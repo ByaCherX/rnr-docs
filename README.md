@@ -18,3 +18,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 This software add-on and custom add-ons include reddevsoftware programs and more comprehensive developer algorithms. These algorithms and codes may differ. The codes of RedDevSoftware cannot be distributed or marketed in any way without notice, and their sale is prohibited. does not give any guarantee or liability, all responsibility belongs to the person.
 
 It provides a deeper look to help you improve your software better. These documentation can cover all sectors (e.g. Finance, Gaming, Health, High Performance Computing, Deep learning, Graphics and Simulation, Networking, Video, Broadcast and Display)
+
+## RedDevSoftware Main Documents İnformation
+
+addonatial text
