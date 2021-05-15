@@ -1,0 +1,16 @@
+log/
+obj/
+_site/
+.optemp/
+_themes/
+_themes.MSDN.Modern/
+_themes.VS.Modern/
+
+# Ignore local configuration changes
+.github/
+.openpublishing.buildcore.ps1
+.vscode/
+
+# Documentation build
+/docs/vcppdocs
+debug.log
