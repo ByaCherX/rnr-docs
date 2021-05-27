@@ -192,7 +192,7 @@ ___
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
-| col 1 is default | left-aligned     |    $1 |
+| col 1 is default | left-aligned     |   $1 |
 
 You can use a [Markdown table generator tool](https://www.tablesgenerator.com/markdown_tables) to help creating them more easily. See also [Markdown editing tools](#markdown-editing-tools).
 
@@ -310,11 +310,11 @@ Use backticks (&#96;) for `inline code`. Use inline code for command-line comman
 
 ### Static Image or Animated gif
 
-![this is the alt text](../images/Logo_DotNet.png)
+![this is the alt text](../images/dotnetx.png)
 
 ### Linked Image
 
-[![alt text for linked image](../images/Logo_DotNet.png)](https://dot.net)
+[![alt text for linked image](../images/dotnetx.png)](https://dot.net)
 
 ## Videos
 
@@ -382,3 +382,28 @@ You can see an example of selectors in action at the [Intune docs](https://docs.
 [Next](../docs/csharp/expression-trees-translating.md)
 
 You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/install-ata-step2).
+
+## Addonatial HTML and CSS markdown
+
+Htlm based -->  <font color='red'>test blue color font</font>
+
+html_css based -->  <span style="color:red">some This is Red Bold. text</span>
+
+html_css based -->  <strong style="color: red; opacity: 0.80;">My Bold Text, in red color.</strong>
+
+<a href="red">Look, ma! Red!</a>
+
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
+
+### TODOs:
+
+- <r>TODO:</r> Important thing to do
+- <o>TODO:</o> Less important thing to do
+- <g>DONE:</g> Breath deeply and improve karma
+
+
+Copyright (c) RedDevSoftware 2021

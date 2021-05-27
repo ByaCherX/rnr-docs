@@ -1,8 +1,15 @@
 # Contributing
 
-Thank you for your interest in contributing to the Visual C++ documentation!
+Thank you for your interest in contributing to the reddevsoftware documentation!
 
-In this topic, you'll see the basic process for adding or updating content in the [Visual C++ documentation site](https://docs.microsoft.com/cpp).
+In this regard, it provides an infrastructure to develop RedDevSoftware programs better and to learn how to use them. This infrastructure can include documents from other organizations.
+
+## Contributing sites
+
+Microsoft Visual C++ documentation [Visual C++ documentation](https://docs.microsoft.com/cpp)
+
+For more detailed details for documentation and contributors [Documentation More About](../docs/reddevsoftware/Contributing/contributing.md)
+
 
 In this topic, we'll cover:
 
