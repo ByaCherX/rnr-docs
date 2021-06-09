@@ -4,6 +4,9 @@ Welcome! This repository contains source files for the work-in-progress Microsof
 
 The documentation for Visual Basic and Visual C# are located in a separate repository at [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs), and the Visual Studio documentation is located in the repository located at [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs).
 
+![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs)
+![GitHub](https://img.shields.io/github/license/ByaCherX/rds-docs)
+
 ## Contributing to the documentation
 
 We welcome your contributions to help us improve the MSVC docs. For a comprehensive guide to contributing to docs.microsoft.com, see the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute). For details on how to make a contribution to the MSVC documentation, see the [Contributing guide](CONTRIBUTING.md).

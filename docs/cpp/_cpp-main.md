@@ -12,6 +12,8 @@ r { color: rgb(250,0,0) }
 
 <h1 style="text-align:center;">C++ Language Reference Main</h1>
 
+![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs)
+
 ## C++ Document Libraries
 |Section|Description|link|
 |-|-|-|

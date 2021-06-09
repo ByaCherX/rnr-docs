@@ -10,7 +10,7 @@ The following C source program consists of two source files. It gives an overvie
 
 The `main` and `max` functions are assumed to be in separate files, and execution of the program begins with the `main` function. No explicit user functions are executed before `main`.
 
-```
+```c
 /*****************************************************************
                     FILE1.C - main function
 *****************************************************************/
