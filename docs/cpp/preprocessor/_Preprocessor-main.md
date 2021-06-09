@@ -6,7 +6,7 @@ helpviewer_keywords: ["preprocessor", "preprocessor, reference main"]
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ---
 
-<h1>C/C++ Preprocessor Reference</h1>
+<h1 style="text-align: center">C/C++ Preprocessor Reference</h1>
 
 The C/C++ preprocessor reference explains the preprocessor as it is implemented in Microsoft C/C++. The preprocessor performs preliminary operations on C and C++ files before they are passed to the compiler. You can use the preprocessor to conditionally compile code, insert files, specify compile-time error messages, and apply machine-specific rules to sections of code.
 
