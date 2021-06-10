@@ -80,6 +80,12 @@ The Microsoft runtime library provides routines for programming the Microsoft Wi
 * [**Internal CRT globals and functions**](internal-crt-globals-and-functions.md)
 * ### [Global variables and standard types](global-variables-and-standard-types.md)
 ---
+* [Global variables](../c-runtime-library/global-variables.md)
+* [Control flags](../c-runtime-library/control-flags.md)
+  * [_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)
+  * [_DEBUG](../c-runtime-library/debug.md)
+  * [_crtDbgFlag](../c-runtime-library/crtdbgflag.md)
+* [Standard types](../c-runtime-library/standard-types.md)
 * ### [Global constants](global-constants.md)
 ---
 * ### [Global state](global-state.md)
