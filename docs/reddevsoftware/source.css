@@ -2,3 +2,63 @@
 border: 1px solid rgb(17, 107, 224);
 width: auto;
 }
+.center {
+    display: block;
+    margin-left: 38%;
+    margin-right: 38%;
+  }
+
+/*:root main css system*/
+:root {
+    --bs-blue: #3688fc;
+    --bs-indigo: #727cf5;
+    --bs-purple: #6b5eae;
+    --bs-pink: #ff679b;
+    --bs-red: #fa6767;
+    --bs-orange: #ff9041;
+    --bs-yellow: #f9bc0d;
+    --bs-green: #42d29d;
+    --bs-teal: #02a8b5;
+    --bs-cyan: #44badc;
+    --bs-white: #fff;
+    --bs-gray: #ced4da;
+    --bs-gray-dark: #e3eaef;
+    --bs-primary: #3688fc;
+    --bs-secondary: #ced4da;
+    --bs-success: #42d29d;
+    --bs-info: #44badc;
+    --bs-warning: #f9bc0d;
+    --bs-danger: #fa6767;
+    --bs-light: #464f5b;
+    --bs-dark: #f1f1f1;
+    --bs-font-sans-serif: "Nunito",sans-serif;
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+/* badge type */
+.bg-secondary{background-color:#6c757d!important}
+.bg-danger{background-color:#dc3545!important}
+.bg-success {background-color: #42d29d !important}
+.badge-success-lighten {color: #42d29d; background-color: rgba(66, 210, 157, 0.596)}
+.badge-outline-warning {color: #f9bc0d;border: 1px solid #f9bc0d;background-color: transparent;
+}
+
+/* badge color type */
+.text-light{color:#f8f9fa!important}
+
+
+/* main badge settings */
+.badge {
+display: inline-block;
+padding: .25em .4em;
+font-size: .75em;
+font-weight: 580;
+line-height: 1;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25rem;
+}
+
+/* --- Ribbon --- */

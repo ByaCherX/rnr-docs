@@ -6,6 +6,7 @@ ms.date: "29/05/2021"
 helpviewer_keywords: ["C++, main"]
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <style>
 r { color: rgb(250,0,0) }
 </style>
@@ -14,7 +15,7 @@ r { color: rgb(250,0,0) }
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs)
 
-## C++ Document Libraries
+## C++ Document Libraries <i class="bi bi-code-slash"></i>
 |Section|Description|link|
 |-|-|-|
 |<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|[-----](../cpp/_cpp-main.md)|
