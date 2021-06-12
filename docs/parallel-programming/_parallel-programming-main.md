@@ -15,6 +15,7 @@ ms.topic: "overview"
 ---
 * ### [C++ Accelerated Massive Parallelism (AMP)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)
 ---
+
 * ### [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)
 ---
 * ### [Concurrency Runtime](concrt/concurrency-runtime.md)

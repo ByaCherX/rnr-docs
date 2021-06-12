@@ -15,10 +15,6 @@ arr: [1, 2, 3]
 
 ---- Test Area ----
 
-## My Great Heading {#custom-id}
-
-<h2 id="custom-id">My Great Heading</h2>
-
 
 | :bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
 |---|---|---|
