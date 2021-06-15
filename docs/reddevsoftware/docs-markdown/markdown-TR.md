@@ -1,38 +1,37 @@
 <link rel="stylesheet" href="../source.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
 <img src="../../media/index/markdown-mark-white.svg" alt="MarkdownLogo" class="center">
-<h1 style="text-align: center">Markdown Language Documents <sub class="trlng">US</sub> </h1>
+<h1 style="text-align: center">Markdown Language Documents <sub class="trlng">TR</sub> </h1>
 
 ## What is Markdown 
 ---
-Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.
+Markdown, düz metin metin belgelerine biçimlendirme öğeleri eklemek için kullanabileceğiniz hafif bir biçimlendirme dilidir. 2004 yılında John Gruber tarafından oluşturulan Markdown, şu anda dünyanın en popüler biçimlendirme dillerinden biridir.
 
-## Why use Markdowm
+### Why use Markdown
 ---
-- Markdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.
+- Markdown her şey için kullanılabilir. İnsanlar bunu web siteleri, belgeler, notlar, kitaplar, sunumlar, e-posta mesajları ve teknik belgeler oluşturmak için kullanır.
 
-- Markdown is portable. Files containing Markdown-formatted text can be opened using virtually any application. If you decide you don’t like the Markdown application you’re currently using, you can import your Markdown files into another Markdown application. That’s in stark contrast to word processing applications like Microsoft Word that lock your content into a proprietary file format.
+- Markdown taşınabilir. Markdown formatlı metin içeren dosyalar hemen hemen her uygulama kullanılarak açılabilir. Şu anda kullanmakta olduğunuz Markdown uygulamasını beğenmediğinize karar verirseniz, Markdown dosyalarınızı başka bir Markdown uygulamasına aktarabilirsiniz. Bu, içeriğinizi özel bir dosya biçimine kilitleyen Microsoft Word gibi sözcük işleme uygulamalarının tam tersidir.
 
-- Markdown is platform independent. You can create Markdown-formatted text on any device running any operating system.
+- Markdown, platformdan bağımsızdır. Herhangi bir işletim sistemini çalıştıran herhangi bir cihazda Markdown formatlı metin oluşturabilirsiniz.
 
-- Markdown is future proof. Even if the application you’re using stops working at some point in the future, you’ll still be able to read your Markdown-formatted text using a text editing application. This is an important consideration when it comes to books, university theses, and other milestone documents that need to be preserved indefinitely.
+- Markdown geleceğin kanıtıdır. Kullandığınız uygulama gelecekte bir noktada çalışmayı durdursa bile, bir metin düzenleme uygulaması kullanarak Markdown formatlı metninizi yine de okuyabileceksiniz. Bu, süresiz olarak korunması gereken kitaplar, üniversite tezleri ve diğer dönüm noktası belgeleri söz konusu olduğunda önemli bir husustur.
 
-- Markdown is everywhere. Websites like Reddit and GitHub support Markdown, and lots of desktop and web-based applications support it.
+- Markdown her yerde. Reddit ve GitHub gibi web siteleri Markdown'ı destekler ve birçok masaüstü ve web tabanlı uygulama bunu destekler.
 
-## How Does it Work?
+### How Does it Work?
 ---
-Markdown applications use something called a Markdown processor (also commonly referred to as a “parser” or an “implementation”) to take the Markdown-formatted text and output it to HTML format. At that point, your document can be viewed in a web browser or combined with a style sheet and printed. You can see a visual representation of this process below.
+Markdown uygulamaları , Markdown formatlı metni almak ve HTML formatına çıkarmak için Markdown işlemcisi (aynı zamanda “ayrıştırıcı” veya “uygulama” olarak da anılır) olarak adlandırılan bir şey kullanır . Bu noktada belgeniz bir web tarayıcısında görüntülenebilir veya bir stil sayfasıyla birleştirilebilir ve yazdırılabilir. Aşağıda bu işlemin görsel bir temsilini görebilirsiniz.
 
 ### What does Markdown do?
 ---
-Markdown is a fast and easy way to take notes, create content for a website, and produce print-ready documents.
+Markdown, not almanın, bir web sitesi için içerik oluşturmanın ve baskıya hazır belgeler üretmenin hızlı ve kolay bir yoludur.
 
-It doesn’t take long to learn the Markdown syntax, and once you know how to use it, you can write using Markdown just about everywhere. Most people use Markdown to create content for the web, but Markdown is good for formatting everything from email messages to grocery lists.
+Markdown sözdizimini öğrenmek uzun sürmez ve nasıl kullanılacağını öğrendikten sonra hemen her yerde Markdown kullanarak yazabilirsiniz. Çoğu kişi, web için içerik oluşturmak için Markdown'ı kullanır, ancak Markdown, e-posta mesajlarından alışveriş listelerine kadar her şeyi biçimlendirmek için iyidir.
 
 ### Support Markdown
 ---
-for more information see ['markdown-support.md'](markdown-support.md) .
+daha fazla bilgi için ['markdown-support.md'](markdown-support.md) kısmına bakın.
 
 <h1>Basic Syntax</h1>
 
@@ -42,7 +41,7 @@ for more information see ['markdown-support.md'](markdown-support.md) .
 
 ## Header
 ---
-To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (`<h3>`), use three number signs (e.g., ### My Header).
+Başlık oluşturmak için #bir kelimenin veya tümcenin önüne sayı işaretleri ( ) ekleyin . Kullandığınız sayı işaretlerinin sayısı başlık seviyesine karşılık gelmelidir. Örneğin, bir başlık düzeyi üç ( `<h3>` ) oluşturmak için üç sayı işareti (örn., ### My Header) kullanın.
 
 | Markdown               | HTML                       | Rendered Output          |
 |------------------------|----------------------------|--------------------------|
@@ -183,4 +182,27 @@ Aksi takdirde bir Markdown belgesindeki metni biçimlendirmek için kullanılaca
 
 
 
+<!--
+<h1 style="text-align:center">Compatibility recommendations</h1>
 
+### Header Practices
+İşaretleme uygulamaları, sayı işaretleri ( #) ve başlık adı arasındaki eksik boşluğun nasıl ele alınacağı konusunda anlaşamaz . Uyumluluk için, numara işaretleri ile başlık adı arasına her zaman bir boşluk koyun.
+
+| ✅ Do this         | ❌ Don't do this |
+|--------------------|-------------------|
+| # Here's a Heading | #Here's a Heading |
+
+### Italic Practices
+Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to italicize the middle of a word for emphasis.
+
+| ✅ Do this  | ❌ Don't do this |
+|------------- |-------------------|
+| A`*cat*`meow | A`_cat_`meow    |
+
+### Link Practices
+Markdown uygulamaları, bir URL'nin ortasındaki boşlukların nasıl ele alınacağı konusunda hemfikir değildir. Uyumluluk için, boşlukları URL ile kodlamayı deneyin %20.
+
+| ✅ Do this | ❌ Don't do this |
+|------------ |------------------|
+| `[link](https://www.example.com/my%20great%20page)` | `[link](https://www.example.com/my great page)`|
+-->
