@@ -1,17 +1,12 @@
-.border{border: 1px solid rgb(17, 107, 224);width: auto;}
+.border{
+border: 1px solid rgb(17, 107, 224);
+width: auto;
+}
 .center {
     display: block;
     margin-left: 38%;
     margin-right: 38%;
-    text-decoration-line: line-through; }
-.trlng {
-  font-size: medium;
-  font-family: sans-serif;
-  font-weight: lighter;
-  color: #07a9e9;
-  text-shadow: -1px 2px 3px #07a9e9; }
-
-.color-red { color: rgb(20, 114, 202) }
+  }
 
 /*:root main css system*/
 :root {
@@ -66,28 +61,4 @@ vertical-align: baseline;
 border-radius: .25rem;
 }
 
-/* --------------------------------------------------------------------------- */
-/*                             Markdown HTML-CSS                               */
-.gradient {background: linear-gradient(to right,rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%);}
-.seperator{width:3000px; height:5px; -webkit-animation:rotate 3s infinite linear}
-
-@-webkit-keyframes rotate {
-  from {background-position:-3000px}
-  to {background-position:0} }
-@keyframes rotate {
-  from {background-position:-3000px}
-  to {background-position:0} }
-
-.anim1 {
-  background: linear-gradient(to right,rgb(255, 255, 255) 0%,rgb(156, 156, 156) 50%,rgb(255, 255, 255) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-animation:rotate 6s infinite linear }
-.anim2 {
-  background: linear-gradient(to right,rgb(245, 58, 58) 0%,rgb(247, 138, 74) 25%,rgb(247, 114, 74) 50%, rgb(247, 94, 67) 75%,rgb(245, 58, 58) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-animation:rotate 6s infinite linear }
-/* --------------------------------------------------------------------------- */
+/* --- Ribbon --- */
