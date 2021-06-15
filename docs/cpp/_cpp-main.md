@@ -11,11 +11,11 @@ ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 r { color: rgb(250,0,0) }
 </style>
 
-<h1 style="text-align:center;">C++ Language Reference Main</h1>
+<h1 style="text-align:center;">C++ Language Reference Main <i class="bi bi-code-slash"></i></h1>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs)
+![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs) 
 
-## C++ Document Libraries <i class="bi bi-code-slash"></i>
+## C++ Document Libraries <i class="bi bi-journals"></i>
 |Section|Description|link|
 |-|-|-|
 |<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|[-----](../cpp/_cpp-main.md)|
@@ -37,7 +37,7 @@ See the following tables to quickly find a keyword or operator:
 
 - [C++ Operators](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## Cpp Language Reference Tree 
+## Cpp Language Reference Tree <i class="bi bi-list-nested"></i>
 ---
 
 * ### [Lexical Conventions](../cpp/lexical-conventions.md)<br/> 
@@ -67,7 +67,7 @@ See the following tables to quickly find a keyword or operator:
    * [Void](void-cpp.md)
    * [Bool](bool-cpp.md)
    * [True](../cpp/true-cpp.md)
-   * [False](../cpp/false-cpp.md)
+   * [False](../cpp/false-cpp.md) 
    * [Expressions](expressions-cpp.md)
    * [char, wchar_t, char8_t, char16_t, char32_t](char-wchar-t-char16-t-char32-t.md)
    * [__int8, __int16, __int32, __int64](int8-int16-int32-int64.md)
