@@ -144,7 +144,7 @@ other example
 ## Images
 ---
 örnekteki gibi fotoğraf ekleyebilirsiniz `![markdown svg logo](../../media/index/markdown-mark.svg)`
-sonuç şunun gibi olacaktır;<img src="../../media/index/markdown-mark.svg" style="width: 90px;">
+sonuç şunun gibi olacaktır <img src="../../media/index/markdown-mark.svg" style="width: 90px;">
 
 ## Links
 ---
@@ -179,21 +179,17 @@ Aksi takdirde bir Markdown belgesindeki metni biçimlendirmek için kullanılaca
 |\|         | pipe (see also escaping pipe in tables)        |
 
 
-
-
-
-<!--
-<h1 style="text-align:center">Compatibility recommendations</h1>
+<h1 class="h1color" style="text-align:center">Compatibility recommendations</h1>
 
 ### Header Practices
-İşaretleme uygulamaları, sayı işaretleri ( #) ve başlık adı arasındaki eksik boşluğun nasıl ele alınacağı konusunda anlaşamaz . Uyumluluk için, numara işaretleri ile başlık adı arasına her zaman bir boşluk koyun.
+İşaretleme uygulamaları, sayı işaretleri (`#`) ve başlık adı arasındaki eksik boşluğun nasıl ele alınacağı konusunda anlaşamaz . Uyumluluk için, numara işaretleri ile başlık adı arasına her zaman bir boşluk koyun.
 
 | ✅ Do this         | ❌ Don't do this |
 |--------------------|-------------------|
 | # Here's a Heading | #Here's a Heading |
 
 ### Italic Practices
-Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to italicize the middle of a word for emphasis.
+Markdown uygulamaları, bir kelimenin ortasındaki alt çizgilerin nasıl ele alınacağı konusunda hem fikir değildir. Uyumluluk için, vurgu için bir kelimenin ortasını italik yapmak için yıldız işaretlerini kullanın.
 
 | ✅ Do this  | ❌ Don't do this |
 |------------- |-------------------|
@@ -205,4 +201,4 @@ Markdown uygulamaları, bir URL'nin ortasındaki boşlukların nasıl ele alına
 | ✅ Do this | ❌ Don't do this |
 |------------ |------------------|
 | `[link](https://www.example.com/my%20great%20page)` | `[link](https://www.example.com/my great page)`|
--->
+

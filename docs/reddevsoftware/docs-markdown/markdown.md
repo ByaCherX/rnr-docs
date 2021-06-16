@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../source.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
 <img src="../../media/index/markdown-mark-white.svg" alt="MarkdownLogo" class="center">
 <h1 style="text-align: center">Markdown Language Documents <sub class="trlng">US</sub> </h1>
 
@@ -34,11 +33,11 @@ It doesn’t take long to learn the Markdown syntax, and once you know how to us
 ---
 for more information see ['markdown-support.md'](markdown-support.md) .
 
-<h1>Basic Syntax</h1>
+<h1 class="h1color">Basic Syntax</h1>
 
 ---
 
-> Neredeyse tüm Markdown uygulamaları, John Gruber'in orijinal tasarım belgesinde özetlenen temel sözdizimini destekler. Markdown işlemcileri arasında küçük farklılıklar ve tutarsızlıklar vardır - bunlar mümkün olan yerlerde satır içi olarak not edilir.
+> It features the basic syntax outlined in John Gruber's original design document. There are minor inconsistencies and inconsistencies between Markdown operations - they are ideal for that. they are not inline.
 
 ## Header
 ---
@@ -55,7 +54,7 @@ To create a heading, add number signs (#) in front of a word or phrase. The numb
 
 ## Alternate Syntax
 ---
-Alternatif olarak, metnin altındaki satıra, ==başlık seviyesi 1 için herhangi bir sayıda karakter veya başlık seviyesi 2 için herhangi bir sayıda karakter ekleyin .
+Alternatively, on the line below the text, add any number of == characters for heading level 1 or -- characters for heading level 2.
 
 | Markdown                               | HTML                       | Rendered Output          |
 |----------------------------------------|----------------------------|--------------------------|
@@ -64,7 +63,7 @@ Alternatif olarak, metnin altındaki satıra, ==başlık seviyesi 1 için herhan
 
 ## Paragraphs
 ---
-Paragraf oluşturmak için bir veya daha fazla metin satırını ayırmak için boş bir satır kullanın.
+To create paragraphs, use a blank line to separate one or more lines of text.
 
 | Markdown | HTML |
 |----------|------|
@@ -72,7 +71,7 @@ Paragraf oluşturmak için bir veya daha fazla metin satırını ayırmak için 
 
 ## Line Breaks
 ---
-Satır sonu (`<br>`) oluşturmak için satırı iki veya daha fazla boşlukla sonlandırın ve ardından return yazın.
+To create a line break (`<br>`), end a line with two or more spaces, and then type return.
 
 | Markdown | HTML |
 |----------|------|
@@ -80,7 +79,7 @@ Satır sonu (`<br>`) oluşturmak için satırı iki veya daha fazla boşlukla so
 
 ## Bold text
 ---
-Metni kalınlaştırmak için, bir kelimenin veya ifadenin önüne ve arkasına iki yıldız veya alt çizgi ekleyin. Vurgu için bir kelimenin ortasını kalın yapmak için harflerin etrafına boşluk bırakmadan iki yıldız ekleyin.
+To bold text, add two asterisks or underscores before and after a word or phrase. To bold the middle of a word for emphasis, add two asterisks without spaces around the letters.
 
 | Markdown | HTML | Rendered Output |
 |----------|------|-----------------|
@@ -90,7 +89,7 @@ Metni kalınlaştırmak için, bir kelimenin veya ifadenin önüne ve arkasına 
 
 ## Italic
 ---
-Metni italik yapmak için, bir kelimenin veya tümcenin önüne ve arkasına bir yıldız işareti veya alt çizgi ekleyin. Vurgu için bir kelimenin ortasını italik yapmak için harflerin etrafına boşluk bırakmadan bir yıldız işareti ekleyin.
+To italicize text, add one asterisk or underscore before and after a word or phrase. To italicize the middle of a word for emphasis, add one asterisk without spaces around the letters.
 
 |Markdown | Html |Rendered Output  |
 |---------|------|-----------------|
@@ -100,7 +99,7 @@ Metni italik yapmak için, bir kelimenin veya tümcenin önüne ve arkasına bir
  
 ## Bold and Italic
 ---
-Metni kalın ve italik olarak aynı anda vurgulamak için, bir kelimenin veya tümcenin önüne ve arkasına üç yıldız veya alt çizgi ekleyin. Vurgu için bir kelimenin ortasını kalın ve italik hale getirmek için harflerin etrafına boşluk bırakmadan üç yıldız işareti ekleyin.
+To emphasize text with bold and italics at the same time, add three asterisks or underscores before and after a word or phrase. To bold and italicize the middle of a word for emphasis, add three asterisks without spaces around the letters.
 
 | Markdown | HTML | Rendered Output |
 |----------|------|-----------------|
@@ -108,7 +107,7 @@ Metni kalın ve italik olarak aynı anda vurgulamak için, bir kelimenin veya t�
 
 ## Blockquotes
 ---
-Blok alıntı oluşturmak `>` için paragrafın önüne bir alıntı ekleyin .
+To create a blockquote, add a `>` in front of a paragraph.
 
 | Markdown | HTML | Rendered Output |
 |----------|------|-----------------|
@@ -128,7 +127,7 @@ Blok alıntı oluşturmak `>` için paragrafın önüne bir alıntı ekleyin .
 ## Code Blocks
 ---
 
-Bir kelimeyi veya tümceyi kod olarak belirtmek için, onu ters tikler ( `) içine alın.
+To denote a word or phrase as code, enclose it in backticks (`).
 
 other example
 
@@ -144,12 +143,12 @@ other example
 
 ## Images
 ---
-örnekteki gibi fotoğraf ekleyebilirsiniz `![markdown svg logo](../../media/index/markdown-mark.svg)`
-sonuç şunun gibi olacaktır;<img src="../../media/index/markdown-mark.svg" style="width: 90px;">
+You can add a photo as in the example. `![markdown svg logo](../../media/index/markdown-mark.svg)`
+the result will be like this <img src="../../media/index/markdown-mark.svg" style="width: 90px;">
 
 ## Links
 ---
-Bir bağlantı oluşturmak için, bağlantı metnini parantez içine alın (örn. [github]) ve ardından hemen URL'yi parantez içinde (örn (https://github.com). ) takip edin.
+To create a link, enclose the link text in brackets (e.g., [github]) and then follow it immediately with the URL in parentheses (e.g., (https://github.com)).
 
 | Markdown | HTML | Rendered Output |
 |----------|------|-----------------|
@@ -160,7 +159,7 @@ Bir bağlantı oluşturmak için, bağlantı metnini parantez içine alın (örn
 | [![image](/assets/images/shiprock.jpg "text")](link) | - | - |
 
 ## Escaping Chracters
-Aksi takdirde bir Markdown belgesindeki metni biçimlendirmek için kullanılacak değişmez bir karakteri görüntülemek için karakterin önüne bir ters eğik çizgi (`\`) ekleyin.
+To display a literal character that would otherwise be used to format text in a Markdown document, add a backslash (`\`) in front of the character.
 
 | Character | Name                                           |
 |-----------|------------------------------------------------|
@@ -178,6 +177,30 @@ Aksi takdirde bir Markdown belgesindeki metni biçimlendirmek için kullanılaca
 | .         | dot                                            |
 | !         | exclamation mark                               |
 |\|         | pipe (see also escaping pipe in tables)        |
+
+
+<h1 class="h1color" style="text-align:center">Compatibility recommendations</h1>
+
+### Header Practices
+Markdown applications don’t agree on how to handle a missing space between the number signs (`#`) and the heading name. For compatibility, always put a space between the number signs and the heading name.
+
+| ✅ Do this         | ❌ Don't do this |
+|--------------------|-------------------|
+| # Here's a Heading | #Here's a Heading |
+
+### Italic Practices
+Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to italicize the middle of a word for emphasis.
+
+| ✅ Do this  | ❌ Don't do this  |
+|------------- |-------------------|
+| A`*cat*`meow | A`_cat_`meow      |
+
+### Link Practices
+Markdown applications don’t agree on how to handle spaces in the middle of a URL. For compatibility, try to URL encode any spaces with %20.
+
+| ✅ Do this | ❌ Don't do this |
+|------------ |------------------|
+| `[link](https://www.example.com/my%20great%20page)` | `[link](https://www.example.com/my great page)`|
 
 
 

@@ -10,7 +10,8 @@
   font-weight: lighter;
   color: #07a9e9;
   text-shadow: -1px 2px 3px #07a9e9; }
-
+h2 {text-shadow: 0px; color: rgb(121, 167, 252);}
+.h1color {text-shadow: 0px; color:rgb(247, 138, 74)}
 .color-red { color: rgb(20, 114, 202) }
 
 /*:root main css system*/
