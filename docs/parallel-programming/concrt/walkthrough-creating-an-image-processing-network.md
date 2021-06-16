@@ -127,7 +127,7 @@ If your application requires that multiple message blocks process the message, i
 
 The following illustration shows the image processing network:
 
-![Image processing network](../../parallel/concrt/media/concrt_imageproc.png "Image processing network")
+![Image processing network](../../parallel-programming/concrt/media/concrt_imageproc.png "Image processing network")
 
 The `countdown_event` object in this example enables the image processing network to inform the main application when all images have been processed. The `countdown_event` class uses a [concurrency::event](../../parallel/concrt/reference/event-class.md) object to signal when a counter value reaches zero. The main application increments the counter every time that it sends a file name to the network. The terminal node of the network decrements the counter after each image has been processed. After the main application traverses the specified directory, it waits for the `countdown_event` object to signal that its counter has reached zero.
 
