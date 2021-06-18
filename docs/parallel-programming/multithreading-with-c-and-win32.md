@@ -21,7 +21,7 @@ Each thread in a process operates independently. Unless you make them visible to
 
 ## Library support for multithreading
 
-All versions of the CRT now support multithreading, with the exception of the non-locking versions of some functions. For more information, see [Multithreaded libraries performance](../c-runtime-library/multithreaded-libraries-performance.md). For information on the versions of the CRT available to link with your code, see [CRT library features](../c-runtime-library/crt-library-features.md).
+All versions of the CRT now support multithreading, with the exception of the non-locking versions of some functions. For more information, see [Multithreaded Libraries Performance](../cpp/c-language/c-runtime-library/multithreaded-libraries-performance.md). For information on the versions of the CRT available to link with your code, see [CRT library features](../c-runtime-library/crt-library-features.md).
 
 ## Include files for multithreading
 
@@ -52,7 +52,7 @@ The `_beginthread` and `_beginthreadex` functions create a new thread. A thread 
 
 ### <a name="_core_the__endthread_function"></a> The _endthread and _endthreadex functions
 
-The [_endthread](../c-runtime-library/reference/endthread-endthreadex.md) function terminates a thread created by `_beginthread` (and similarly, `_endthreadex` terminates a thread created by `_beginthreadex`). Threads terminate automatically when they finish. `_endthread` and `_endthreadex` are useful for conditional termination from within a thread. A thread dedicated to communications processing, for example, can quit if it is unable to get control of the communications port.
+The [_endthread](../cpp/c-runtime-library/reference/endthread-endthreadex.md) function terminates a thread created by `_beginthread` (and similarly, `_endthreadex` terminates a thread created by `_beginthreadex`). Threads terminate automatically when they finish. `_endthread` and `_endthreadex` are useful for conditional termination from within a thread. A thread dedicated to communications processing, for example, can quit if it is unable to get control of the communications port.
 
 ## Writing a multithreaded Win32 program
 

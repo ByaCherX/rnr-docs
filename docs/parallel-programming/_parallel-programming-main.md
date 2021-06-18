@@ -5,15 +5,15 @@ ms.date: "11/06/2021"
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
 ms.topic: "overview"
 ---
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <h1 style="text-align:center">Parallel Programming in Visual C++ Main</h1>
 
 
-## Parallel programming reference tree
+## Parallel programming reference tree <i class="bi bi-list-nested"></i>
 ---
 * ### [Auto-Parallelization and Auto-Vectorization](../parallel-programming/auto-parallelization-and-auto-vectorization.md)
 ---
-* ### [C++ Accelerated Massive Parallelism (AMP)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)
+* ### [C++ Accelerated Massive Parallelism (AMP)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md) <i class="bi bi-hexagon"></i>
 ---
 * [C++ AMP Overview](../parallel-programming/amp/cpp-amp-overview.md)
 * [Using Tiles](../parallel-programming/amp/using-tiles.md)
@@ -31,7 +31,7 @@ ms.topic: "overview"
   * [Concurrency::graphics Namespace](amp/reference/concurrency-graphics-namespace.md)
   * [Concurrency::precise_math Namespace](amp/reference/concurrency-precise-math-namespace.md)
 
-* ### [Concurrency Runtime (ConCRT)](concrt/concurrency-runtime.md)
+* ### [Concurrency Runtime (ConCRT)](concrt/concurrency-runtime.md) <i class="bi bi-hexagon"></i>
 ---
 * #### [Overview of the Concurrency Runtime](../parallel-programming/concrt/overview-of-the-concurrency-runtime.md)
 * #### [Exception Handling in the Concurrency Runtime](../parallel-programming/concrt/exception-handling-in-the-concurrency-runtime.md)
@@ -75,9 +75,38 @@ ms.topic: "overview"
   * [Concurrency Namespace](concrt/reference/concurrency-namespace.md)
   * [Std namespace](concrt/reference/std-namespace.md)
   * [Stdx namespace](concrt/reference/stdx-namespace.md)
-* ### [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)
+
+* ### [OpenMP in MSVC](openmp/openmp-in-visual-cpp.md)
 ---
-* ### [OpenMP](openmp/openmp-in-visual-cpp.md)
----
+* #### [SIMD Extension](openmp/openmp-simd.md)
+* #### [C and C++ Application Program Interface](../parallel-programming/openmp/openmp-c-and-cpp-application-program-interface.md)
+  * [Introduction](openmp/1-introduction.md)
+  * [Directives](openmp/2-directives.md)
+  * [Run-time library functions](openmp/3-run-time-library-functions.md)
+  * [Environment variables](openmp/4-environment-variables.md)
+  * [Examples](openmp/a-examples.md)
+  * [Stubs for run-time library functions](openmp/b-stubs-for-run-time-library-functions.md)
+  * [OpenMP C and C++ grammar](openmp/c-openmp-c-and-cpp-grammar.md)
+  * [The schedule clause](openmp/d-using-the-schedule-clause.md)
+  * [Implementation-defined behaviors in OpenMP C/C++](openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+  * [New features and clarifications in version 2.0](openmp/f-new-features-and-clarifications-in-version-2-0.md)
+* #### [OpenMP Library Reference](openmp/reference/openmp-library-reference.md)
+  * [OpenMP Directives](openmp/reference/openmp-directives.md)
+  * [Clauses](openmp/reference/openmp-clauses.md)
+  * [Functions](openmp/reference/openmp-functions.md)
+  * [Environment Variables](openmp/reference/openmp-environment-variables.md)
+
 * ### [Multithreading Support for Older Code (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)
 ---
+* #### [Multithreading with C and Win32](multithreading-with-c-and-win32.md)
+  * [Multithreading with C and Win32](multithreading-with-c-and-win32.md)
+  * [Sample Multithread C Program](sample-multithread-c-program.md)
+  * [Thread Local Storage (TLS)](thread-local-storage-tls.md)
+* #### [Multithreading with C++ and MFC](multithreading-with-cpp-and-mfc.md)
+  * [Multithreading: Creating User-Interface Threads](multithreading-creating-user-interface-threads.md)
+  * [Multithreading: Creating Worker Threads](multithreading-creating-worker-threads.md)
+  * [Multithreading: When to Use the Synchronization Classes](multithreading-when-to-use-the-synchronization-classes.md)
+  * [Multithreading: How to Use the Synchronization Classes](multithreading-how-to-use-the-synchronization-classes.md)
+  * [Multithreading: Terminating Threads](multithreading-terminating-threads.md)
+  * [Multithreading: Programming Tips](multithreading-programming-tips.md)
+* #### [Multithreading and Locales](multithreading-and-locales.md)
