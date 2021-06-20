@@ -33,7 +33,7 @@ Markdown sözdizimini öğrenmek uzun sürmez ve nasıl kullanılacağını öğ
 ---
 daha fazla bilgi için ['markdown-support.md'](markdown-support.md) kısmına bakın.
 
-<h1>Basic Syntax</h1>
+<h1 class="h1color" style="text-align:center">Basic Syntax</h1>
 
 ---
 

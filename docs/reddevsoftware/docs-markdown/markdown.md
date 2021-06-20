@@ -33,7 +33,7 @@ It doesn’t take long to learn the Markdown syntax, and once you know how to us
 ---
 for more information see ['markdown-support.md'](markdown-support.md) .
 
-<h1 class="h1color">Basic Syntax</h1>
+<h1 class="h1color" style="text-align:center">Basic Syntax</h1> <i class="fab fa-aws"></i>
 
 ---
 
