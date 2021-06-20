@@ -22,6 +22,10 @@ This software add-on and custom add-ons include reddevsoftware programs and more
 
 It provides a deeper look to help you improve your software better. These documentation can cover all sectors (e.g. Finance, Gaming, Health, High Performance Computing, Deep learning, Graphics and Simulation, Networking, Video, Broadcast and Display)
 
+Bu yazılım eklentisi ve özel eklentiler, reddevsoftware programlarını ve daha kapsamlı geliştirici algoritmalarını içerir. Bu algoritmalar ve kodlar farklılık gösterebilir. RedDevSoftware'in kodları önceden haber verilmeksizin hiçbir şekilde dağıtılamaz veya pazarlanamaz ve satışı yasaktır. herhangi bir garanti veya sorumluluk vermez, tüm sorumluluk kişiye aittir.
+
+Yazılımınızı daha iyi geliştirmenize yardımcı olmak için daha derin bir görünüm sağlar. Bu belgeler tüm sektörleri kapsayabilir (ör. Finans, Oyun, Sağlık, Yüksek Performanslı Bilgi İşlem, Derin öğrenme, Grafik ve Simülasyon, Ağ Oluşturma, Video, Yayın ve Görüntülü Reklamcılık)
+
 ## RedDevSoftware Main Documents İnformation
 
 addonatial text source ...
