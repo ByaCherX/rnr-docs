@@ -5,15 +5,13 @@ ms.date: "03/30/2018"
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: "overview"
 ---
-<style>
-font-typer{}
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 # C++/CX Language Reference
 
 The Universal Windows Platform (UWP) is the modern programming interface for Windows. With UWP you write an application or component once and deploy it on any Windows 10 device. You can write a component in C++ and applications written in any other UWP-compatible language can use it. 
 
-## Cppcx Language Reference Tree 
+## Cppcx Language Reference Tree <i class="bi bi-list-nested"></i>
 ---
 * #### [Universal Windows Apps C++ (UWP)](universal-windows-apps-cpp.md)
    * [C++/CX language reference](visual-c-language-reference-c-cx.md)
