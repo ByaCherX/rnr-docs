@@ -20,7 +20,7 @@ Use AddressSanitizer to reduce your time spent on:
 
 ddressSanitizer is integrated with the Visual Studio project system, the CMake build system, and the IDE. Projects can enable AddressSanitizer by setting a project property, or by using one extra compiler option: **`/fsanitize=address`**. The new option is compatible with all levels of optimization and configurations of x86 and x64. However, it's incompatible with [edit-and-continue](/visualstudio/debugger/edit-and-continue-visual-cpp), [incremental linking](../build/reference/incremental-link-incrementally.md), and [`/RTC`](../build/reference/rtc-run-time-error-checks.md).
 
-## Code Sanitizers Tree
+## Code Sanitizers Tree <i class="bi bi-list-nested"></i>
 ---
 
 * #### [Adress Sanitizers Overview](asan.md)
