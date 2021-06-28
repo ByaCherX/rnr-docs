@@ -1,14 +1,14 @@
 ---
-description: "Learn more about: C++ Language Reference"
+description: "C++ Language Reference"
 title: "C++ Language Reference"
 ms.custom: "index-page"
 ms.date: "29/05/2021"
 helpviewer_keywords: ["C++, main"]
-ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
+ms.assetid: unknown ?
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <style>
-r { color: rgb(250,0,0) }
+r {color: rgb(250,0,0)}
 </style>
 
 <h1 style="text-align:center;">C++ Language Reference Main <i class="bi bi-code-slash"></i></h1>
@@ -16,14 +16,18 @@ r { color: rgb(250,0,0) }
 ![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs) 
 
 ## C++ Document Libraries <i class="bi bi-journals"></i>
-|Section|Description|link|
-|-|-|-|
-|<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|[-----](../cpp/_cpp-main.md)|
-|C++ Standard Library Main Documents|Provides standard library for C language|[-----](../cpp/standard-library/_standard-library-main.md)|
-|Active Template Library (ATL)|(ATL) is a set of template-based C++ classes that let you create|[-----](../cpp/atl/_ATL-main.md)|
-|C/C++ Preprocessor Reference|The C/C++ preprocessor reference explains the preprocessor|[-----](../cpp/preprocessor/_Preprocessor-main.md)|
-|C++/CX Language Reference|C++/CX is a set of extensions of the C++ language.|[-----](../cpp/cppcx/_cppcx-main.md)|
-|Compiler Intrinsics and assembly language|processor-specific code for maximum performance and control.|[-----](../cpp/assembler/_asm-main.md)|
+|Section|Description|
+|-|-|
+|<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|
+|[➔](c-language/_c-main.md) C Language Reference (*dev)|C programming language as implemented in Microsoft C.|
+|[➔](../cpp/standard-library/_standard-library-main.md) C++ Standard Library Main Documents|Provides standard library for C language|
+|[➔](c-language/c-runtime-library/_c-runtime-lib-main.md) C Runtime Library (CRT)|Microsoft runtime library provides routines for programming operating system|
+|[➔](../cpp/atl/_ATL-main.md) Active Template Library (ATL)|(ATL) is a set of template-based C++ classes that let you create|
+|[➔](../cpp/preprocessor/_Preprocessor-main.md) C/C++ Preprocessor Reference|The C/C++ preprocessor reference explains the preprocessor|
+|[➔](../cpp/cppcx/_cppcx-main.md) C++/CX Language Reference|C++/CX is a set of extensions of the C++ language.|
+|[➔](../cpp/assembler/_asm-main.md) Compiler Intrinsics and assembly language|processor-specific code for maximum performance and control.|
+|[➔](sanitizers/_code-sanitizers-main.md) C/C++ Code Sanitizers (Beta)|class of bugs that affect program correctness and program security.|
+|[➔](parallel-programming/_parallel-programming-main.md) Parallel Programming in Visual C++|C++ Accelerated Massive Parallelism (C++ AMP)|
 
 ## Cpp Language Reference 
 
@@ -93,7 +97,7 @@ See the following tables to quickly find a keyword or operator:
    * [decltype](decltype-cpp.md)
    * [Attributes in C++](attributes.md)
 ---
-* ### [Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+* ### [Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 
    * [Scope resolution](../cpp/scope-resolution-operator.md)
    * [Member selection (object or pointer)](../cpp/member-access-operators-dot-and.md)
    * [Array subscript](../cpp/subscript-operator.md)
