@@ -8,7 +8,6 @@ ms.topic: "overview"
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <h1 style="text-align:center">Parallel Programming in Visual C++ Main</h1>
 
-
 ## Parallel programming reference tree <i class="bi bi-list-nested"></i>
 ---
 * ### [Auto-Parallelization and Auto-Vectorization](../parallel-programming/auto-parallelization-and-auto-vectorization.md)
