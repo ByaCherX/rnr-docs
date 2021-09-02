@@ -25,12 +25,12 @@ The Microsoft C++ 32-bit and 64-bit compilers recognize the types in the table l
 
 - **`long long`** (**`unsigned long long`**)
 
-If its name begins with two underscores (`__`), a data type is non-standard.
+Adı iki alt çizgi (`__`) ile başlıyorsa , bir veri türü standart değildir.
 
 The ranges that are specified in the following table are inclusive-inclusive.
 
 |Type Name|Bytes|Other Names|Range of Values|
-|---------------|-----------|-----------------|---------------------|
+|:---------------|:-----------:|-----------------|---------------------|
 |**`int`**|4|**`signed`**|-2,147,483,648 to 2,147,483,647|
 |**`unsigned int`**|4|**`unsigned`**|0 to 4,294,967,295|
 |**`__int8`**|1|**`char`**|-128 to 127|

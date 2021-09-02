@@ -7,7 +7,7 @@ ms.assetid: 5ebc9837-e273-4ea6-ac7d-14b3c2c974c7
 ---
 # Numerical Limits (C++)
 
-The two standard include files, \<limits.h> and \<float.h>, define the numerical limits, or minimum and maximum values that a variable of a given type can hold. These minimums and maximums are guaranteed to be portable to any C++ compiler that uses the same data representation as ANSI C. The \<limits.h> include file defines the [numerical limits for integral types](../cpp/integer-limits.md), and \<float.h> defines the [numerical limits for floating types](../cpp/floating-limits.md).
+İki standart, \<limits.h> ve \<float.h> dosyalarını içerir, sayısal sınırları veya belirli bir türdeki bir değişkenin tutabileceği minimum ve maksimum değerleri tanımlar. Bu minimum ve maksimum değerlerin, ANSI C ile aynı veri gösterimini kullanan herhangi bir C++ derleyicisine taşınabilir olması garanti edilir. \<limits.h> içerme dosyası, integral türleri için sayısal sınırları tanımlar ve \<float.h> için sayısal sınırları tanımlar. yüzen tipler .
 
 ## See also
 

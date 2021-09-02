@@ -8,71 +8,72 @@ ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ---
 # Built-in types (C++)
 
-Built-in types (also called *fundamental types*) are specified by the C++ language standard and are built into the compiler. Built-in types aren't defined in any header file. Built-in types are divided into three main categories: *integral*, *floating-point*, and *void*. Integral types represent whole numbers. Floating-point types can specify values that may have fractional parts. Most built-in types are treated as distinct types by the compiler. However, some types are *synonyms*, or treated as equivalent types by the compiler.
+Yerleşik türler (*fundamental types* olarak da adlandırılır) C++ dil standardı tarafından belirtilir ve derleyicide yerleşiktir. Yerleşik türler hiçbir başlık dosyasında tanımlanmamıştır. Yerleşik türler üç ana kategoriye ayrılır: *integral*, *floating-point* ve *void*. Integral türleri tam sayıları temsil eder. Floating-point türleri, kesirli parçalara sahip olabilecek değerleri belirtebilir. Çoğu yerleşik tür, derleyici tarafından farklı türler olarak değerlendirilir. Ancak, bazı türler eşanlamlıdır veya derleyici tarafından eşdeğer türler olarak değerlendirilir.
 
 ## Void type
 
-The [`void`](void-cpp.md) type describes an empty set of values. No variable of type **`void`** can be specified. The **`void`** type is used primarily to declare functions that return no values or to declare generic pointers to untyped or arbitrarily typed data. Any expression can be explicitly converted or cast to type **`void`**. However, such expressions are restricted to the following uses:
+[`void`](void-cpp.md) Tip değerlerin boş kümesini tanımlamaktadır. Hiçbir tür değişken **`void`** belirtilemez. **`void`** Tip hiçbir değer döndürmek işlevi bildirmek için veya türsüz veya keyfi olarak yazılan veriler genel olarak açıklanmaktadır ilan etmek öncelikle kullanılır. Herhangi bir ifade açıkça dönüştürülebilir veya type'a dönüştürülebilir **`void`**. Ancak, bu tür ifadeler aşağıdaki kullanımlarla sınırlıdır:
 
-- An expression statement. (For more information, see [Expressions](expressions-cpp.md).)
+- Bir ifade ifadesi. ( Daha fazla bilgi için, bkz. [Expressions](expressions-cpp.md) )
 
-- The left operand of the comma operator. (For more information, see [Comma Operator](comma-operator.md).)
+- Virgül operatörünün sol işleneni. ( Daha fazla bilgi için bkz. [Comma Operator](comma-operator.md) )
 
-- The second or third operand of the conditional operator (`? :`). (For more information, see [Expressions with the Conditional Operator](conditional-operator-q.md).)
+- Koşul operatörünün (`? :`) ikinci veya üçüncü işleneni. ( Daha fazla bilgi için bkz. [Expressions with the Conditional Operator](conditional-operator-q.md) )
 
 ## std::nullptr_t
 
-The keyword **`nullptr`** is a null-pointer constant of type `std::nullptr_t`, which is convertible to any raw pointer type. For more information, see [`nullptr`](nullptr.md).
+Anahtar sözcük **`nullptr`**, `std::nullptr_t` herhangi bir ham işaretçi türüne dönüştürülebilen , türünde bir boş işaretçi sabitidir . Daha fazla bilgi için bkz [`nullptr`](nullptr.md).
 
 ## Boolean type
 
-The [`bool`](bool-cpp.md) type can have values [`true`](../cpp/true-cpp.md) and [`false`](../cpp/false-cpp.md). The size of the **`bool`** type is implementation-specific. See [Sizes of built-in types](#sizes-of-built-in-types) for Microsoft-specific implementation details.
+[`bool`](bool-cpp.md) Tip değerlere sahip olabilir [`true`](true-cpp.md) ve [`false`](false-cpp.md). Türün boyutu **`bool`** uygulamaya özeldir. Microsoft'a özgü uygulama ayrıntıları için [Sizes of built-in types](#sizes-of-built-in-types) bakın.
 
 ## Character types
+> Düzeltme Gerekli
 
-The **`char`** type is a character representation type that efficiently encodes members of the basic execution character set. The C++ compiler treats variables of type **`char`**, **`signed char`**, and **`unsigned char`** as having different types.
+**`char`** Türü etkin bir temel uygulama karakter kümesinin üyeleri kodlayan bir karakter gösterimi türüdür. Çeşidi C ++ derleyici davranır değişkenler **`char`**, **`signed char`** ve **`unsigned char`** farklı türde olan.
 
-**Microsoft-specific**: Variables of type **`char`** are promoted to **`int`** as if from type **`signed char`** by default, unless the [`/J`](../build/reference/j-default-char-type-is-unsigned.md) compilation option is used. In this case, they're treated as type **`unsigned char`** and are promoted to **`int`** without sign extension.
+**Microsoft-specific**: Derleme seçeneği kullanılmadığı sürece, tür değişkenleri varsayılan olarak türden türe **`char`** yükseltilir. Bu durumda, tür olarak kabul edilirler ve işaret uzantısı olmadan terfi ettirilirler.int **`signed char`** [`/J`](../build/reference/j-default-char-type-is-unsigned.md) **`unsigned char`** **`int`**
 
-A variable of type **`wchar_t`** is a wide-character or multibyte character type. Use the **`L`** prefix before a character or string literal to specify the wide-character type.
+Bir tür değişkeni, **`wchar_t`** geniş karakterli veya çok baytlı bir karakter türüdür. **`L`** Geniş karakter türünü belirtmek için bir karakterden veya dize değişmez değerinden önceki öneki kullanın.
 
-**Microsoft-specific**: By default, **`wchar_t`** is a native type, but you can use [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) to make **`wchar_t`** a typedef for **`unsigned short`**. The **`__wchar_t`** type is a Microsoft-specific synonym for the native **`wchar_t`** type.
+**Microsoft-specific**: Varsayılan olarak, **`wchar_t`** yerel bir türdür, ancak için typedef [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) yapmak **`wchar_t`** için kullanabilirsiniz **`unsigned short`**. **`__wchar_t`** Tip yerli bir Microsoft özgü eşanlamlısıdır wchar_ttürü.
 
-The **`char8_t`** type is used for UTF-8 character representation. It has the same representation as **`unsigned char`**, but is treated as a distinct type by the compiler. The **`char8_t`** type is new in C++20. **Microsoft-specific**: use of **`char8_t`**  requires the [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) compiler option.
+**`char8_t`** Tipi UTF-8 karakter gösterimi için kullanılır. İle aynı temsile sahiptir **`unsigned char`**, ancak derleyici tarafından ayrı bir tür olarak kabul edilir. **`char8_t`** Tip 20 C ++ yenidir. **Microsoft-specific**: kullanımı derleyici seçeneğini **`char8_t`** gerektirir [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md).
 
-The **`char16_t`** type is used for UTF-16 character representation. It must be large enough to represent any UTF-16 code unit. It's treated as a distinct type by the compiler.
+**`char16_t`** Tipi UTF-16 karakter gösterimi için kullanılır. Herhangi bir UTF-16 kod birimini temsil edecek kadar büyük olmalıdır. Derleyici tarafından ayrı bir tür olarak kabul edilir.
 
-The **`char32_t`** type is used for UTF-32 character representation. It must be large enough to represent any UTF-32 code unit. It's treated as a distinct type by the compiler.
+**`char32_t`** Tipi UTF-32 karakter gösterimi için kullanılır. Herhangi bir UTF-32 kod birimini temsil edecek kadar büyük olmalıdır. Derleyici tarafından ayrı bir tür olarak kabul edilir.
 
 ## Floating-point types
 
-Floating-point types use an IEEE-754 representation to provide an approximation of fractional values over a wide range of magnitudes. The following table lists the floating-point types in C++ and the comparative restrictions on floating-point type sizes. These restrictions are mandated by the C++ standard and are independent of the Microsoft implementation. The absolute size of built-in floating-point types isn't specified in the standard.
+Kayan nokta türleri, çok çeşitli büyüklüklerde kesirli değerlerin yaklaşıklığını sağlamak için bir IEEE-754 gösterimi kullanır. Aşağıdaki tabloda, C++'daki kayan nokta türleri ve kayan nokta türü boyutlarındaki karşılaştırmalı kısıtlamalar listelenmektedir. Bu kısıtlamalar, C++ standardı tarafından zorunlu kılınmıştır ve Microsoft uygulamasından bağımsızdır. Yerleşik kayan nokta türlerinin mutlak boyutu standartta belirtilmemiştir.
 
 | Type | Contents |
 |--|--|
-| **`float`** | Type **`float`** is the smallest floating point type in C++. |
-| **`double`** | Type **`double`** is a floating point type that is larger than or equal to type **`float`**, but shorter than or equal to the size of type **`long double`**. |
-| **`long double`** | Type **`long double`** is a floating point type that is larger than or equal to type **`double`**. |
+| **`float`** | Type **`float`**, C++'daki en küçük kayan nokta türüdür. |
+| **`double`** | Tür **`double`**, türe eşit veya daha büyük **`float`**, ancak türün boyutuna eşit veya daha kısa olan bir kayan nokta türüdür **`long double`**. |
+| **`long double`** | Type **`long double`**, type 'dan büyük veya eşit olan bir kayan nokta türüdür **`double`**. |
 
-**Microsoft-specific**: The representation of **`long double`** and **`double`** is identical. However, **`long double`** and **`double`** are treated as distinct types by the compiler. The Microsoft C++ compiler uses the 4- and 8-byte IEEE-754 floating-point representations. For more information, see [IEEE floating-point representation](../build/ieee-floating-point-representation.md).
+**Microsoft-specific**: Temsil **`long double`** eve **`double`** aynıdır. Ancak **`long double`** ve **`double`** derleyici tarafından farklı türler olarak kabul edilir. Microsoft C++ derleyicisi, 4 ve 8 baytlık IEEE-754 kayan nokta temsillerini kullanır. Daha fazla bilgi için bkz. [IEEE floating-point representation](../build/ieee-floating-point-representation.md).
 
 ## Integer types
 
-The **`int`** type is the default basic integer type. It can represent all of the whole numbers over an implementation-specific range.
+**`int`** Tipi, varsayılan temel tamsayı türüdür. Uygulamaya özel bir aralıktaki tüm sayıları temsil edebilir.
 
-A *signed* integer representation is one that can hold both positive and negative values. It's used by default, or when the **`signed`** modifier keyword is present. The **`unsigned`** modifier keyword specifies an *unsigned* representation that can only hold non-negative values.
+Bir imzalı tamsayı temsil pozitif ve negatif değerler hem tutabilir biridir. Varsayılan olarak veya signeddeğiştirici anahtar sözcüğü mevcut olduğunda kullanılır . unsignedDeğiştirici anahtar kelime belirtir bir imzasız sadece negatif olmayan değerler tutabilir gösterimi.
 
-A size modifier specifies the width in bits of the integer representation used. The language supports **`short`**, **`long`**, and **`long long`** modifiers. A **`short`** type must be at least 16 bits wide. A **`long`** type must be at least 32 bits wide. A **`long long`** type must be at least 64 bits wide. The standard specifies a size relationship between the integral types:
+Boyut değiştirici, kullanılan tamsayı gösteriminin bit cinsinden genişliğini belirtir. Dil short, long, ve long longdeğiştiricileri destekler . Bir shorttür en az 16 bit genişliğinde olmalıdır. Bir longtür en az 32 bit genişliğinde olmalıdır. Bir long longtür en az 64 bit genişliğinde olmalıdır. Standart, integral türleri arasında bir boyut ilişkisi belirtir:
 
 `1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long)`
 
-An implementation must maintain both the minimum size requirements and the size relationship for each type. However, the actual sizes can and do vary between implementations. See [Sizes of built-in types](#sizes-of-built-in-types) for Microsoft-specific implementation details.
+Bir uygulama, her tür için hem minimum boyut gereksinimlerini hem de boyut ilişkisini sağlamalıdır. Ancak, gerçek boyutlar uygulamalar arasında değişebilir ve değişebilir. Microsoft'a özgü uygulama ayrıntıları için Yerleşik türlerin boyutlarına bakın .
 
-The **`int`** keyword may be omitted when **`signed`**, **`unsigned`**, or size modifiers are specified. The modifiers and **`int`** type, if present, may appear in any order. For example, **`short unsigned`** and **`unsigned int short`** refer to the same type.
+**`int`** Anahtar sözcük ihmal edilebilir **`signed`**, **`unsigned`** veya boyuta tadil belirtilmektedir. Değiştiriciler ve **`int`** varsa tür, herhangi bir sırada görünebilir. Örneğin, **`short unsigned`** ve **`unsigned int short`** aynı türe bakın.
 
 ### Integer type synonyms
 
-The following groups of types are considered synonyms by the compiler:
+Aşağıdaki tür grupları derleyici tarafından eş anlamlı olarak kabul edilir:
 
 - **`short`**, **`short int`**, **`signed short`**, **`signed short int`**
 
@@ -90,11 +91,11 @@ The following groups of types are considered synonyms by the compiler:
 
 - **`unsigned long long`**, **`unsigned long long int`**
 
-**Microsoft-specific** integer types include the specific-width **`__int8`**, **`__int16`**, **`__int32`**, and **`__int64`** types. These types may use the **`signed`** and **`unsigned`** modifiers. The **`__int8`** data type is synonymous with type **`char`**, **`__int16`** is synonymous with type **`short`**, **`__int32`** is synonymous with type **`int`**, and **`__int64`** is synonymous with type **`long long`**.
+**Microsoft-specific** türleri tam sayı belirli bir genişliği vardır **`__int8`**, **`__int16`**, **`__int32`** ve **`__int64`** türleri. Bu türler **`signed`** ve **`unsigned`** değiştiricileri kullanabilir . **`__int8`** Veri türü türü ile eş anlamlıdır **`char`**, **`__int16`** türü ile eş anlamlıdır **`short`**, **`__int32`** türü ile eşanlamlıdır **`char`** ve **`__int64`** türü ile eş anlamlıdır **`long long`**.
 
 ## Sizes of built-in types
 
-Most built-in types have implementation-defined sizes. The following table lists the amount of storage required for built-in types in Microsoft C++. In particular, **`long`** is 4 bytes even on 64-bit operating systems.
+Çoğu yerleşik tür, uygulama tanımlı boyutlara sahiptir. Aşağıdaki tablo, Microsoft C++'daki yerleşik türler için gereken depolama miktarını listeler. Özellikle **`long`** 64 bit işletim sistemlerinde bile 4 bayttır.
 
 | Type | Size |
 |--|--|

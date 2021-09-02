@@ -7,9 +7,9 @@ ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 ---
 # Transfers of Control
 
-You can use the **`goto`** statement or a **`case`** label in a **`switch`** statement to specify a program that branches past an initializer. Such code is illegal unless the declaration that contains the initializer is in a block enclosed by the block in which the jump statement occurs.
+Bir başlatıcıyı geçen bir programı belirtmek için **`goto`** ifadeyi veya bir **`case`** ifadedeki etiketi kullanabilirsiniz **`switch`**. Başlatıcıyı içeren bildirim, jump ifadesinin gerçekleştiği blok tarafından çevrelenen bir blokta olmadığı sürece, bu tür kodlar geçersizdir.
 
-The following example shows a loop that declares and initializes the objects `total`, `ch`, and `i`. There is also an erroneous **`goto`** statement that transfers control past an initializer.
+Aşağıdaki örnek total, ch, ve nesnelerini bildiren ve başlatan bir döngüyü gösterir i. **`goto`** Denetimi bir başlatıcıdan sonra aktaran hatalı bir ifade de vardır .
 
 ```cpp
 // transfers_of_control.cpp
@@ -41,6 +41,6 @@ int main()
 }
 ```
 
-In the preceding example, the **`goto`** statement tries to transfer control past the initialization of `i`. However, if `i` were declared but not initialized, the transfer would be legal.
+Önceki örnekte, **`goto`** deyim, kontrolün başlatılmasından sonraki denetimi aktarmaya çalışır `i`. Ancak, `i` beyan edilmiş ancak başlatılmamışsa, transfer yasal olacaktır.
 
-The objects `total` and `ch`, declared in the block that serves as the *statement* of the **`while`** statement, are destroyed when that block is exited using the **`break`** statement.
+Nesneleri `total` ve `ch` olarak hizmet blok ilan açıklamada ait **`while`** blok kullanılarak çıkıldığı zaman tablosunda, imha edilir **`break`** deyimi.

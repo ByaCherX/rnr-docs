@@ -7,15 +7,15 @@ ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
 ---
 # Comments (C++)
 
-A comment is text that the compiler ignores but that is useful for programmers. Comments are normally used to annotate code for future reference. The compiler treats them as white space. You can use comments in testing to make certain lines of code inactive; however, `#if`/`#endif` preprocessor directives work better for this because you can surround code that contains comments but you cannot nest comments.
+Yorum, derleyicinin yok saydığı ancak programcılar için yararlı olan metindir. Yorumlar normalde ileride başvurmak üzere koda açıklama eklemek için kullanılır. Derleyici bunları beyaz boşluk olarak değerlendirir. Belirli kod satırlarını devre dışı bırakmak için test sırasında yorumları kullanabilirsiniz; ancak ``#if``/ ``#endif`` önişlemci yönergeleri bunun için daha iyi çalışır çünkü yorumları içeren kodu çevreleyebilirsiniz ancak yorumları iç içe geçiremezsiniz.
 
-A C++ comment is written in one of the following ways:
+Bir C++ yorumu aşağıdaki yollardan biriyle yazılır:
 
-- The `/*` (slash, asterisk) characters, followed by any sequence of characters (including new lines), followed by the `*/` characters. This syntax is the same as ANSI C.
+- ``/*`` Ardından (yeni hatları da dahil olmak üzere) herhangi bir karakter dizisi, ardından (çizgi, yıldız) karakterler, ``*/`` karakter. Bu sözdizimi ANSI C ile aynıdır.
 
-- The `//` (two slashes) characters, followed by any sequence of characters. A new line not immediately preceded by a backslash terminates this form of comment. Therefore, it is commonly called a "single-line comment."
+- ``//`` (İki eğik çizgi) karakterleri, herhangi bir karakter dizisi içerir. Hemen önünde bir ters eğik çizgi olmayan yeni bir satır, bu yorum biçimini sonlandırır. Bu nedenle, genellikle "tek satırlık yorum" olarak adlandırılır.
 
-The comment characters (`/*`, `*/`, and `//`) have no special meaning within a character constant, string literal, or comment. Comments using the first syntax, therefore, cannot be nested.
+Yorum karakterlerinin ( `/*`, `*/`, ve `//`) bir karakter sabiti, dize değişmezi veya yorum içinde özel bir anlamı yoktur. Bu nedenle, ilk sözdizimini kullanan yorumlar iç içe geçirilemez.
 
 ## See also
 

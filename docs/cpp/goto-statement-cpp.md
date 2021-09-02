@@ -8,7 +8,7 @@ ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
 ---
 # goto Statement (C++)
 
-The **`goto`** statement unconditionally transfers control to the statement labeled by the specified identifier.
+**`goto`** İfadesi koşulsuz belirtilen tanımlayıcı tarafından etiketli açıklamaya kontrolünü aktarır.İfadesi koşulsuz belirtilen tanımlayıcı tarafından etiketli açıklamaya kontrolünü aktarır.
 
 ## Syntax
 
@@ -18,11 +18,11 @@ goto identifier;
 
 ## Remarks
 
-The labeled statement designated by `identifier` must be in the current function. All `identifier` names are members of an internal namespace and therefore do not interfere with other identifiers.
+tarafından belirtilen etiketli ifade `identifier`, geçerli işlevde olmalıdır. Tüm `identifier` adlar dahili bir ad alanının üyeleridir ve bu nedenle diğer tanımlayıcılarla etkileşime girmez.
 
-A statement label is meaningful only to a **`goto`** statement; otherwise, statement labels are ignored. Labels cannot be redeclared.
+Bir deyim etiketi yalnızca bir **`goto`** deyim için anlamlıdır ; aksi takdirde, ifade etiketleri yoksayılır. Etiketler yeniden bildirilemez.
 
-A **`goto`** statement is not allowed to transfer control to a location that skips over the initialization of any variable that is in scope in that location. The following example raises C2362:
+Bir **`goto`** ifadenin, o konumdaki kapsamdaki herhangi bir değişkenin başlatılmasını atlayan bir konuma denetimi aktarmasına izin verilmez. Aşağıdaki örnek, C2362'yi yükseltir:
 
 ```cpp
 int goto_fn(bool b)
@@ -41,13 +41,13 @@ exit:
 }
 ```
 
-It is good programming style to use the **`break`**, **`continue`**, and **`return`** statements instead of the **`goto`** statement whenever possible. However, because the **`break`** statement exits from only one level of a loop, you might have to use a **`goto`** statement to exit a deeply nested loop.
+İyi programlama kullanmak tarzıdır **`break`**, **`continue`**, and **`return`** yerine ifadeleri **`goto`** her açıklamada mümkün. Ancak, **`break`** ifade bir döngünün yalnızca bir düzeyinden **`goto`** çıktığı için, derinlemesine iç içe geçmiş bir döngüden çıkmak için bir ifade kullanmanız gerekebilir .
 
-For more information about labels and the **`goto`** statement, see [Labeled Statements](../cpp/labeled-statements.md).
+Etiketler ve **`goto`** ifade hakkında daha fazla bilgi için bkz. [Labeled Statements](../cpp/labeled-statements.md).
 
 ## Example
 
-In this example, a **`goto`** statement transfers control to the point labeled `stop` when `i` equals 3.
+Bu örnekte, bir **`goto`** ifade , kontrolü 3'e eşit `stop` olduğunda etiketlenen noktaya aktarır `i`.
 
 ```cpp
 // goto_statement.cpp

@@ -6,23 +6,23 @@ helpviewer_keywords: ["header files [C++]"]
 ---
 # Header files (C++)
 
-The names of program elements such as variables, functions, classes, and so on must be declared before they can be used. For example, you can't just write `x = 42` without first declaring 'x'.
+Değişkenler, işlevler, sınıflar vb. gibi program öğelerinin adları, kullanılmadan önce bildirilmelidir. Örneğin, `x = 42` önce 'x' bildirmeden yazamazsınız.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
-The declaration tells the compiler whether the element is an **`int`**, a **`double`**, a **function**, a **`class`** or some other thing.  Furthermore, each name must be declared (directly or indirectly) in every .cpp file in which it is used. When you compile a program, each .cpp file is compiled independently into a compilation unit. The compiler has no knowledge of what names are declared in other compilation units. That means that if you define a class or function or global variable, you must provide a declaration of that thing in each additional .cpp file that uses it. Each declaration of that thing must be exactly identical in all files. A slight inconsistency will cause errors, or unintended behavior, when the linker attempts to merge all the compilation units into a single program.
+Bildirim, derleyiciye öğenin bir **`int`**, a **`double`**, a **function**, a **`class`** veya başka bir şey olup olmadığını söyler . Ayrıca, her ad, kullanıldığı her .cpp dosyasında (doğrudan veya dolaylı olarak) bildirilmelidir. Bir programı derlerken, her .cpp dosyası bağımsız olarak bir derleme biriminde derlenir. Derleyici, diğer derleme birimlerinde hangi adların bildirildiğini bilmiyor. Bu, bir sınıf, işlev veya genel değişken tanımlarsanız, onu kullanan her ek .cpp dosyasında o şeyin bir bildirimini sağlamanız gerektiği anlamına gelir. Bu şeyin her bildirimi tüm dosyalarda tam olarak aynı olmalıdır. Bağlayıcı tüm derleme birimlerini tek bir programda birleştirmeye çalıştığında, hafif bir tutarsızlık hatalara veya istenmeyen davranışlara neden olur.
 
-To minimize the potential for errors, C++ has adopted the convention of using *header files* to contain declarations. You make the declarations in a header file, then use the #include directive in every .cpp file or other header file that requires that declaration. The #include directive inserts a copy of the header file directly into the .cpp file prior to compilation.
+Hata olasılığını en aza indirmek için C++, bildirimleri içermek için *header files* kullanma kuralını benimsemiştir . Bildirimleri bir başlık dosyasında yaparsınız, ardından her .cpp dosyasında veya bu bildirimi gerektiren diğer başlık dosyasında #include yönergesini kullanırsınız. #include yönergesi, derlemeden önce başlık dosyasının bir kopyasını doğrudan .cpp dosyasına ekler.
 
 > [!NOTE]
-> In Visual Studio 2019, the C++20 *modules* feature is introduced as an improvement and eventual replacement for header files. For more information, see [Overview of modules in C++](modules-cpp.md).
+> Visual Studio 2019'da, C++20 modülleri özelliği, başlık dosyalarının bir iyileştirmesi ve nihai olarak değiştirilmesi olarak sunulmuştur. Daha fazla bilgi için bkz. [Overview of modules in C++](modules-cpp.md).
 
 ## Example
 
-The following example shows a common way to declare a class and then use it in a different source file. We'll start with the header file, `my_class.h`. It contains a class definition, but note that the definition is incomplete; the member function `do_something` is not defined:
+Aşağıdaki örnek, bir sınıf bildirmenin ve ardından onu farklı bir kaynak dosyada kullanmanın yaygın bir yolunu gösterir. Başlık dosyasıyla başlayacağız, `my_class.h`. Bir sınıf tanımı içerir, ancak tanımın eksik olduğuna dikkat edin; üye işlevi `do_something` tanımlı değil:
 
 ```cpp
 // my_class.h
@@ -37,9 +37,9 @@ namespace N
 }
 ```
 
-Next, create an implementation file (typically with a .cpp or similar extension). We'll call the file my_class.cpp and provide a definition for the member declaration. We add an `#include` directive for "my_class.h" file in order to have the my_class declaration inserted at this point in the .cpp file, and we include `<iostream>` to pull in the declaration for `std::cout`. Note that quotes are used for header files in the same directory as the source file, and angle brackets are used for standard library headers. Also, many standard library headers do not have .h or any other file extension.
+Ardından, bir uygulama dosyası oluşturun (genellikle .cpp veya benzeri bir uzantıya sahip). my_class.cpp dosyasını arayacağız ve üye bildirimi için bir tanım sağlayacağız. `#include` Bu noktada my_class bildiriminin .cpp dosyasına eklenmesi için "my_class.h" dosyasına bir yönerge ekliyoruz ve .cpp dosyasına `<iostream>` çekmeyi dahil ediyoruz `std::cout`. Kaynak dosyayla aynı dizindeki başlık dosyaları için tırnak işaretleri kullanıldığını ve standart kitaplık başlıkları için açılı ayraçların kullanıldığını unutmayın. Ayrıca, birçok standart kitaplık başlığında .h veya başka bir dosya uzantısı yoktur.
 
-In the implementation file, we can optionally use a **`using`** statement to avoid having to qualify every mention of "my_class" or "cout" with "N::" or "std::".  Don't put **`using`** statements in your header files!
+Uygulama dosyasında, **`using`** "my_class" veya "cout" kelimelerinin her sözünü "N::" veya "std::" ile nitelemek zorunda kalmamak için isteğe bağlı olarak bir ifade kullanabiliriz. **`using`** Başlık dosyalarınıza ifadeler koymayın!
 
 ```cpp
 // my_class.cpp
@@ -55,7 +55,7 @@ void my_class::do_something()
 }
 ```
 
-Now we can use `my_class` in another .cpp file. We #include the header file so that the compiler pulls in the declaration. All the compiler needs to know is that my_class is a class that has a public member function called `do_something()`.
+Artık `my_class` başka bir .cpp dosyasında kullanabiliriz. Derleyicinin bildirimi çekmesi için başlık dosyasını #include ediyoruz. Derleyicinin bilmesi gereken tek şey, my_class öğesinin, adlı genel üye işlevine sahip bir sınıf olmasıdır `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -71,11 +71,11 @@ int main()
 }
 ```
 
-After the compiler finishes compiling each .cpp file into .obj files, it passes the .obj files to the linker. When the linker merges the object files it finds exactly one definition for my_class; it is in the .obj file produced for my_class.cpp, and the build succeeds.
+Derleyici her .cpp dosyasını .obj dosyalarına derlemeyi bitirdikten sonra, .obj dosyalarını bağlayıcıya iletir. Bağlayıcı nesne dosyalarını birleştirdiğinde, my_class için tam olarak bir tanım bulur; my_class.cpp için üretilen .obj dosyasındadır ve derleme başarılı olur.
 
 ## Include guards
 
-Typically, header files have an *include guard* or a `#pragma once` directive to ensure that they are not inserted multiple times into a single .cpp file.
+Tipik olarak, başlık dosyalarında birden çok kez tek bir .cpp dosyasına eklenmemelerini sağlamak için bir içerme koruması veya `#pragma once` yönergesi bulunur.
 
 ```cpp
 // my_class.h
@@ -96,21 +96,20 @@ namespace N
 
 ## What to put in a header file
 
-Because a header file might potentially be included by multiple files, it cannot contain definitions that might produce multiple definitions of the same name. The following are not allowed, or are considered very bad practice:
+Bir başlık dosyası potansiyel olarak birden çok dosya tarafından içerilebileceğinden, aynı ada sahip birden çok tanım üretebilecek tanımları içeremez. Aşağıdakilere izin verilmez veya çok kötü uygulama olarak kabul edilir:
 
-- built-in type definitions at namespace or global scope
-- non-inline function definitions
-- non-const variable definitions
-- aggregate definitions
-- unnamed namespaces
-- using directives
+- ad alanında (namespace) veya genel kapsamda (global scope) yerleşik tür tanımlarında
+- satır içi olmayan işlev tanımları (non-inline function)
+- const olmayan değişken tanımları (non-const variable)
+- toplu tanımlar (aggregate definitions)
+- adsız ad alanları (unnamed namespaces)
+- direktifleri kullanmak
 
-Use of the **`using`** directive will not necessarily cause an error, but can potentially cause a problem because it brings the namespace into scope in every .cpp file that directly or indirectly includes that header.
+Kullanımı **`using`** yönergesi mutlaka hataya neden olmaz, ancak can potansiyel bir sorun nedeni doğrudan ya da dolaylı olarak bu başlık içerdiğini her .cpp dosyasında kapsam içine ad getiriyor çünkü.
 
 ## Sample header file
 
-The following example shows the various kinds of declarations and definitions that are allowed in a header file:
-
+Aşağıdaki örnek, bir başlık dosyasında izin verilen çeşitli türde bildirimleri ve tanımları gösterir:
 ```cpp
 // sample.h
 #pragma once

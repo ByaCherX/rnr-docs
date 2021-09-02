@@ -14,23 +14,23 @@ ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 
 ## Remarks
 
-The logical OR operator (**`||`**) returns the boolean value **`true`** if either or both operands is **`true`** and returns **`false`** otherwise. The operands are implicitly converted to type **`bool`** before evaluation, and the result is of type **`bool`**. Logical OR has left-to-right associativity.
+Mantıksal VEYA operatörü (**`||`**), **`true`** işlenenlerden biri veya her ikisi ise boole değerini **`true`** döndürür ve **`false`** aksi halde döndürür . İşlenenler, **`bool`** değerlendirmeden önce örtük olarak type'a dönüştürülür ve sonuç type olur **`bool`**. Mantıksal VEYA soldan sağa ilişkilendirilebilirliğe sahiptir.
 
-The operands to the logical OR operator don't have to have the same type, but they must be of boolean, integral, or pointer type. The operands are commonly relational or equality expressions.
+Mantıksal VEYA operatörünün işlenenlerinin aynı türde olması gerekmez, ancak boolean, integral veya işaretçi türünde olmaları gerekir. İşlenenler genellikle ilişkisel veya eşitlik ifadeleridir.
 
-The first operand is completely evaluated and all side effects are completed before continuing evaluation of the logical OR expression.
+İlk işlenen tamamen değerlendirilir ve mantıksal OR ifadesinin değerlendirilmesine devam edilmeden önce tüm yan etkiler tamamlanır.
 
-The second operand is evaluated only if the first operand evaluates to **`false`**, because evaluation isn't needed when the logical OR expression is **`true`**. It's known as *short-circuit* evaluation.
+**`false`** Mantıksal VEYA ifadesi olduğunda değerlendirme gerekli olmadığından, ikinci işlenen yalnızca ilk işlenen olarak değerlendirilirse değerlendirilir **`true`**. Kısa devre değerlendirmesi olarak bilinir .
 
 ```cpp
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-In the above example, if `x` is equal to either `w`, `y`, or `z`, the second argument to the `printf` function evaluates to **`true`**, which is then promoted to an integer, and the value 1 is printed. Otherwise, it evaluates to **`false`** and the value 0 is printed. As soon as one of the conditions evaluates to **`true`**, evaluation stops.
+Yukarıdaki örnekte, `x` eşitse `w`, `y`, or `z`, printfişlevin ikinci argümanı olarak değerlendirilir **`true`**, bu daha sonra bir tamsayıya yükseltilir ve 1 değeri yazdırılır. Aksi takdirde, olarak değerlendirilir **`false`**ve 0 değeri yazdırılır. Koşullardan biri olarak değerlendirilir **`true`** değerlendirmez değerlendirme durur.
 
 ## Operator keyword for &#124;&#124;
 
-C++ specifies **`or`** as an alternative spelling for **`||`**. In C, the alternative spelling is provided as a macro in the \<iso646.h> header. In C++, the alternative spelling is a keyword; use of \<iso646.h> or the C++ equivalent \<ciso646> is deprecated. In Microsoft C++, the [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compiler option is required to enable the alternative spelling.
+C++ **`or`** için alternatif bir yazım belirtir **`||`**. C'de alternatif yazım, \<iso646.h> başlığında bir makro olarak sağlanır. C++'da alternatif yazım bir anahtar kelimedir; \<iso646.h> veya C++ eşdeğeri \<ciso646> kullanımı kullanımdan kaldırılmıştır.
 
 ## Example
 

@@ -18,22 +18,22 @@ private base-class
 
 ## Remarks
 
-When preceding a list of class members, the **`private`** keyword specifies that those members are accessible only from member functions and friends of the class. This applies to all members declared up to the next access specifier or the end of the class.
+Bir sınıf üyeleri listesinden önce privateanahtar sözcük, bu üyelere yalnızca sınıfın üye işlevlerinden ve arkadaşlarından erişilebilir olduğunu belirtir. Bu, bir sonraki erişim belirtecine veya sınıfın sonuna kadar bildirilen tüm üyeler için geçerlidir.
 
-When preceding the name of a base class, the **`private`** keyword specifies that the public and protected members of the base class are private members of the derived class.
+Temel sınıfın adından önce privateanahtar sözcük , temel sınıfın genel ve korumalı üyelerinin türetilmiş sınıfın özel üyeleri olduğunu belirtir.
 
-Default access of members in a class is private. Default access of members in a structure or union is public.
+Bir sınıftaki üyelerin varsayılan erişimi özeldir. Bir yapı veya birlik içindeki üyelerin varsayılan erişimi herkese açıktır.
 
-Default access of a base class is private for classes and public for structures. Unions cannot have base classes.
+Bir temel sınıfın varsayılan erişimi, sınıflar için özel ve yapılar için geneldir. Sendikaların temel sınıfları olamaz.
 
-For related information, see [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [protected](../cpp/protected-cpp.md), and the member-access table in [Controlling Access to Class Members](member-access-control-cpp.md).
+İlgili bilgiler için, Sınıf Üyelerine Erişimi Kontrol Etme bölümündeki friend , public , protected ve üye erişim tablosuna bakın .
 
 ## /clr Specific
 
-In CLR types, the C++ access specifier keywords (**`public`**, **`private`**, and **`protected`**) can affect the visibility of types and methods with regard to assemblies. For more information, see [Member Access Control](member-access-control-cpp.md).
+CLR türlerinde, C++ erişim belirteci anahtar sözcükleri (**`public`**, **`private`**, and **`protected`**), derlemelerle ilgili türlerin ve yöntemlerin görünürlüğünü etkileyebilir. Daha fazla bilgi için, bkz. [Member Access Control](member-access-control-cpp.md).
 
 > [!NOTE]
-> Files compiled with [/LN](../build/reference/ln-create-msil-module.md) are not affected by this behavior. In this case, all managed classes (either public or private) will be visible.
+>  [/LN](../build/reference/ln-create-msil-module.md) ile derlenen dosyalar bu davranıştan etkilenmez. Bu durumda, yönetilen tüm sınıflar (public veya private) görünür olacaktır.
 
 ## END /clr Specific
 

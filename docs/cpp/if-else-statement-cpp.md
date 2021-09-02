@@ -8,14 +8,14 @@ ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ---
 # if-else statement (C++)
 
-An if-else statement controls conditional branching. Statements in the *`if-branch`* are executed only if the *`condition`* evaluates to a non-zero value (or **`true`**). If the value of *`condition`* is nonzero, the following statement gets executed, and the statement following the optional **`else`** gets skipped. Otherwise, the following statement gets skipped, and if there's an **`else`** then the statement following the **`else`** gets executed.
+Bir if-else ifadesi koşullu dallanmayı kontrol eder. içindeki ifadeler, *`if-branch`* yalnızca *`condition`* sıfırdan farklı bir değer (veya **`true`**) olarak değerlendirilirse yürütülür . Değeri *`condition`* sıfır değilse, aşağıdaki ifade yürütülür ve isteğe bağlı ifadeyi izleyen ifade **`else`** atlanır. Aksi takdirde, aşağıdaki deyim Atlanan alır ve bir varsa **`else`** aşağıdaki komutla elseçalıştırılmaktadır.
 
 *`condition`* expressions that evaluate to non-zero are:
 
 - **`true`**
-- a non-null pointer,
-- any non-zero arithmetic value, or
-- a class type that defines an unambiguous conversion to an arithmetic, boolean, or pointer type. (For information about conversions, see [Standard Conversions](../cpp/standard-conversions.md).)
+- boş olmayan bir işaretçi (pointer)
+- sıfır olmayan herhangi bir aritmetik değer veya
+- aritmetik, boole veya işaretçi türüne açık bir dönüştürmeyi tanımlayan bir sınıf türü. (Dönüşümler hakkında bilgi için bkz.  [Standard Conversions](../cpp/standard-conversions.md).)
 
 ## Syntax
 
@@ -55,9 +55,9 @@ An if-else statement controls conditional branching. Statements in the *`if-bran
 
 ## if-else statements
 
-In all forms of the **`if`** statement, *`condition`*, which can have any value except a structure, is evaluated, including all side effects. Control passes from the **`if`** statement to the next statement in the program unless the executed *`if-branch`* or *`else-branch`* contains a [`break`](../cpp/break-statement-cpp.md), [`continue`](../cpp/continue-statement-cpp.md), or [`goto`](../cpp/goto-statement-cpp.md).
+Bir yapı dışında herhangi bir değere sahip olabilen **`if`** ifadenin tüm formlarında, *`condition`* tüm yan etkileri de dahil olmak üzere değerlendirilir. **`if`** Yürütülen *`if-branch`* or *`else-branch`* bir[`break`](../cpp/break-statement-cpp.md), [`continue`](../cpp/continue-statement-cpp.md), veya içermediği sürece kontrol, deyimden programdaki bir sonraki deyime geçer [`goto`](../cpp/goto-statement-cpp.md).
 
-The **`else`** clause of an `if...else` statement is associated with the closest previous **`if`** statement in the same scope that doesn't have a corresponding **`else`** statement.
+**`else`** Bir fıkrasının `if...else` deyimi en yakın önceki ile ilişkili **`if`** karşılık gelen yok aynı kapsamda açıklamada **`else`** deyimi.
 
 ### Example
 
@@ -110,7 +110,7 @@ int main()
 
 ## <a name="if_with_init"></a> if statement with an initializer
 
-Starting in C++17, an **`if`** statement may also contain an *`init-statement`* expression that declares and initializes a named variable. Use this form of the if-statement when the variable is only needed within the scope of the if-statement. **Microsoft-specific**: This form is available starting in Visual Studio 2017 version 15.3, and requires at least the [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) compiler option.
+C++17'den başlayarak, **`if`** bir *`init-statement`* ifade, adlandırılmış bir değişkeni bildiren ve başlatan bir ifade de içerebilir. Değişkene yalnızca if-ifadesi kapsamında ihtiyaç duyulduğunda if-ifadesinin bu formunu kullanın. **Microsoft-specific**: Bu form, Visual Studio 2017 sürüm 15.3'ten itibaren kullanılabilir ve en azından [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) derleyici seçeneği gerektirir.
 
 ### Example
 
@@ -158,11 +158,11 @@ int main()
 
 ## <a name="if_constexpr"> if constexpr statements
 
-Starting in C++17, you can use an **`if constexpr`** statement in function templates to make compile-time branching decisions without having to resort to multiple function overloads. **Microsoft-specific**: This form is available starting in Visual Studio 2017 version 15.3, and requires at least the [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) compiler option.
+C++17'den başlayarak, **`if constexpr`** birden çok işlev aşırı yüklemesine başvurmak zorunda kalmadan derleme zamanı dallandırma kararları vermek için işlev şablonlarında bir ifade kullanabilirsiniz . **Microsoft-specific**: Bu form, Visual Studio 2017 sürüm 15.3'ten itibaren kullanılabilir ve en azından [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) derleyici seçeneği gerektirir.
 
 ### Example
 
-This example shows how you can write a single function that handles parameter unpacking. No zero-parameter overload is needed:
+Bu örnek, parametre paketini açmayı işleyen tek bir işlevi nasıl yazabileceğinizi gösterir. Sıfır parametreli aşırı yük gerekmez:
 
 ```cpp
 template <class T, class... Rest>

@@ -7,7 +7,7 @@ helpviewer_keywords: ["scope, scope resolution operator", "operators [C++], scop
 ---
 # Scope resolution operator: `::`
 
-The scope resolution operator **`::`** is used to identify and disambiguate identifiers used in different scopes. For more information about scope, see [Scope](../cpp/scope-visual-cpp.md).
+Kapsam çözümleme operatörü **`::`**, farklı kapsamlarda kullanılan tanımlayıcıları belirlemek ve belirsizliğini gidermek için kullanılır. Kapsam hakkında daha fazla bilgi için bkz. [Scope](../cpp/scope-visual-cpp.md).
 
 ## Syntax
 
@@ -33,11 +33,11 @@ The scope resolution operator **`::`** is used to identify and disambiguate iden
 
 ## Remarks
 
-The `identifier` can be a variable, a function, or an enumeration value.
+`identifier` Bir değişken, bir fonksiyon ya da bir numaralandırma bir değer olabilir.
 
 ## Use `::` for classes and namespaces
 
-The following example shows how the scope resolution operator is used with namespaces and classes:
+Aşağıdaki örnek, kapsam çözümleme operatörünün ad alanları ve sınıflarla nasıl kullanıldığını gösterir:
 
 ```cpp
 namespace NamespaceA{
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-A scope resolution operator without a scope qualifier refers to the global namespace.
+Kapsam niteleyicisi olmayan bir kapsam çözümleme işleci, genel ad alanına başvurur.
 
 ```cpp
 namespace NamespaceA{
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-You can use the scope resolution operator to identify a member of a **`namespace`**, or to identify a namespace that nominates the member’s namespace in a **`using`** directive. In the example below, you can use `NamespaceC` to qualify `ClassB`, even though `ClassB` was declared in namespace `NamespaceB`, because `NamespaceB` was nominated in `NamespaceC` by a **`using`** directive.
+Kapsam çözümleme operatörünü, bir üyeyi **`namespace`** tanımlamak veya üyenin ad alanını bir **`using`** yönergede aday gösteren bir ad alanını belirlemek için kullanabilirsiniz . Aşağıdaki örnekte, kullanabilirsiniz `NamespaceC` hak kazanmak için `ClassB` bile olsa, `ClassB` ad ilan edildi `NamespaceB`, çünkü `NamespaceB` içinde aday `NamespaceC` bir tarafından **`using`** yönerge.
 
 ```cpp
 namespace NamespaceB {
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-You can use chains of scope resolution operators. In the following example, `NamespaceD::NamespaceD1` identifies the nested namespace `NamespaceD1`, and `NamespaceE::ClassE::ClassE1` identifies the nested class `ClassE1`.
+Kapsam çözümleme operatörlerinin zincirlerini kullanabilirsiniz. Aşağıdaki örnekte, `NamespaceD::NamespaceD1` iç içe ad alanını `NamespaceD1` ve `NamespaceE::ClassE::ClassE1` iç içe geçmiş sınıfı tanımlar `ClassE1`.
 
 ```cpp
 namespace NamespaceD{
@@ -132,7 +132,7 @@ int main() {
 
 ## Use `::` for static members
 
-You must use the scope resolution operator to call static members of classes.
+Statik sınıf üyelerini çağırmak için kapsam çözümleme operatörünü kullanmalısınız.
 
 ```cpp
 class ClassG {
@@ -152,7 +152,7 @@ int main() {
 
 ## Use `::` for scoped enumerations
 
-The scoped resolution operator is also used with the values of a scoped enumeration [Enumeration declarations](../cpp/enumerations-cpp.md), as in the following example:
+Kapsamlı çözümleme operatörü, aşağıdaki örnekte olduğu gibi, kapsamlı bir numaralandırma [Enumeration declarations](../cpp/enumerations-cpp.md) bildirimlerinin değerleriyle de kullanılır :
 
 ```cpp
 enum class EnumA{

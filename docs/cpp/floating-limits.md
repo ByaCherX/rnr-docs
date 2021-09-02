@@ -9,7 +9,7 @@ ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 
 **Microsoft Specific**
 
-The following table lists the limits on the values of floating-point constants. These limits are also defined in the standard header file \<float.h>.
+Aşağıdaki tablo, kayan noktalı sabitlerin değerlerine ilişkin sınırları listeler. Bu sınırlar, standart başlık dosyası \<float.h> içinde de tanımlanır.
 
 ## Limits on Floating-Point Constants
 

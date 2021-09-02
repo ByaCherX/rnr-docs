@@ -7,7 +7,7 @@ ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
 ---
 # Member Access Control (C++)
 
-Access controls enable you to separate the [public](../cpp/public-cpp.md) interface of a class from the [private](../cpp/private-cpp.md) implementation details and the [protected](../cpp/protected-cpp.md) members that are only for use by derived classes. The access specifier applies to all members declared after it until the next access specifier is encountered.
+Erişim denetimleri, bir sınıfın [public](../cpp/public-cpp.md) arabirimini [private](../cpp/private-cpp.md) uygulama ayrıntılarından ve yalnızca türetilmiş sınıflar tarafından kullanılmak üzere [protected](../cpp/protected-cpp.md) üyelerden ayırmanıza olanak tanır. Erişim belirteci, bir sonraki erişim belirteci ile karşılaşılıncaya kadar kendisinden sonra bildirilen tüm üyeler için geçerlidir.
 
 ```cpp
 class Point
@@ -27,40 +27,40 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-The default access is **`private`** in a class, and **`public`** in a struct or union. Access specifiers in a class can be used any number of times in any order. The allocation of storage for objects of class types is implementation dependent, but members are guaranteed to be assigned successively higher memory addresses between access specifiers.
+Varsayılan erişim **`private`** bir sınıfta ve **`public`** bir yapı veya birleşimdedir. Bir sınıftaki erişim belirteçleri, herhangi bir sırada herhangi bir sayıda kullanılabilir. Sınıf türlerinin nesneleri için depolama tahsisi uygulamaya bağlıdır, ancak üyelere erişim belirteçleri arasında art arda daha yüksek bellek adresleri atanması garanti edilir.
 
 ## Member-Access Control
 
 |Type of Access|Meaning|
 |--------------------|-------------|
-|[private](../cpp/private-cpp.md)|Class members declared as **`private`** can be used only by member functions and friends (classes or functions) of the class.|
-|[protected](../cpp/protected-cpp.md)|Class members declared as **`protected`** can be used by member functions and friends (classes or functions) of the class. Additionally, they can be used by classes derived from the class.|
-|[public](../cpp/public-cpp.md)|Class members declared as **`public`** can be used by any function.|
+|[public](../cpp/public-cpp.md)|**`public`** Herhangi bir işlev tarafından kullanılabilecek şekilde bildirilen sınıf üyeleri .|
+|[private](../cpp/private-cpp.md)|Olarak bildirilen sınıf üyeleri **`private`**, yalnızca sınıfın üye işlevleri ve arkadaşları (sınıflar veya işlevler) tarafından kullanılabilir.|
+|[protected](../cpp/protected-cpp.md)|Bildirilen sınıf üyeleri **`protected`**, sınıfın üye işlevleri ve arkadaşları (sınıflar veya işlevler) tarafından kullanılabilir. Ek olarak, sınıftan türetilen sınıflar tarafından kullanılabilirler.|
 
-Access control helps prevent you from using objects in ways they were not intended to be used. This protection is lost when explicit type conversions (casts) are performed.
+Erişim denetimi, nesneleri kullanılmaları amaçlanmayan şekillerde kullanmanızı engellemeye yardımcı olur. Bu koruma, açık tür dönüştürmeleri (yayınlar) gerçekleştirildiğinde kaybolur.
 
 > [!NOTE]
-> Access control is equally applicable to all names: member functions, member data, nested classes, and enumerators.
+> Erişim denetimi tüm adlara eşit olarak uygulanabilir: üye işlevleri, üye verileri, iç içe sınıflar ve numaralandırıcılar.
 
 ## Access Control in Derived Classes
 
-Two factors control which members of a base class are accessible in a derived class; these same factors control access to the inherited members in the derived class:
+Türetilmiş bir sınıfta bir temel sınıfın hangi üyelerine erişilebilir olduğunu iki faktör kontrol eder; aynı faktörler, türetilmiş sınıftaki devralınan üyelere erişimi kontrol eder:
 
-- Whether the derived class declares the base class using the **`public`** access specifier.
+- Türetilmiş sınıfın **`public`** erişim belirtecini kullanarak temel sınıfı bildirip bildirmediği .
 
-- What the access to the member is in the base class.
+- Temel sınıfta üyeye erişimin ne olduğu.
 
-The following table shows the interaction between these factors and how to determine base-class member access.
+Aşağıdaki tablo, bu faktörler arasındaki etkileşimi ve temel sınıf üye erişiminin nasıl belirleneceğini gösterir.
 
 ### Member Access in Base Class
 
 |private|protected|Public|
 |-------------|---------------|------------|
-|Always inaccessible regardless of derivation access|Private in derived class if you use private derivation|Private in derived class if you use private derivation|
-||Protected in derived class if you use protected derivation|Protected in derived class if you use protected derivation|
-||Protected in derived class if you use public derivation|Public in derived class if you use public derivation|
+|Türetme erişiminden bağımsız olarak her zaman erişilemez|Özel türetme kullanıyorsanız türetilmiş sınıfta özel|Özel türetme kullanıyorsanız türetilmiş sınıfta özel|
+||Korumalı türetme kullanıyorsanız türetilmiş sınıfta korunur|Korumalı türetme kullanıyorsanız türetilmiş sınıfta korunur|
+||Genel türetme kullanıyorsanız türetilmiş sınıfta korunur|Genel türetme kullanıyorsanız, türetilmiş sınıfta genel|
 
-The following example illustrates this:
+Aşağıdaki örnek bunu göstermektedir:
 
 ```cpp
 // access_specifiers_for_base_classes.cpp
@@ -104,11 +104,11 @@ int main()
 }
 ```
 
-In `DerivedClass1`, the member function `PublicFunc` is a public member and `ProtectedFunc` is a protected member because `BaseClass` is a public base class. `PrivateFunc` is private to `BaseClass`, and it is inaccessible to any derived classes.
+içinde `DerivedClass1`, üye işlevi `PublicFunc` bir genel üyedir ve bir genel temel sınıf `ProtectedFunc` olduğu için korumalı bir üyedir `BaseClass`. `PrivateFunc` için `BaseClass` özeldir ve türetilmiş sınıflara erişilemez.
 
-In `DerivedClass2`, the functions `PublicFunc` and `ProtectedFunc` are considered private members because `BaseClass` is a private base class. Again, `PrivateFunc` is private to `BaseClass`, and it is inaccessible to any derived classes.
+Olarak `DerivedClass2`, fonksiyonlar `PublicFunc` ve `ProtectedFunc` çünkü özel üyelerini kabul edilir `BaseClass` özel taban sınıftır. Yine, `PrivateFunc` özel olan BaseClassve herhangi bir türetilmiş sınıflara erişilemez.
 
-You can declare a derived class without a base-class access specifier. In such a case, the derivation is considered private if the derived class declaration uses the **`class`** keyword. The derivation is considered public if the derived class declaration uses the **`struct`** keyword. For example, the following code:
+Temel sınıf erişim belirteci olmadan türetilmiş bir sınıf bildirebilirsiniz. Böyle bir durumda, türetilmiş sınıf bildirimi **`class`** anahtar kelimeyi kullanıyorsa türetme özel olarak kabul edilir . Türetilmiş sınıf bildirimi **`struct`** anahtar kelimeyi kullanıyorsa türetme genel kabul edilir . Örneğin, aşağıdaki kod:
 
 ```cpp
 class Derived : Base
@@ -136,16 +136,16 @@ struct Derived : public Base
 ...
 ```
 
-Note that members declared as having private access are not accessible to functions or derived classes unless those functions or classes are declared using the **`friend`** declaration in the base class.
+Özel erişime sahip olarak bildirilen üyelerin **`friend`**, temel sınıftaki bildirim kullanılarak bu işlevler veya sınıflar bildirilmedikçe, işlevler veya türetilmiş sınıflar tarafından erişilebilir olmadığına dikkat edin.
 
-A **`union`** type cannot have a base class.
+Bir **`union`** türün temel sınıfı olamaz.
 
 > [!NOTE]
-> When specifying a private base class, it is advisable to explicitly use the **`private`** keyword so users of the derived class understand the member access.
+> Özel bir temel sınıf **`private`** belirtirken, türetilmiş sınıfın kullanıcılarının üye erişimini anlaması için anahtar sözcüğü açıkça kullanmanız önerilir .
 
 ## Access control and static members
 
-When you specify a base class as **`private`**, it affects only nonstatic members. Public static members are still accessible in the derived classes. However, accessing members of the base class using pointers, references, or objects can require a conversion, at which time access control is again applied. Consider the following example:
+olarak bir temel sınıf belirttiğinizde **`private`**, yalnızca statik olmayan üyeleri etkiler. Genel statik üyelere, türetilmiş sınıflarda hala erişilebilir. Ancak, işaretçiler, referanslar veya nesneler kullanarak temel sınıfın üyelerine erişmek, erişim denetiminin yeniden uygulandığı bir dönüştürme gerektirebilir. Aşağıdaki örneği göz önünde bulundurun:
 
 ```cpp
 // access_control.cpp
@@ -179,15 +179,15 @@ int Derived2::ShowCount()
 }
 ```
 
-In the preceding code, access control prohibits conversion from a pointer to `Derived2` to a pointer to `Base`. The **`this`** pointer is implicitly of type `Derived2 *`. To select the `CountOf` function, **`this`** must be converted to type `Base *`. Such a conversion is not permitted because `Base` is a private indirect base class to `Derived2`. Conversion to a private base class type is acceptable only for pointers to immediate derived classes. Therefore, pointers of type `Derived1 *` can be converted to type `Base *`.
+Önceki kod olarak, erişim kontrol için bir işaretçi dönüşümü engeller `Derived2` için bir işaretçi `Base`. **`this`** İşaretçi dolaylı tiptedir `Derived2 *`. İşlevi seçmek için `CountOf` type'a **`this`** dönüştürülmelidir `Base *`. Baseiçin özel bir dolaylı temel sınıf olduğundan böyle bir dönüştürmeye izin verilmez `Derived2`. Özel bir temel sınıf türüne dönüştürme, yalnızca doğrudan türetilmiş sınıflara yönelik işaretçiler için kabul edilebilir. Bu nedenle, tür işaretçileri türe `Derived1 *` dönüştürülebilir `Base *`.
 
-Note that calling the `CountOf` function explicitly, without using a pointer, reference, or object to select it, implies no conversion. Therefore, the call is allowed.
+`CountOf` İşlevi seçmek için bir işaretçi, başvuru veya nesne kullanmadan açıkça çağırmanın dönüştürme anlamına gelmediğini unutmayın. Bu nedenle, aramaya izin verilir.
 
-Members and friends of a derived class, `T`, can convert a pointer to `T` to a pointer to a private direct base class of `T`.
+Türetilmiş bir sınıfın üyeleri ve arkadaşları, bir `T` işaretçiyi `T` bir işaretçiye, özel bir doğrudan temel sınıfa dönüştürebilir `T`.
 
 ## Access to virtual functions
 
-The access control applied to [virtual](../cpp/virtual-cpp.md) functions is determined by the type used to make the function call. Overriding declarations of the function do not affect the access control for a given type. For example:
+ [virtual](../cpp/virtual-cpp.md) işlevlere uygulanan erişim denetimi , işlev çağrısını yapmak için kullanılan türe göre belirlenir. İşlevin geçersiz kılınan bildirimleri, belirli bir tür için erişim denetimini etkilemez. Örneğin:
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -217,19 +217,19 @@ int main()
 }
 ```
 
-In the preceding example, calling the virtual function `GetState` using a pointer to type `VFuncBase` calls `VFuncDerived::GetState`, and `GetState` is treated as public. However, calling `GetState` using a pointer to type `VFuncDerived` is an access-control violation because `GetState` is declared private in class `VFuncDerived`.
+Önceki örnekte, çağrılar yazmak için `GetState` bir işaretçi kullanarak sanal işlevi `VFuncBase` çağırmak `VFuncDerived::GetState`, `GetState` genel olarak kabul edilir. Ancak, yazmak `GetState` için işaretçi kullanarak çağırmak , sınıfta private olarak bildirildiğinden `VFuncDerived` erişim denetimi ihlalidir .`GetStateVFuncDerived` 
 
 > [!CAUTION]
-> The virtual function `GetState` can be called using a pointer to the base class `VFuncBase`. This does not mean that the function called is the base-class version of that function.
+> Sanal işlev `GetState`, temel sınıfa bir işaretçi kullanılarak çağrılabilir `VFuncBase`. Bu, çağrılan işlevin o işlevin temel sınıf versiyonu olduğu anlamına gelmez.
 
 ## Access control with multiple inheritance
 
-In multiple-inheritance lattices involving virtual base classes, a given name can be reached through more than one path. Because different access control can be applied along these different paths, the compiler chooses the path that gives the most access. See the following figure.
+Sanal temel sınıfları içeren çoklu kalıtımlı kafeslerde, belirli bir isme birden fazla yoldan ulaşılabilir. Bu farklı yollar boyunca farklı erişim denetimi uygulanabileceğinden, derleyici en fazla erişim sağlayan yolu seçer. Aşağıdaki şekle bakın.
 
 ![Access along paths of an inheritance graph](../cpp/media/vc38v91.gif "Access along paths of an inheritance graph") <br/>
 Access along paths of an inheritance graph
 
-In the figure, a name declared in class `VBase` is always reached through class `RightPath`. The right path is more accessible because `RightPath` declares `VBase` as a public base class, whereas `LeftPath` declares `VBase` as private.
+Şekilde, class içinde bildirilen bir isme `VBase` her zaman class üzerinden ulaşılır `RightPath`. Doğru yol, çünkü daha erişilebilir `RightPath` beyan `VBase` oysa bir kamu temel sınıf olarak `LeftPath` beyan `VBase` özel olarak.
 
 ## See also
 

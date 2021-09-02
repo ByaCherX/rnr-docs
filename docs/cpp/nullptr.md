@@ -8,10 +8,10 @@ ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
 ---
 # nullptr
 
-The **`nullptr`** keyword specifies a null pointer constant of type `std::nullptr_t`, which is convertible to any raw pointer type.  Although you can use the keyword **`nullptr`** without including any headers, if your code uses the type `std::nullptr_t`, then you must define it by including the header `<cstddef>`.
+**`nullptr`** Anahtar tipi bir boş gösterici sabit belirten `std::nullptr_t` herhangi bir ham işaretçi türü dönüştürülebilen. Anahtar kelimeyi **`nullptr`** herhangi bir başlık eklemeden kullanabilmenize rağmen , kodunuz type kullanıyorsa, `std::nullptr_t` bunu başlık ekleyerek tanımlamanız gerekir `<cstddef>`.
 
 > [!NOTE]
-> The **`nullptr`** keyword is also defined in C++/CLI for managed code applications and is not interchangeable with the ISO Standard C++ keyword. If your code might be compiled by using the [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) compiler option, which targets managed code, then use `__nullptr` in any line of code where you must guarantee that the compiler uses the native C++ interpretation. For more information, see [`nullptr` (C++/CLI and C++/CX)](../extensions/nullptr-cpp-component-extensions.md).
+> **`nullptr`** Anahtar kelime de yönetilen kod uygulamaları için C++/CLI tanımlanan ve ISO Standardı C++ anahtar kelime ile değiştirilebilir değildir. [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) Kodunuz, yönetilen kodu hedefleyen derleyici seçeneği kullanılarak derlenebiliyorsa `__nullptr`, derleyicinin yerel C++ yorumunu kullandığını garanti etmeniz gereken herhangi bir kod satırında kullanın. Daha fazla bilgi için bkz. [`nullptr` (C++/CLI and C++/CX)](../extensions/nullptr-cpp-component-extensions.md).
 
 ## Remarks
 

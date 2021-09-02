@@ -8,7 +8,7 @@ ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
 ---
 # do-while Statement (C++)
 
-Executes a *statement* repeatedly until the specified termination condition (the *expression*) evaluates to zero.
+Belirtilen sonlandırma koşulu ( *expression* ) sıfır olarak değerlendirilene kadar bir deyimi tekrar tekrar yürütür.
 
 ## Syntax
 
@@ -20,13 +20,13 @@ while ( expression ) ;
 
 ## Remarks
 
-The test of the termination condition is made after each execution of the loop; therefore, a **do-while** loop executes one or more times, depending on the value of the termination expression. The **do-while** statement can also terminate when a [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), or [return](../cpp/return-statement-cpp.md) statement is executed within the statement body.
+Sonlandırma koşulunun testi, döngünün her yürütülmesinden sonra yapılır; bu nedenle, bir **do-while** döngüsü, sonlandırma ifadesinin değerine bağlı olarak bir veya daha fazla kez yürütülür. **do-while** bir zaman ifadesi de kesebilirler [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), yada [return](../cpp/return-statement-cpp.md) ifadesi deyimi bünyesinde yürütülür.
 
-The *expression* must have arithmetic or pointer type. Execution proceeds as follows:
+İfade aritmetik veya işaretçi türü olmalıdır. Yürütme şu şekilde ilerler:
 
-1. The statement body is executed.
+- İfade gövdesi yürütülür.
 
-1. Next, *expression* is evaluated. If *expression* is false, the **do-while** statement terminates and control passes to the next statement in the program. If *expression* is true (nonzero), the process is repeated, beginning with step 1.
+- Daha sonra ifade (*expression*) değerlendirilir. Eğer ifade yanlıştır, **do-while** deyimi sonlandığı ve kontrol programının bir sonraki ifadeye geçer. Eğer ekspresyon (sıfır olmayan) doğru, işlem adım 1'ile başlayan, tekrar edilir.
 
 ## Example
 

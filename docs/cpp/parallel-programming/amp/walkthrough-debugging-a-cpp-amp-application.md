@@ -24,7 +24,7 @@ This article demonstrates how to debug an application that uses C++ Accelerated 
 
 Before you start this walkthrough:
 
-- Read [C++ AMP Overview](../../parallel/amp/cpp-amp-overview.md).
+- Read [C++ AMP Overview](../../parallel-programming/amp/cpp-amp-overview.md).
 
 - Make sure that line numbers are displayed in the text editor. For more information, see [How to: Display line numbers in the editor](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 

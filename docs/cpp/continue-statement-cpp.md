@@ -8,7 +8,7 @@ ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
 ---
 # continue Statement (C++)
 
-Forces transfer of control to the controlling expression of the smallest enclosing [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md), or [while](../cpp/while-statement-cpp.md) loop.
+Kontrolün, çevreleyen en küçük do, for veya while döngüsünün kontrol ifadesine aktarılmasını zorlar .
 
 ## Syntax
 
@@ -18,13 +18,13 @@ continue;
 
 ## Remarks
 
-Any remaining statements in the current iteration are not executed. The next iteration of the loop is determined as follows:
+Geçerli yinelemede kalan deyimler yürütülmez. Döngünün bir sonraki yinelemesi şu şekilde belirlenir:
 
-- In a **`do`** or **`while`** loop, the next iteration starts by reevaluating the controlling expression of the **`do`** or **`while`** statement.
+Bir **`do`** veya **`while`** döngüsünde, sonraki yineleme, **`do`** veya **`while`** ifadesinin kontrol eden ifadesini yeniden değerlendirerek başlar .
 
-- In a **`for`** loop (using the syntax `for( <init-expr> ; <cond-expr> ; <loop-expr> )`), the `<loop-expr>` clause is executed. Then the `<cond-expr>` clause is reevaluated and, depending on the result, the loop either ends or another iteration occurs.
+Bir **`for`** döngüde (sözdizimi kullanılarak `for( <init-expr> ; <cond-expr> ; <loop-expr> )`), `<loop-expr>` yan tümce yürütülür. Daha sonra `<cond-expr>` tümce yeniden değerlendirilir ve sonuca bağlı olarak döngü ya biter ya da başka bir yineleme gerçekleşir.
 
-The following example shows how the **`continue`** statement can be used to bypass sections of code and begin the next iteration of a loop.
+Aşağıdaki örnek, **`continue`** deyimin kod bölümlerini atlamak ve bir döngünün sonraki yinelemesine başlamak için nasıl kullanılabileceğini gösterir.
 
 ## Example
 

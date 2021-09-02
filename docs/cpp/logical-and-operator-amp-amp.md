@@ -14,13 +14,13 @@ ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 
 ## Remarks
 
-The logical AND operator (**&&**) returns **`true`** if both operands are **`true`** and returns **`false`** otherwise. The operands are implicitly converted to type **`bool`** before evaluation, and the result is of type **`bool`**. Logical AND has left-to-right associativity.
+Mantıksal AND operatörü (**&&**) **`true`**, her iki işlenen de ise **`true`** döner, **`false`** aksi halde döner. İşlenenler, **`bool`** değerlendirmeden önce örtük olarak type'a dönüştürülür ve sonuç type olur **`bool`**. Mantıksal AND, soldan sağa ilişkilendirilebilirliğe sahiptir.
 
-The operands to the logical AND operator don't need to have the same type, but they must have boolean, integral, or pointer type. The operands are commonly relational or equality expressions.
+Mantıksal AND operatörünün işlenenlerinin aynı tipte olması gerekmez, ancak boolean, integral veya işaretçi tipine sahip olmaları gerekir. İşlenenler genellikle ilişkisel veya eşitlik ifadeleridir.
 
-The first operand is completely evaluated and all side effects are completed before evaluation of the logical AND expression continues.
+İlk işlenen tamamen değerlendirilir ve mantıksal AND ifadesinin değerlendirilmesi devam etmeden önce tüm yan etkiler tamamlanır.
 
-The second operand is evaluated only if the first operand evaluates to **`true`** (nonzero). This evaluation eliminates needless evaluation of the second operand when the logical AND expression is **`false`**. You can use this short-circuit evaluation to prevent null-pointer dereferencing, as shown in the following example:
+İkinci işlenen, yalnızca ilk işlenen **`true`** (sıfır olmayan) olarak değerlendirilirse değerlendirilir . Bu değerlendirme, mantıksal AND ifadesi olduğunda ikinci işlenenin gereksiz değerlendirmesini ortadan kaldırır **`false`**. Bu kısa devre değerlendirmesini, aşağıdaki örnekte gösterildiği gibi boş işaretçi referansını kaldırmayı önlemek için kullanabilirsiniz:
 
 ```cpp
 char *pch = 0;
@@ -28,11 +28,11 @@ char *pch = 0;
 (pch) && (*pch = 'a');
 ```
 
-If `pch` is null (0), the right side of the expression is never evaluated. This short-circuit evaluation makes the assignment through a null pointer impossible.
+Eğer pchboş (0) 'dir, ifadenin sağ tarafı değerlendirilir asla. Bu kısa devre değerlendirmesi, bir boş gösterici aracılığıyla atamayı imkansız hale getirir.
 
 ## Operator keyword for &&
 
-C++ specifies **`and`** as an alternative spelling for **`&&`**. In C, the alternative spelling is provided as a macro in the \<iso646.h> header. In C++, the alternative spelling is a keyword; use of \<iso646.h> or the C++ equivalent \<ciso646> is deprecated. In Microsoft C++, the [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compiler option is required to enable the alternative spelling.
+C++ **`and`** için alternatif bir yazım belirtir **`&&`**. C'de alternatif yazım, \<iso646.h> başlığında bir makro olarak sağlanır. C++'da alternatif yazım bir anahtar kelimedir; \<iso646.h> veya C++ eşdeğeri \<ciso646> kullanımı kullanımdan kaldırılmıştır. Microsoft C++' [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md), alternatif yazımı etkinleştirmek için veya derleyici seçeneği gereklidir.
 
 ## Example
 
