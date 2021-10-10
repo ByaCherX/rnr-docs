@@ -5,12 +5,17 @@ h1 {color:rgb(130, 156, 235);}
 h2 {color: goldenrod;}
 h3 {color: rgb(180, 156, 120);}
 
-l {font-size: 20px;}
+/* text style defination */
+tx1  {font-size: 15px;}
+.c1s1  {color: rgb(129, 185, 207);}
 
+l {font-size: 16px;}
+.redcolor   {color: rgb(228, 47, 15);}
+.bluecolor  {color: rgb(15, 125, 228);}
+.greencolor {color: rgb(36, 204, 20);}
 
-
-
-
+.index {columns: 16em;}
+.index-color {color: greenyellow; font-size: x-large; padding: 10px; font-size: 28px; font-family: 'Times New Roman', Times, serif;}
 
 
 
