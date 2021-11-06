@@ -38,23 +38,60 @@ When the command line does not specify what to push with `<refspec>...` argument
 
 When neither the command-line nor the configuration specify what to push, the default behavior is used, which corresponds to the `simple` value for `push.default`: the current branch is pushed to the corresponding upstream branch, but as a safety measure, the push is aborted if the upstream branch does not have the same name as the local one.
 
+## Git remote
 
+### Commands
 
+<code1>add</code1></br>
+Add a remote named < name> for the repository at < url>. The command `git fetch <name>` can then be used to create and update remote-tracking branches < name>/< branch>.
 
+With `-f` option, `git fetch <name>` is run immediately after the remote information is set up.
 
+With `--tags` option, `git fetch <name>` imports every tag from the remote repository.
 
+With `--no-tags` option, `git fetch <name>` does not import tags from the remote repository.
 
+By default, only tags on fetched branches are imported (see git-fetch).
 
+With `-t <branch>` option, instead of the default glob refspec for the remote to track all branches under the `refs/remotes/<name>/` namespace, a refspec to track only `<branch>` is created. You can give more than one `-t <branch>` to track multiple branches without grabbing all branches.
 
+With `-m <master>` option, a symbolic-ref `refs/remotes/<name>/HEAD` is set up to point at remote’s `<master>` branch. See also the set-head command.
 
+When a fetch mirror is created with `--mirror=fetch`, the refs will not be stored in the refs/remotes/ namespace, but rather everything in refs/ on the remote will be directly mirrored into refs/ in the local repository. This option only makes sense in bare repositories, because a fetch would overwrite any local commits.
 
+When a push mirror is created with `--mirror=push`, then `git push` will always behave as if `--mirror` was passed.
 
+<code1>rename</code1></br>
+Rename the remote named < old> to < new>. All remote-tracking branches and configuration settings for the remote are updated.
 
+In case < old> and < new> are the same, and < old> is a file under `$GIT_DIR/remotes` or `$GIT_DIR/branches`, the remote is converted to the configuration file format.
 
+<code1>set-head</code1></br>
+Sets or deletes the default branch (i.e. the target of the symbolic-ref `refs/remotes/<name>/HEAD`) for the named remote. Having a default branch for a remote is not required, but allows the name of the remote to be specified in lieu of a specific branch. For example, if the default branch for origin is set to `master`, then `origin` may be specified wherever you would normally specify `origin/master`.
 
+<code1>set-branches</code1></br>
+Changes the list of branches tracked by the named remote. This can be used to track a subset of the available remote branches after the initial setup for a remote.
 
+The named branches will be interpreted as if specified with the `-t` option on the `git remote add` command line.
 
+With `--add`, instead of replacing the list of currently tracked branches, adds to that list.
 
+show
+Gives some information about the remote < name>.
+
+With `-n` option, the remote heads are not queried first with `git ls-remote <name>`; cached information is used instead.
+
+<code1>prune</code1></br>
+Deletes stale references associated with < name>. By default, stale remote-tracking branches under < name> are deleted, but depending on global configuration and the configuration of the remote we might even prune local tags that haven’t been pushed there. Equivalent to `git fetch --prune <name>`, except that no new references will be fetched.
+
+See the PRUNING section of git-fetch for what it’ll prune depending on various configuration.
+
+With `--dry-run` option, report what branches would be pruned, but do not actually prune them.
+
+<code1>update</code1></br>
+Fetch updates for remotes or remote groups in the repository as defined by `remotes.<group>`. If neither group nor remote is specified on the command line, the configuration parameter remotes.default will be used; if remotes.default is not defined, all remotes which do not have the configuration parameter `remote.<name>.skipDefaultUpdate` set to true will be updated. (See git-config).
+
+With `--prune` option, run pruning against all the remotes that are updated.
 
 
 
