@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/js_style.css">
+<link rel="stylesheet" href="../../lib/doc_style.css">
 
 ## Object Defination
 The `Object` class represents one of *JavaScript's data types*. It is used to store various keyed collections and more complex entities. Objects can be created using the *Object()* constructor or the *object initializer / literal syntax*.
@@ -17,13 +17,26 @@ The Object constructor creates an object wrapper for the given value.
 ### Object() constructor
 The `Object` constructor creates an object wrapper for the given value.
 ```js
-new Object()
-new Object(value)
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
 
-// example
-let o = new Object()
-o.foo = 42
-console.log(o)   // object { foo: 42 }
+let user = new User("Jack");
+
+alert(user.name);     // Jack
+alert(user.isAdmin);  // false
+```
+
+### Return from constructors
+Usually, constructors do not have a `return` statement. Their task is to write all necessary stuff into `this`, and it automatically becomes the result.
+```js
+function BigUser() {
+  this.name = "John";
+  return { name: "Godzilla" };  // <-- returns this object
+}
+
+alert( new BigUser().name );    // Godzilla, got that object
 ```
 
 ## Static methods
@@ -164,10 +177,47 @@ obj.prop = 33;           // Throws an error in strict mode
 console.log(obj.prop);   // output: 42
 ```
 
+## Object methods "this"
+Objects are usually created to represent entities of the real world, like users, orders and so on...
 
-...More Section Coming Soon
+For a start, let’s teach the user to say hello:
+```js
+let user = {
+  name: "John",
+  age: 30
+};
 
+user.sayHi = function() {
+  alert("Hello!");
+};
 
+user.sayHi(); // Hello!
+```
+### Method shorthand
+There exists a shorter syntax for methods in an object literal:
+```js
+user = {
+  sayHi: function() {
+    alert("Hello");
+  }
+};
+
+// method shorthand looks better, right?
+user = {
+  sayHi() { // same as "sayHi: function(){...}"
+    alert("Hello");
+  }
+};
+
+// more advanced method
+let user = {name: "John", age: 30,
+  sayHi() {
+    // "this" is the "current object"
+    alert(this.name);
+  }
+};
+user.sayHi(); // John
+```
 
 ## Instance properties
 
