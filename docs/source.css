@@ -1,0 +1,112 @@
+#h1c{text-align: center;}
+code1 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(206, 87, 61); font-size: 110%; text}
+.border{border: 1px solid rgb(17, 107, 224);width: auto;}
+.center {
+    display: block;
+    margin-left: 38%;
+    margin-right: 38%;
+    text-decoration-line: line-through; }
+.trlng {
+  font-size: medium;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: #07a9e9;
+  text-shadow: -1px 2px 3px #07a9e9; }
+h2 {text-shadow: 0px; color: rgb(121, 167, 252);}
+.h1color {text-shadow: 0px; color:rgb(247, 138, 74)}
+.color-red {color: rgb(202, 26, 20)};
+
+/*:root main css system*/
+:root {
+    --bs-blue: #3688fc;
+    --bs-indigo: #727cf5;
+    --bs-purple: #6b5eae;
+    --bs-pink: #ff679b;
+    --bs-red: #fa6767;
+    --bs-orange: #ff9041;
+    --bs-yellow: #f9bc0d;
+    --bs-green: #42d29d;
+    --bs-teal: #02a8b5;
+    --bs-cyan: #44badc;
+    --bs-white: #fff;
+    --bs-gray: #ced4da;
+    --bs-gray-dark: #e3eaef;
+    --bs-primary: #3688fc;
+    --bs-secondary: #ced4da;
+    --bs-success: #42d29d;
+    --bs-info: #44badc;
+    --bs-warning: #f9bc0d;
+    --bs-danger: #fa6767;
+    --bs-light: #464f5b;
+    --bs-dark: #f1f1f1;
+    --bs-font-sans-serif: "Nunito",sans-serif;
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+/* badge type */
+.bg-secondary{background-color:#6c757d!important}
+.bg-danger{background-color:#dc3545!important}
+.bg-success {background-color: #42d29d !important}
+.badge-success-lighten {color: #42d29d; background-color: rgba(66, 210, 157, 0.596)}
+.badge-outline-warning {color: #f9bc0d;border: 1px solid #f9bc0d;background-color: transparent;
+}
+
+/* badge color type */
+.text-light{color:#f8f9fa!important}
+
+
+/* main badge settings */
+.badge {
+display: inline-block;
+padding: .25em .4em;
+font-size: .75em;
+font-weight: 580;
+line-height: 1;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25rem;
+}
+
+
+/* --------------------------- Markdown HTML-CSS --------------------------- */
+.gradient {background: linear-gradient(to right,rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%);}
+.seperator{width:3000px; height:5px; -webkit-animation:rotate 3s infinite linear}
+
+@-webkit-keyframes rotate {
+  from {background-position:-3000px}
+  to {background-position:0} }
+@keyframes rotate {
+  from {background-position:-3000px}
+  to {background-position:0} }
+
+.anim1 {
+  background: linear-gradient(to right,rgb(255, 255, 255) 0%,rgb(156, 156, 156) 50%,rgb(255, 255, 255) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-animation:rotate 6s infinite linear }
+.anim2 {
+  background: linear-gradient(to right,rgb(245, 58, 58) 0%,rgb(247, 138, 74) 25%,rgb(247, 114, 74) 50%, rgb(247, 94, 67) 75%,rgb(245, 58, 58) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-animation:rotate 6s infinite linear }
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------- GitHub CSS Style --------------------------- */
+.bug{color: rgb(215,58,74); font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #ca2609;}
+.doc{color: #0075ca; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #0075ca;}
+.duplicate{color: #cfd3d7; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #cfd3d7;}
+.enchnt{color: #a2eeef; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #a2eeef;}
+.gfi{color: #7057ff; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #7057ff;}
+.hlpw{color: #008672; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #008672;}
+.invld{color: #e4e669; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #e4e669;}
+.quest{color: #d876e3; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #d876e3;}
+.wontfix{color: #ffffff; font-size: medium; font-weight: 500; text-shadow: 1px 1px 3px #ffffff;}
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------- Test Area CSS Style --------------------------- */
+
+/* --------------------------------------------------------------------------- */
