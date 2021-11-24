@@ -60,6 +60,13 @@ text-overflow: ellipsis;
 text-overflow: "";
 ```
 
+### path()
+The `path()` CSS *function* accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.
+```css
+path( [[<'fill-rule'>,]?<string>)
 
+/* example */
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+```
 
 
