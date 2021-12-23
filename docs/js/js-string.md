@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/js_style.css">
+<link rel="stylesheet" href="../../lib/doc_style.css">
 
 ## Description
 Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their length, to build and concatenate them using the *+ and += string operators*, checking for the existence or location of substrings with the indexOf() method, or extracting substrings with the `substring()` method.
