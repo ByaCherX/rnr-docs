@@ -59,15 +59,16 @@ class ClassWithInstanceField {
   instanceField = 'instance field'
 }
 
-class ClassWithStaticField {
-  static staticField = 'static field'
-}
-
 class ClassWithPublicInstanceMethod {
   publicMethod() {
     return 'hello world'
   }
 }
+
+class ClassWithStaticField {
+  static staticField = 'static field'
+}
+
 ```
 
 ## Static
