@@ -18,12 +18,41 @@ elem.style.left = left; // e.g '123px', calculated at run-time
 elem.style.top = top; // e.g '456px'
 ```
 
+### Element style
+The property elem.style is an object that corresponds to what’s written in the "style" attribute. Setting `elem.style.width="100px"` works the same as if we had in the attribute `style` a string `width:100px`.
 
+For multi-word property the camelCase is used:
+```css
+background-color  => elem.style.backgroundColor
+z-index           => elem.style.zIndex
+border-left-width => elem.style.borderLeftWidth
+```
+For instance:
+```css
+document.body.style.backgroundColor = prompt('background color?', 'green');
+```
 
+### Mind the units
+Don’t forget to add CSS units to values.
 
+For instance, we should not set `elem.style.top` to `10`, but rather to `10px`. Otherwise it wouldn’t work:
+```html
+<body>
+  <script>
+    // doesn't work!
+    document.body.style.margin = 20;
+    alert(document.body.style.margin); // '' (empty string, the assignment is ignored)
 
+    // now add the CSS unit (px) - and it works
+    document.body.style.margin = '20px';
+    alert(document.body.style.margin); // 20px
 
-
+    alert(document.body.style.marginTop); // 20px
+    alert(document.body.style.marginLeft); // 20px
+  </script>
+</body>
+```
+Please note: the browser “unpacks” the property `style.margin` in the last lines and infers `style.marginLeft` and `style.marginTop` from it.
 
 
 
