@@ -49,7 +49,7 @@ class Point {
   x: number;
   y: number;
  
-  // Normal signature with defaults
+  // Normal signature with defaults.
   constructor(x = 0, y = 0) {
     this.x = x;
     this.y = y;
@@ -110,7 +110,7 @@ class Thing {
   }
 ```
 
-### extends Clauses
+### extends Clases
 Classes may `extend` from a base class. A derived class has all the properties and methods of its base class, and also define additional members.
 ```ts
 class Animal {
@@ -126,7 +126,7 @@ class Dog extends Animal {
     }
   }
 }
- 
+
 const d = new Dog();
 d.move();      // Base class method
 d.woof(3);     // Derived class method
@@ -197,6 +197,23 @@ class Box {
   }
 }
 ```
+
+## Class Expressions
+Class expressions are very similar to class declarations. The only real difference is that class expressions don’t need a name, though we can refer to them via whatever identifier they ended up bound to:
+```ts
+const someClass = class<Type> {
+  content: Type;
+  constructor(value: Type) {
+    this.content = value;
+  }
+};
+ 
+const m = new someClass("Hello, world");
+```
+
+
+
+
 
 
 
