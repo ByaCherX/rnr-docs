@@ -1,7 +1,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
-<h1 style="text-align:center">Java Script Documents</h1>
+<p align="center"><img alt="react-js" src="../media/javascript.svg" width="120"/></p>
+<h1 style="text-align:left;">JavaScript</h1>
+
+<p style="text-align:right">Beta</p>
+
+------------------------------------------------------------------------------------
+
+<h2 align="center">JavaScript Document Libraries <i class="bi bi-journals"></i></h2>
 
 ## Value properties
 * [Infinity](js-values.md#Infinity)
