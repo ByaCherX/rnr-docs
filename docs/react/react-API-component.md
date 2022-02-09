@@ -25,10 +25,6 @@ These methods are called in the following order when an instance of a component 
 * [render()]()
 * [componentDidMount()]()
 
-#### Unmounting
-This method is called when a component is being removed from the DOM:
-* [componentWillUnmount()]()
-
 #### Updating
 An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
 * [static getDerivedStateFromProps()]()
@@ -36,6 +32,10 @@ An update can be caused by changes to props or state. These methods are called i
 * [render()]()
 * [getSnapshotBeforeUpdate()]()
 * [componentDidUpdate()]()
+
+#### Unmounting
+This method is called when a component is being removed from the DOM:
+* [componentWillUnmount()]()
 
 #### Error Handling
 These methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
