@@ -547,17 +547,3 @@ for (const value of iterator) {console.log(value);}
 // output: "a"  "b"  "c"
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -56,17 +56,17 @@
 
 ## Indexed collections
 * [Array](js-array.md)
-* [Int8Array]
-* [Uint8Array]
-* [Uint8ClampedArray]
-* [Int16Array]
-* [Uint16Array]
-* [Int32Array]
-* [Uint32Array]
-* [Float32Array]
-* [Float64Array]
-* [BigInt64Array]
-* [BigUint64Array]
+* [Int8Array](js-array-addonational.md)
+* [Uint8Array](js-array-addonational.md)
+* [Uint8ClampedArray](js-array-addonational.md)
+* [Int16Array](js-array-addonational.md)
+* [Uint16Array](js-array-addonational.md)
+* [Int32Array](js-array-addonational.md)
+* [Uint32Array](js-array-addonational.md)
+* [Float32Array](js-array-addonational.md)
+* [Float64Array](js-array-addonational.md)
+* [BigInt64Array](js-array-addonational.md)
+* [BigUint64Array](js-array-addonational.md)
 
 ## Keyed collections
 * [Map](js-map.md)
@@ -79,7 +79,7 @@
 * [SharedArrayBuffer]
 * [Atomics]
 * [DataView]
-* [JSON]
+* [JSON](js-json.md)
 
 ## Control abstraction
 * [GeneratorFunction](js-function.md#Constructor)
@@ -105,14 +105,14 @@
 * [Intl.RelativeTimeFormat]
 
 ## WebAssembly
-* [WebAssembly]()
-* [WebAssembly.Module]()
-* [WebAssembly.Instance]()
-* [WebAssembly.Memory]()
-* [WebAssembly.Table]()
-* [WebAssembly.CompileError]()
-* [WebAssembly.LinkError]()
-* [WebAssembly.RuntimeError]()
+* [WebAssembly](js-webassembly.md)
+* [WebAssembly.Module](js-webassembly.md)
+* [WebAssembly.Instance](js-webassembly.md)
+* [WebAssembly.Memory](js-webassembly.md)
+* [WebAssembly.Table](js-webassembly.md)
+* [WebAssembly.CompileError](js-webassembly.md)
+* [WebAssembly.LinkError](js-webassembly.md)
+* [WebAssembly.RuntimeError](js-webassembly.md)
 
 <h1 style="text-align:center">Statements</h2>
 
@@ -136,25 +136,25 @@
 * [function*]()
 * [Arrow functions]
 * [async function]
-* [return]
+* [return](js)
 * [class](js-class.md)
 
 ## Advanced working with functions > **Content not ready!**
 * [Recursion and stack]()
 
 ## Iterations
-* [do...while](js-iterations.md#)
-* [for](js-iterations.md#)
+* [do...while](js-iterations.md#do..while)
+* [for](js-iterations.md#for)
 * [for each...in](js-iterations.md#)
-* [for...in](js-iterations.md#)
-* [for...of](js-iterations.md#)
+* [for...in](js-iterations.md#for...in)
+* [for...of](js-iterations.md#for...of)
 * [for await...of](js-iterations.md#)
-* [while](js-iterations.md#)
+* [while](js-iterations.md#while)
 
 ## Other
 * [debugger]()
-* [export]()
-* [import]()
+* [export](js-export-import.md#Export)
+* [import](js-export-import.md#Import)
 * [label]()
 * [with]()
 
