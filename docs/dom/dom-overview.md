@@ -38,6 +38,36 @@ doc.nodeName # DOM property of document object
 p_list = doc.getElementsByTagName("para")
 ```
 
+Here’s a picture of links that allow for travel between DOM nodes:
+```markdown
+             | document | 
+                   ^
+                   |
+     | document.documentElement | < html >
+                   ^
+                   |
+           | document.body | (if inside body)
+___________________________________________
+                   ^
+                   |
+               parentNode
+                   ^
+ previousSibling   |     nextSibling
+        <---- | < DIV > | ---->
+               childNodes
+              /          \
+             /            \
+        firstChild     lastChild
+```
+### On top: documentElement and body
+The topmost tree nodes are available directly as `document` properties:
+* **< html> = document.documentElement**
+The topmost document node is `document.documentElement`. That’s the DOM node of the `<html>` tag.
+* **< body> = document.body**
+Another widely used DOM node is the `<body>` element – `document.body`.
+* **< head> = document.head**
+The `<head>` tag is available as `document.head`.
+
 ### Accessing the DOM
 You don't have to do anything special to begin using the DOM. You use the API directly in JavaScript from within what is called a script, a program run by a browser.
 
