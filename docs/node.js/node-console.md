@@ -3,8 +3,8 @@
 
 <h1 style="text-align:left;">Node.js - Console</h1>
 
-#### Stability: 2 - Stable
-#### Source Code: lib/console.js
+<t8s>Stability: 2 - Stable</t8s></br>
+<t8s>Source Code: lib/console.js</t8s>
 
 The console module provides a simple debugging console that is similar to the JavaScript console mechanism provided by web browsers.
 
