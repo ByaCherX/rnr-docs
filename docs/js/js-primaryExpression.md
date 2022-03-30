@@ -8,7 +8,10 @@ A function's `this` keyword behaves a little differently in JavaScript compared 
 
 In most cases, the value of this is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called.
 ```js
-this
+this.
+
+// In web browsers, the window object is also the global object:
+console.log(this === window); // true
 ```
 #### Examples
 ```js
@@ -29,19 +32,26 @@ add.call(o, 5, 7);         // 16
 add.apply(o, [10, 20]);    // 34
 ```
 
-
-### Function 
-> [!NOTE]
-> the function subject is explained in more detail and will not be detailed in the primaryExpression section [Function-Declaration](js-function.md)
-
-### Class
-> [!NOTE]
-> the class subject is explained in more detail and will not be detailed in the primaryExpression section [Class](js-class.md)
-
 ### yield
-The `yield` keyword is used to pause and resume a generator function (function* or legacy generator function).
+The `yield` keyword pauses generator function execution and the value of the expression following the `yield` keyword is returned to the generator's caller. It can be thought of as a generator-based version of the `return` keyword.
+
+yield can only be called directly from the generator function that contains it. It cannot be called from nested functions or from callbacks.
+
+The `yield` keyword causes the call to the generator's `next()` method to return an IteratorResult object with two properties: value and done. The value property is the result of evaluating the `yield` expression, and done is false, indicating that the generator function has not fully completed.
+
+Once paused on a `yield` expression, the generator's code execution remains paused until the generator's `next()` method is called. Each time the generator's `next()` method is called, the generator resumes execution, and runs until it reaches one of the following:
+* A `yield`, which causes the generator to once again pause and return the generator's new value. The next time `next()` is called, execution resumes with the statement immediately after the `yield`.
+
+* throw is used to throw an exception from the generator. This halts execution of the generator entirely, and execution resumes in the caller (as is normally the case when an exception is thrown).
+
+* The end of the generator function is reached. In this case, execution of the generator ends and an `IteratorResult` is returned to the caller in which the value is undefined and `done` is `true`.
+
+* A return statement is reached. In this case, execution of the generator ends and an `IteratorResult` is returned to the caller in which the `value` is the value specified by the return statement and `done` is `true`.
 ```js
-[rv] = yield [expression]
+/* === Syntax === */
+[rv] = yield [expression] 
+// [expression]: Defines the value to return from the generator function via the iterator protocol.
+
 // example
 function* counter() {
     let saleList = [3,7,5]
@@ -57,9 +67,11 @@ console.log(Storage.next())    // { value: undefined, done: true }
 ```
 
 ### yield*
-The `yield*` is used to delegate to another generator or iterable object.
+The `yield*` expression iterates over the operand and `yields` each value returned by it.
 ```js
+/* === Syntax === */
 yield* expression;
+
 // example 
 function* g1() {yield 2; yield 3;}
 function* g2() {yield 1; yield* g1(); yield 4;}
@@ -71,36 +83,11 @@ console.log(iterator.next());   // value:4 done: false
 console.log(iterator.next());   // value:undefined done: true
 ```
 
-### await
-The `await` operator is used to wait for a Promise. It can only be used inside an *async function* within regular JavaScript code; however it can be used on its own with *JavaScript modules*.
-```js
-[rv] = await expression;
-```
-The `await` expression causes `async` function execution to pause until a `Promise` is settled (that is, fulfilled or rejected), and to resume execution of the `async` function after fulfillment. When resumed, the value of the `await` expression is that of the fulfilled `Promise`.
-
-### Array
-> [!NOTE]
-> the Array subject is explained in more detail and will not be detailed in the primaryExpression section [Array](js-array.md)
-
-### Object initializer
-Objects can be initialized using *new Object()*, *Object.create()*, or using the literal notation (initializer notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces `( {} )`
-```js
-let o {}
-let o {a: 'foo', ..., c:{} }
-let o = {
-    property: function (paramaters) {},
-};
-```
-
-### RegExp
-The `RegExp` object is used for matching text with a pattern. For an introduction to regular expressions, read the Regular Expressions chapter in the JavaScript Guide.
-
 ### Grouping operator ()
 The grouping operator `( )` controls the precedence of evaluation in expressions.
 ```js
 console.log(1 + 2 * 3);    // 7
 console.log((1 + 2) * 3);  // 9
 ```
-
 
 
