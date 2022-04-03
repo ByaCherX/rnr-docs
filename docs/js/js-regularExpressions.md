@@ -77,7 +77,50 @@ Regular expressions are used with the `RegExp` methods `test()` and `exec()` and
 |replaceAll()|Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring.|
 |split()     |Uses a regular expression or a fixed string to break a string into an array of substrings.|
 
+<h1 style="text-align:center">Assertions</h1>
 
+Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
+### Types
 
+|Chracters  |Meaning  |
+|---------|---------|
+|^     | Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, ``/^A/`` does not match the "A" in "an A", but does match the first "A" in "An A".|
+|$     | Matches the end of input. If the multiline flag is set to true, also matches immediately before a line break character. For example, ``/t$/`` does not match the "t" in "eater", but does match it in "eat".|
+|\b  | Matches a word boundary. This is the position where a word character is not followed or preceded by another word-character, such as between a letter and a space. Note that a matched word boundary is not included in the match. In other words, the length of a matched word boundary is zero.|
+|\B  | Matches a non-word boundary. This is a position where the previous and next character are of the same type: Either both must be words, or both must be non-words, for example between two letters or between two spaces. The beginning and end of a string are considered non-words. Same as the matched word boundary, the matched non-word boundary is also not included in the match. For example, ``/\Bon/`` matches "on" in "at noon", and ``/ye\B/`` matches "ye" in "possibly yesterday".|
+|x(?=y)  | Lookahead assertion: Matches "x" only if "x" is followed by "y". For example, /Jack(?=Sprat)/ matches "Jack" only if it is followed by "Sprat".|
+|x(?!y)  | Negative lookahead assertion: Matches "x" only if "x" is not followed by "y".|
+|(?<=y)x  | Lookbehind assertion: Matches "x" only if "x" is preceded by "y".|
+|(?<!y)x  | Negative lookbehind assertion: Matches "x" only if "x" is not preceded by "y".|
 
+<h1 style="text-align:center">Character Classes</h1>
+
+Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
+
+### Types
+|Chracters  |Meaning  |
+|---------|---------|
+| . | `/.y/` matches "my" and "ay", but not "yes", in "yes make my day".|
+| \d | Matches any digit (Arabic numeral). Equivalent to `[0-9]`. For example, `/\d/` or `/[0-9]/` matches "2" in "B2 is the suite number".|
+| \D | Matches any character that is not a digit (Arabic numeral). Equivalent to `[^0-9]`. For example, `/\D/` or `/[^0-9]/` matches "B" in "B2 is the suite number".|
+| \w | Matches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to `[A-Za-z0-9_]`. For example, `/\w/` matches "a" in "apple", "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".|
+| \W | Matches any character that is not a word character from the basic Latin alphabet. Equivalent to `[^A-Za-z0-9_]`. For example, `/\W/` or `/[^A-Za-z0-9_]/` matches "%" in "50%" and "É" in "Émanuel".|
+| \s | Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces. Equivalent to `[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`. For example, `/\s\w*/` matches " bar" in "foo bar".|
+| \S | Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`. For example, `/\S\w*/` matches "foo" in "foo bar".|
+| \t | Matches a horizontal tab.|
+| \r | Matches a carriage return.|
+| \n | Matches a linefeed.|
+| \v | Matches a vertical tab.|
+| \f | Matches a form-feed.|
+| [\b] | Matches a backspace. If you're looking for the word-boundary character (`\b`), see Assertions.|
+| \0 | Matches a NUL character. Do not follow this with another digit.|
+| \cX | Matches a control character using caret notation, where "X" is a letter from A–Z (corresponding to codepoints `U+0001–U+001A`). For example, `/\cM\cJ/` matches "\r\n".|
+| \xhh | Matches the character with the code `hh` (two hexadecimal digits).|
+| \uhhh | Matches a UTF-16 code-unit with the value `hhhh` (four hexadecimal digits).|
+| \u{hhhh} or \u{hhhhh} | (Only when the `u` flag is set.) Matches the character with the Unicode value `U+hhhh` or `U+hhhhh` (hexadecimal digits).|
+| \p{UnicodeProperty} | Matches a character based on its Unicode character properties (to match just, for example, emoji characters, or Japanese katakana characters, or Chinese/Japanese Han/Kanji characters, etc.).|
+| \ | For characters that are usually treated literally, indicates that the next character is special and not to be interpreted literally. For example, ``/b/`` matches the character "b". By placing a backslash in front of "b", that is by using ``/\b/``, the character becomes special to mean match a word boundary.|
+
+---
+> For a more detailed document on Regular Expressions, you should now look at [MDN Documents](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
