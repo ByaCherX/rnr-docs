@@ -38,6 +38,7 @@ interface Props {
 const obj: Props = { a: 5 };
  
 const obj2: Required<Props> = { a: 5 };
+// Property 'b' is missing in type '{ a: number; }' but required in type 'Required<Props>'.
 ```
 
 ## Readonly< Type>
@@ -52,6 +53,7 @@ const todo: Readonly<Todo> = {
 };
  
 todo.title = "Hello";
+// Cannot assign to 'title' because it is a read-only property.
 ```
 
 ## Record< Keys, Type>
@@ -117,8 +119,8 @@ type T2 = Parameters<<T>(arg: T) => T>;
 type T3 = Parameters<typeof f1>;
 type T4 = Parameters<any>;
 type T5 = Parameters<never>;
-type T6 = Parameters<string>;
-type T7 = Parameters<Function>;
+type T6 = Parameters<string>;    // err
+type T7 = Parameters<Function>;  // err
 ```
 
 ## ConstructorParameters< Type>
@@ -129,7 +131,7 @@ type T1 = ConstructorParameters<FunctionConstructor>;
 type T2 = ConstructorParameters<RegExpConstructor>;
 type T3 = ConstructorParameters<any>;
  
-type T4 = ConstructorParameters<Function>;
+type T4 = ConstructorParameters<Function>;  // err
 ```
 
 ## ReturnType< Type>
@@ -144,12 +146,67 @@ type T3 = ReturnType<<T extends U, U extends number[]>() => T>;
 type T4 = ReturnType<typeof f1>;
 type T5 = ReturnType<any>;
 type T6 = ReturnType<never>;
-type T7 = ReturnType<string>;
-type T8 = ReturnType<Function>;
+type T7 = ReturnType<string>;    // err
+type T8 = ReturnType<Function>;  // err
 ```
 
-> [!IMPORTANT]
-> for more detailed documentation -> https://devdocs.io/typescript/utility-types
+## InstanceType< Type>
+Constructs a type consisting of the instance type of a constructor function in `Type`.
+```ts
+class C { x = 0;  y = 0; }
+ 
+type T0 = InstanceType<typeof C>;
+type T1 = InstanceType<any>;
+type T2 = InstanceType<never>;
+type T3 = InstanceType<string>;    // err
+type T4 = InstanceType<Function>;  // err
+```
+
+## ThisParameterType< Type>
+Extracts the type of the this parameter for a function type, or unknown if the function type has no `this` parameter.
+```ts
+function toHex(this: Number) {
+  return this.toString(16);
+}
+ 
+function numberToString(n: ThisParameterType<typeof toHex>) {
+  return toHex.apply(n);
+}
+```
+
+## ThisType< Type>
+This utility does not return a transformed type. Instead, it serves as a marker for a contextual `this` type. Note that the `noImplicitThis` flag must be enabled to use this utility.
+```ts
+type ObjectDescriptor<D, M> = {
+  data?: D;
+  methods?: M & ThisType<D & M>; // Type of 'this' in methods is D & M
+};
+ 
+function makeObject<D, M>(desc: ObjectDescriptor<D, M>): D & M {
+  let data: object = desc.data || {};
+  let methods: object = desc.methods || {};
+  return { ...data, ...methods } as D & M;
+}
+ 
+let obj = makeObject({
+  data: { x: 0, y: 0 },
+  methods: {
+    moveBy(dx: number, dy: number) {
+      this.x += dx; // Strongly typed this
+      this.y += dy; // Strongly typed this
+    },
+  },
+});
+ 
+obj.x = 10;
+obj.y = 20;
+obj.moveBy(5, 5);
+```
+In the example above, the methods object in the argument to makeObject has a contextual type that includes `ThisType<D & M>` and therefore the type of this in methods within the methods object is ``{ x: number, y: number } & { moveBy(dx: number, dy: number): number }``. Notice how the type of the methods property simultaneously is an inference target and a source for the this type in methods.
+
+The `ThisType<T>` marker interface is simply an empty interface declared in lib.d.ts. Beyond being recognized in the contextual type of an object literal, the interface acts like any empty interface.
+
+
 
 
 

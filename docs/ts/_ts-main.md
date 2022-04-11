@@ -11,19 +11,20 @@
 <h2 align="center">TypeScript Document Libraries <i class="bi bi-journals"></i></h2>
 
 ## Reference
-* [TypeScript JSX](ts-jsx.md)
-* [TypeScript Types](ts-types.md)
-* [TypeScript Object Types](ts-object-types.md)
-* [TypeScript Classes](ts-classes.md)
-* [TypeScript Enums](ts-enums.md)
-* [TypeScript NameSpace](ts-namespace.md)
+* [TypeScript Utility Types](ts-utility-types.md)
 * [TypeScript Declaration](ts-declaration.md)
 * [TypeScript Decorators](ts-decorators.md)
-* [TypeScript Modules](ts-modules.md)
-* [TypeScript Utility Types](ts-utility-types.md)
-* [TypeScript](ts-deep-dive.md)
+* [TypeScript Enums](ts-enums.md)
+* [TypeScript Iterators](ts-iterators.md)
+* [TypeScript JSX](ts-jsx.md)
+* [TypeScript Types](ts-types.md)
 * [TypeScript Type Compatibility](ts-type-compatibility.md)
+* [TypeScript Object Types](ts-object-types.md)
+* [TypeScript Classes](ts-classes.md)
+* [TypeScript NameSpace](ts-namespace.md)
+* [TypeScript Modules](ts-modules.md)
 * [TypeScript Compiler](ts-compiler.md)
+* [TypeScript](ts-deep-dive.md)
 
 
 ## Project Configuration
@@ -37,6 +38,8 @@
 
 
 
+> [!IMPORTANT]
+> this document only explains some parts. For more detailed documentation, you can refer to the official [TypeScript documentation](https://www.typescriptlang.org/docs) website.
 
 
 
