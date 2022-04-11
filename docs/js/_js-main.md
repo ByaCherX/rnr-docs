@@ -10,6 +10,8 @@
 
 <h2 align="center">JavaScript Document Libraries <i class="bi bi-journals"></i></h2>
 
+<h1 style="text-align:center">Built-in Objects</h1>
+
 ## Value properties
 * [Infinity](js-values.md#Infinity)
 * [NaN](js-values.md#NaN)
@@ -27,9 +29,19 @@
 * [encodeURI()]
 * [encodeURIComponent()]
 
-## Fundamental objects
+## Functions
+* [function](js-function.md)
+* [function*](js-function.md#function*)
+* [AsyncFunction](js-function#async-function)
+* [functionAdvanced](js-advanced-functions.md)
+
+## Object
 * [Object](js-object.md)
-* [Function](js-function.md)
+
+## Classes
+* [Class](js-class.md)
+
+## Fundamental objects
 * [Boolean](js-boolean.md)
 * [Symbol](js-symbol.md)
 
@@ -52,42 +64,40 @@
 
 ## Text processing
 * [String](js-string.md)
-* [RegExp]
+* [RegExp](js-regularExpressions.md)
 
 ## Indexed collections
 * [Array](js-array.md)
-* [Int8Array](js-array-addonational.md)
-* [Uint8Array](js-array-addonational.md)
-* [Uint8ClampedArray](js-array-addonational.md)
-* [Int16Array](js-array-addonational.md)
-* [Uint16Array](js-array-addonational.md)
-* [Int32Array](js-array-addonational.md)
-* [Uint32Array](js-array-addonational.md)
-* [Float32Array](js-array-addonational.md)
-* [Float64Array](js-array-addonational.md)
-* [BigInt64Array](js-array-addonational.md)
-* [BigUint64Array](js-array-addonational.md)
+* [Int8Array](js-array-advanced.md)
+* [Uint8Array](js-array-advanced.md)
+* [Uint8ClampedArray](js-array-advanced.md)
+* [Int16Array](js-array-advanced.md)
+* [Uint16Array](js-array-advanced.md)
+* [Int32Array](js-array-advanced.md)
+* [Uint32Array](js-array-advanced.md)
+* [Float32Array](js-array-advanced.md)
+* [Float64Array](js-array-advanced.md)
+* [BigInt64Array](js-array-advanced.md)
+* [BigUint64Array](js-array-advanced.md)
 
 ## Keyed collections
 * [Map](js-map.md)
 * [Set](js-set.md)
-* [WeakMap]
-* [WeakSet]
+* [WeakMap](js-map.md#WeakMap)
+* [WeakSet](js-map.md#WeakSet)
 
 ## Structured data
 * [ArrayBuffer]
 * [SharedArrayBuffer]
 * [Atomics]
 * [DataView]
-* [JSON](js-json.md)
 
-## Control abstraction
-* [GeneratorFunction](js-function.md#Constructor)
-* [AsyncGeneratorFunction](js-function.md#)
-* [Generator](js-function.md#)
-* [AsyncGenerator](js-function.md#)
-* [AsyncFunction](js-function.md#)
-* [Promise](js-function.md#)
+## JSON
+* [JSON](js-json.md) !!!
+
+## Async/Await Promise
+* [Async/Await](js-async-await.md)
+* [Promise](js-async-await.md#promise)
 
 ## Reflection
 * [Reflect](js-reflect.md)
@@ -114,7 +124,7 @@
 * [WebAssembly.LinkError](js-webassembly.md)
 * [WebAssembly.RuntimeError](js-webassembly.md)
 
-<h1 style="text-align:center">Statements</h2>
+<h1 style="text-align:center">Statements & Declarations</h1>
 
 ## Control flow
 * [Block](js-controlFlow.md#Block)
@@ -131,30 +141,19 @@
 * [let](js-declaration.md#let)
 * [const](js-declaration.md#const)
 
-## Functions and classes
-* [function](js-function.md)
-* [function*]()
-* [Arrow functions]
-* [async function]
-* [return](js)
-* [class](js-class.md)
-
-## Advanced working with functions > **Content not ready!**
-* [Recursion and stack]()
-
 ## Iterations
+* [while](js-iterations.md#while)
 * [do...while](js-iterations.md#do..while)
 * [for](js-iterations.md#for)
 * [for each...in](js-iterations.md#)
 * [for...in](js-iterations.md#for...in)
 * [for...of](js-iterations.md#for...of)
 * [for await...of](js-iterations.md#)
-* [while](js-iterations.md#while)
 
 ## Other
-* [debugger]()
-* [export](js-export-import.md#Export)
+* [return](js-object.md#return-from-constructors)
 * [import](js-export-import.md#Import)
+* [export](js-export-import.md#Export)
 * [label]()
 * [with]()
 
@@ -162,27 +161,19 @@
 
 ## Primary expressions
 * [this](js-primaryExpression.md#This)
-* [function](js-primaryExpression.md#)
-* [class](js-primaryExpression.md#)
-* [function*](js-primaryExpression.md#)
 * [yield](js-primaryExpression.md#)
 * [yield*](js-primaryExpression.md#)
-* [async function](js-primaryExpression.md#)
-* [await](js-primaryExpression.md#)
-* [array](js-primaryExpression.md#)
-* [{}](js-primaryExpression.md#)
-* [/ab+c/i](js-primaryExpression.md#)
-* [( )](js-primaryExpression.md#)
-* [null](js-primaryExpression.md#null)
+
+## Async/Await/Promise
 
 ## Left-hand-side expressions
-* [Property accessors]()
-* [Optional chaining]()
-* [new]()
-* [new.target]()
-* [import.meta]()
-* [super]()
-* [...obj]()
+* [Property accessors [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+* [Optional chaining [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+* [new [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+* [new.target [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+* [import.meta [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
+* [super [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+* [...obj [MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ## Unary operators
 * [Increment(++)](js-operators.md#Increment(++))
