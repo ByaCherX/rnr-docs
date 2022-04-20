@@ -11,18 +11,35 @@
 <h2 align="center">About this documentation</h2>
 Welcome to the official-rds API reference documentation for Node.js!
 
+## Release Types
+* <rtype1>**Current**</rtype1></br> Under active development. Code for the Current release is in the
+  branch for its major version number (for example,
+  [`v15.x`](https://github.com/ByaCherX/node.js-rds/tree/v15.x)). Node.js releases a new
+  major version every 6 months, allowing for breaking changes. This happens in
+  April and October every year. Releases appearing each October have a support
+  life of 8 months. Releases appearing each April convert to LTS (see below)
+  each October.
+* <rtype2>**LTS**</rtype2></br> Releases that receive Long Term Support, with a focus on stability
+  and security. Every even-numbered major version will become an LTS release.
+  LTS releases receive 12 months of _Active LTS_ support and a further 18 months
+  of _Maintenance_. LTS release lines have alphabetically-ordered code names,
+  beginning with v4 Argon. There are no breaking changes or feature additions,
+  except in some special circumstances.
+* <rtype3>**Nightly**</rtype3></br> Code from the Current branch built every 24-hours when there are
+  changes. Use with caution.
+
 ## Stability index
 Throughout the documentation are indications of a section's stability. Some APIs are so proven and so relied upon that they are unlikely to ever change at all. Others are brand new and experimental, or known to be hazardous.
 
 The stability indices are as follows:
 
-**Stability: 0** - Deprecated. The feature may emit warnings. Backward compatibility is not guaranteed.
+<stability0>**Stability: 0**</stability0> - Deprecated. The feature may emit warnings. Backward compatibility is not guaranteed.
 
-**Stability: 1** - Experimental. The feature is not subject to Semantic Versioning rules. Non-backward compatible changes or removal may occur in any future release. Use of the feature is not recommended in production environments.
+<stability1>**Stability: 1**</stability1> - Experimental. The feature is not subject to Semantic Versioning rules. Non-backward compatible changes or removal may occur in any future release. Use of the feature is not recommended in production environments.
 
-**Stability: 2** - Stable. Compatibility with the npm ecosystem is a high priority.
+<stability2>**Stability: 2**</stability2> - Stable. Compatibility with the npm ecosystem is a high priority.
 
-**Stability: 3** - Legacy. The feature is no longer recommended for use. While it likely will not be removed, and is still covered by semantic-versioning guarantees, use of the feature should be avoided.
+<stability3>**Stability: 3**</stability3> - Legacy. The feature is no longer recommended for use. While it likely will not be removed, and is still covered by semantic-versioning guarantees, use of the feature should be avoided.
 
 Use caution when making use of Experimental features, particularly within modules. Users may not be aware that experimental features are being used. Bugs or behavior changes may surprise users when Experimental API modifications occur. To avoid surprises, use of an Experimental feature may need a command-line flag. Experimental features may also emit a warning.
 
@@ -70,8 +87,7 @@ Stability overview
 | worker_threads                      | (2) Stable       |
 | zlib                                | (2) Stable       |
 
-
-
+## Status Project
 
 <h2 align="center">Node.js Document Libraries <i class="bi bi-journals"></i></h2>
 
