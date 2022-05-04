@@ -1,6 +1,6 @@
 #h1c{text-align: center;}
-code1 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(206, 87, 61); font-size: 110%; text}
-.border{border: 1px solid rgb(17, 107, 224);width: auto;}
+code1 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(206, 87, 61); font-size: 110%;}
+.border{border: 1px solid rgb(17, 107, 224); width:auto;}
 .center {
     display: block;
     margin-left: 38%;
