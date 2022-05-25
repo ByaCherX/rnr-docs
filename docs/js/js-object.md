@@ -113,6 +113,9 @@ aModule.x = 1;
 console.log(bModule.x); // 1
 ```
 
+### Object.keys()
+
+
 #### Explain
 * **Configurable**</br>
 *true & false* = if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.

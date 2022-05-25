@@ -461,7 +461,7 @@ slice(start)
 slice(start, end)
 // example
 const array1 = [1,2,3,4,5];
-console.log(array1.slice(2));  // output: ["camel","duck","elephant"]
+console.log(array1.slice(2));  // output: ??..
 ```
 
 ### Array.some()
