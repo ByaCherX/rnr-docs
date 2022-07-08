@@ -38,6 +38,8 @@ BigInt(123);
 ```
 
 ## Static methods
+* BigInt.asIntN()
+* BigInt.asUintN()
 
 ### BigInt.asIntN()
 The `BigInt.asIntN` static method clamps a BigInt value to a signed integer value, and returns that value.

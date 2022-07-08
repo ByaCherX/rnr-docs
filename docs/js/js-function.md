@@ -30,6 +30,8 @@ arguments[1] = 'new value';
 ```
 
 ## Instance properties
+* Function.length()
+* Function.name()
 
 ### Function.length()
 The length property indicates the number of parameters expected by the function.
@@ -38,13 +40,17 @@ funcName1.length
 ```
 ``length`` bir fonksiyon nesnesinin bir özelliğidir ve fonksiyonun kaç tane argüman beklediğini, yani resmi parametre sayısını gösterir. Bu sayı rest parametresini hariç tutar ve yalnızca varsayılan değere sahip ilkinden önceki parametreleri içerir. Buna karşılık, *arguments.length* bir işlev için yereldir ve işleve fiilen iletilen argümanların sayısını sağlar.
 
-### Function. name()
+### Function.name()
 A Function object's read-only ``name`` property indicates the function's name as specified when it was created, or it may be either ``anonymous`` or ``''`` (an empty string) for functions created anonymously.
 ```js
 funcName1.name
 ```
 
 ## Instance methods
+* Function.apply()
+* Function.bind()
+* Function.call()
+* Function.toString()
 
 ### Function.apply()
 The ``apply()`` method calls a function with a given *this* value, and *arguments* provided as an array (or an array-like object).
@@ -74,6 +80,8 @@ toString()
 ```
 
 ## Function Advanced
+* Function*
+* [AsyncFunction](js-async-await.md)
 
 ### Function*
 The function* keyword can be used to define a generator function inside an expression.

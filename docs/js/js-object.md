@@ -40,6 +40,17 @@ alert( new BigUser().name );    // Godzilla, got that object
 ```
 
 ## Static methods
+* Object.assign()
+* Object.create()
+* Object.defineProperty()
+* Object.defineProperties()
+* Object.entries()
+* Object.freeze()
+* Object.fromEntries()
+* Object.getPrototypeOf()
+* Object.is()
+* Object.keys()
+* Object.values()
 
 ### Object.assign()
 The `Object.assign()` method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
@@ -115,7 +126,6 @@ console.log(bModule.x); // 1
 
 ### Object.keys()
 
-
 #### Explain
 * **Configurable**</br>
 *true & false* = if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.
@@ -178,6 +188,25 @@ Object.freeze(obj);
 
 obj.prop = 33;           // Throws an error in strict mode
 console.log(obj.prop);   // output: 42
+```
+
+### Object.fromEntries()
+The `Object.fromEntries()` method takes a list of key-value pairs and returns a new object whose properties are given by those entries. The iterable argument is expected to be an object that implements an `@@iterator` method, that returns an iterator object, that produces a two element array-like object, whose first element is a value that will be used as a property key, and whose second element is the value to associate with that property key.
+```js
+// syntax
+Object.fromEntries(iterable);
+
+// example: Converting a Map to an Object
+const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: "bar", baz: 42 }
+```
+
+### Object.getPrototypeOf()
+The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal `[[Prototype]]` property) of the specified object.
+```js
+// Syntax
+Object.getPrototypeOf(obj);
 ```
 
 ## Object methods "this"

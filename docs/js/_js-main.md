@@ -60,7 +60,7 @@
 * [Number](js-number.md)
 * [BigInt](js-bigint.md)
 * [Math](js-math.md)
-* [Date]
+* [Date](js-date.md)
 
 ## Text processing
 * [String](js-string.md)

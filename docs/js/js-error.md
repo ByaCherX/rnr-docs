@@ -4,6 +4,14 @@
 `Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
 ## Error types
+* EvalError
+* RangeError
+* ReferenceError
+* SyntaxError
+* TypeError
+* URIError
+* AggregateError
+
 ### EvalError
 The `EvalError` object indicates an error regarding the global eval() function. This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
 ```js
@@ -123,6 +131,7 @@ try {
 ```
 
 ## Constructor
+
 ### Error() constructor
 The `Error` constructor creates an error object.
 ```js
@@ -133,6 +142,7 @@ new Error(message, fileName, lineNumber)
 ```
 
 ## Instance properties
+
 ### Error.prototype.message()
 The `message` property is a human-readable description of the error.
 ```js
@@ -181,17 +191,17 @@ try {
 }
 ```
 
+### Example
+#### Throwing a generic error
+Usually you create an `Error` object with the intention of raising it using the throw keyword. You can handle the error using the try...catch construct:
+```js
+try {
+  throw new Error('Whoops!')
+} catch (e) {
+  console.error(e.name + ': ' + e.message)
+}
 
-
-
-
-
-
-
-
-
-
-
+```
 
 
 

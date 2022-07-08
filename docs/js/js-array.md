@@ -23,7 +23,7 @@ new Array(element0, element1, ..., elementN)
 new Array(arrayLength)
 ```
 
-#### Example
+### Example
 ```js
 // Array literal notation
 let fruits = ['apple','banana'];
@@ -132,6 +132,8 @@ let shallowCopy = fruits.slice()    // ["Strawberry", "Mango"]
 ```
 
 ## Static methods
+* Array.from()
+* Array.isArray()
 
 ### Array.from()
 The `Array.from()` static method creates a new, shallow-copied `Array` instance from an array-like or iterable object.
@@ -159,6 +161,7 @@ Array.isArray(value)
 ```
 
 ## Instance properties
+* Array.length
 
 ### Array.length
 The `length` property of an object which is an instance of type `Array` sets or returns the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
@@ -169,6 +172,38 @@ console.log(list.length);    // output: 4
 ```
 
 ## Instance Methods
+* Array.at()
+* Array.concat()
+* Array.copyWithin()
+* Array.entries()
+* Array.every()
+* Array.fill()
+* Array.filter()
+* Array.find()
+* Array.findIndex()
+* Array.flat()
+* Array.flatMap()
+* Array.forEach()
+* Array.includes()
+* Array.indexOf()
+* Array.join()
+* Array.keys()
+* Array.lastIndexOf()
+* Array.map()
+* Array.pop()
+* Array.push()
+* Array.reduce()
+* Array.reduceRight()
+* Array.reverse()
+* Array.shift()
+* Array.slice()
+* Array.some()
+* Array.sort()
+* Array.splice()
+* Array.toLocaleString()
+* Array.toString()
+* Array.unshift()
+* Array.values()
 
 ### Array.at()
 The `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.

@@ -19,6 +19,14 @@ A Map object iterates its elements in insertion order — a for...of loop return
 |Performance|Performs better in scenarios involving frequent additions and removals of key-value pairs.|Not optimized for frequent additions and removals of key-value pairs.|
 
 ## Constructor
+* Map.clear()
+* Map.delete()
+* Map.set()
+* Map.get()
+* Map.has()
+* Map.keys()
+* Map.values()
+* Map.entries()
 
 ### Map() constructor
 The `Map()` creates *Map* objects.

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 <h1 style="text-align:center">TS - Enums</h1>
@@ -20,7 +20,7 @@ enum Direction {
 Above, we have a numeric enum where Up is initialized with 1. All of the following members are auto-incremented from that point on. In other words, Direction.Up has the value 1, Down has 2, Left has 3, and Right has 4.
 
 Using an enum is simple: just access any member as a property off of the enum itself, and declare types using the name of the enum:
-```ts
+```ts 
 enum UserResponse {
   No = 0,
   Yes = 1,
