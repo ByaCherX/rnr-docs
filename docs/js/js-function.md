@@ -71,6 +71,18 @@ The call() method calls a function with a given this value and arguments provide
 ```js
 call(thisArg)
 call(thisArg, arg1, ..., argN)
+
+// example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+const cheese = new Food('feta', 5);
 ```
 
 ### Function.toString()
