@@ -17,6 +17,242 @@ function Book(title, author) {
 }
 ```
 
+<h1 style="text-align:center">JSDoc References</h1>
+
+## Types
+
+### @type
+You can reference types with the “@type” tag. The type can be:
+1. Primitive, like string or number.
+2. Declared in a TypeScript declaration, either global or imported.
+3. Declared in a JSDoc @typedef tag.
+```js
+/** @type {string} */
+var s;
+ 
+/** @type {Window} */
+var win;
+
+/** @type {string | boolean} */
+var sb;
+```
+
+### @param and @returns
+@param uses the same type syntax as @type, but adds a parameter name. The parameter may also be declared optional by surrounding the name with square brackets:
+```js
+// Parameters may be declared in a variety of syntactic forms
+/**
+ * @param {string}  p1 - A string param.
+ * @param {string=} p2 - An optional param (Google Closure syntax)
+ * @param {string} [p3] - Another optional param (JSDoc syntax).
+ * @param {string} [p4="test"] - An optional param with a default value
+ * @returns {string} This is the result
+ */
+function stringsStringStrings(p1, p2, p3, p4) {
+  // TODO
+}
+```
+
+### @typedef, @callback and @param
+You can define complex types with @typedef. Similar syntax works with @param.
+```js
+/**
+ * @typedef {object} SpecialType - creates a new type named 'SpecialType'
+ * @property {string} prop1 - a string property of SpecialType
+ * @property {number} prop2 - a number property of SpecialType
+ * @property {number=} prop3 - an optional number property of SpecialType
+ * @prop {number} [prop4] - an optional number property of SpecialType
+ * @prop {number} [prop5=42] - an optional number property of SpecialType with default
+ */
+ 
+/** @type {SpecialType} */
+var specialTypeObject;
+specialTypeObject.prop3;
+```
+
+### @template
+You can declare type parameters with the @template tag. This lets you make functions, classes, or types that are generic:
+```js
+/**
+ * @template T
+ * @param {T} x - A generic parameter that flows through to the return type
+ * @returns {T}
+ */
+function id(x) {
+  return x;
+}
+ 
+const a = id("string");
+const b = id(123);
+const c = id({});
+```
+
+
+## Classes
+Classes can be declared as ES6 classes.
+```js
+class C {
+  /**
+   * @param {number} data
+   */
+  constructor(data) {
+    // property types can be inferred
+    this.name = "foo";
+ 
+    // or set explicitly
+    /** @type {string | null} */
+    this.title = null;
+ 
+    // or simply annotated, if they're set elsewhere
+    /** @type {number} */
+    this.size;
+ 
+    this.initialize(data); // Should error, initializer expects a string
+  }
+  /**
+   * @param {string} s
+   */
+  initialize = function (s) {
+    this.size = s.length;
+  };
+}
+ 
+var c = new C(0);
+ 
+// C should only be called with new, but
+// because it is JavaScript, this is allowed and
+// considered an 'any'.
+var result = C(1);
+```
+
+### Property Modifiers
+@public, @private, and @protected work exactly like ``public``, ``private``, and ``protected`` in TypeScript:
+```js
+// @ts-check
+ 
+class Car {
+  constructor() {
+    /** @private */
+    this.identifier = 100;
+  }
+ 
+  printIdentifier() {
+    console.log(this.identifier);
+  }
+}
+ 
+const c = new Car();
+console.log(c.identifier); //err 'identifier' is private and only accessible within class 'Car'
+```
+
+### @readonly
+The @readonly modifier ensures that a property is only ever written to during initialization.
+
+### @override
+@override works the same way as in TypeScript; use it on methods that override a method from a base class:
+```js
+export class C {
+  m() { }
+}
+class D extends C {
+  /** @override */
+  m() { }
+}
+```
+
+### @extends
+When JavaScript classes extend a generic base class, there is no JavaScript syntax for passing a type argument. The @extends tag allows this:
+```js
+/**
+ * @template T
+ * @extends {Set<T>}
+ */
+class SortableSet extends Set {
+  // ...
+}
+```
+
+### @implements
+In the same way, there is no JavaScript syntax for implementing a TypeScript interface. The @implements tag works just like in TypeScript:
+```js
+/** @implements {Print} */
+class TextBook {
+  print() {
+    // TODO
+  }
+}
+```
+
+### @constructor
+The compiler infers constructor functions based on this-property assignments, but you can make checking stricter and suggestions better if you add a @constructor.
+
+### @this
+The compiler can usually figure out the type of this when it has some context to work with. When it doesn’t, you can explicitly specify the type of this with @this:
+```js
+/**
+ * @this {HTMLElement}
+ * @param {*} e
+ */
+function callbackForLater(e) {
+  this.clientHeight = parseInt(e); // should be fine!
+}
+```
+
+
+## Documentation
+
+### @deprecated
+When a function, method, or property is deprecated you can let users know by marking it with a `/** @deprecated */` JSDoc comment. That information is surfaced in completion lists and as a suggestion diagnostic that editors can handle specially. In an editor like VS Code, deprecated values are typically displayed in a strike-through style like this.
+```js
+/** @deprecated */
+const apiV1 = {};
+const apiV2 = {};
+```
+
+### @see
+@see lets you link to other names in your program:
+```js
+type Box<T> = { t: T }
+/** @see Box for implementation details */
+type Boxify<T> = { [K in keyof T]: Box<T> };
+```
+
+### @link
+@link is like @see, except that it can be used inside other tags:
+```js
+type Box<T> = { t: T }
+/** @returns A {@link Box} containing the parameter. */
+function box<U>(u: U): Box<U> {
+  return { t: u };
+}
+```
+
+
+## Other
+
+### @enum
+The @enum tag allows you to create an object literal whose members are all of a specified type. Unlike most object literals in JavaScript, it does not allow other members. @enum is intended for compatibility with Google Closure’s @enum tag.
+```js
+/** @enum {number} */
+const JSDocState = {
+  BeginningOfLine: 0,
+  SawAsterisk: 1,
+  SavingComments: 2,
+};
+ 
+JSDocState.SawAsterisk;
+```
+
+### @author
+You can specify the author of an item with @author:
+```js
+/**
+ * Welcome to awesome.ts
+ * @author Ian Awesome <i.am.awesome@example.com>
+ */
+```
+
+
 <h1 style="text-align:center">Block Tags</h1>
 
 * @abstract (synonyms: @virtual)
