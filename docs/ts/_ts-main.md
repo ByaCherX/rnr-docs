@@ -28,8 +28,7 @@
 
 
 ## Project Configuration
-* [TypeScript Config](ts-config.md)
-* [Project References](ts-projectReferences.md)
+
 
 
 
