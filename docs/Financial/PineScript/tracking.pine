@@ -1,0 +1,216 @@
+// This source code is subject to the terms of the RedDevSoftware License at __constructing this site__
+// Library //=> V-MEX
+
+//@version=5
+
+// @description 
+library('Progressbar') // as progress
+
+//  ▪ PROGRESSBAR ──── {
+// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+// ──── Progressbar {
+// @function    A fully customizable progressbar.
+// @version     0.7 dev
+// @author      © RedDevSoftware - created by EmreKayal
+// --
+// @param       series  line   [Array]  `_arrLine`        *requird    collect line objects.
+// @param       series  label  [Array]  `_arrLabel`       *requird    An array to collect label objects.
+// @param       series  color  [Array]  `_theme`          *requird    Option A:   [0] => Background Color; [1] => Text Background Color; [2] => Bar Unfilled Color; [3] Bar Filled Color; 
+//                                                                    Option B:   [0] => Background Color; [1] => Text Background Color; [2] => Bar Unfilled Color; [3] Bar Filled Color; [:@_gradient: true => [4] => Bar Filled Color Gradient]
+//                                                                    Option C:   [0] => Background Color; [1] => Text Background Color; [2] => Bar Unfilled Color; [3] Bar Filled Color; [4] Bar Filled Color; [...] Bar Filled Color; ...
+// @param       simple  int             `_offsetX`        *requird    Set xloc anchor point offset value, relative to the current bar_index [relative/bars]
+// @param       series  int             `_y`              *requird    Set yloc anchor point value, [absolut/price]
+// @param       series  float           `_value`          *requird    Indicated value.
+// @param       simple  float           `_min`            *requird    Minimal value to show.
+// @param       simple  float           `_max`            *requird    Maximal value to show.
+// --
+// @param       simple  int             `_slices`         defval      Total amounut of slices.
+// @param       simple  int             `_sliceWidth`     defval      Width of each slice. [relative/bars]
+// @param       simple  int             `_sliceHeight`    defval      Height of each slice, in linewidth.
+// @param       simple  int             `_collapse`       defval      Collapse between slices, in bars.
+// @param       simple  int             `_paddingWidth`   defval      Padding width, left/right.
+// @param       simple  int             `_paddingHeight`  defval      Padding height, top/bottom.
+// @param       series  string          `_textLeft`       defval      Text left.
+// @param       series  string          `_textRight`      defval      Text right.
+// @param       series  string          `_textTop`        defval      Text top.
+// @param       series  string          `_textBottom`     defval      Text bottom.
+// @param       series  string          `_tooltip`        defval      Text tooltip.
+// @param       simple  string          `_textSize`       defval      Set text size.
+// @param       simple  string          `_textPadding`    defval      Padding between text and progressbar.
+// @param       simple  string          `_style`          defval      Linestyle.
+// @param       simple  bool            `_prefill`        defval      Option to color bar, if current value is greater than sliceStart xor sliceEnde.
+// @param       simple  bool            `_mark`           defval      Option to only color a single bar / position.
+// @param       simple  float           `_markSize`       defval      Set a factor to multiply sliceHeight of the marked bar.
+// @param       simple  bool            `_gradient`       defval      Option to activate gradient color from _theme array index 4. See _theme description.
+// --
+// @return      tuple   `_offsetX`, `_y`, `fullLength`, `colBarFilled`, `colBarUnfilled` Returns callback data.
+// --
+export bar(series line [] _arrLine, series label [] _arrLabel, series color [] _theme, simple int _offsetX, series float _y, series float _value, simple float _min, simple float _max,
+ simple int _slices = 5, simple int _sliceWidth = 2, simple int _sliceHeight = 5, simple int _collapse = 0, simple int _paddingWidth = 0, simple int _paddingHeight = 0,
+ series string _textLeft = na, series string _textRight = na, series string _textTop = na, series string _textBottom = na, series string _tooltip = na, 
+ simple string _textSize = size.small, simple int _textPadding = 1, simple string _style = line.style_solid,
+ simple bool _prefill = false, simple bool _mark = false, simple float _markSize = 1.618, simple bool _gradient = false) =>
+    // --
+    float pRange = _max - _min, float slice = pRange / _slices, float slicePct = 100 / _slices, int backgroundId = array.size(_arrLine), int labelId = array.size(_arrLabel) 
+    color colBarFilled = array.get(_theme, 3), int ctr = -1, float colorPct = 100 / (array.size(_theme) - 3)
+    array.push(_arrLine, line.new(x1 = bar_index + _offsetX, y1 = _y, x2 = na, y2 = na, xloc = xloc.bar_index, color = array.get(_theme, 0), width = _sliceHeight + _paddingHeight))
+    // -- Lines
+    int x = for x = 0 to (_slices - 1) by 1
+        float sliceStart = _min + (slice * x), float sliceEnd = sliceStart + slice 
+        int colorIndex = math.ceil(slicePct * (x + 1) / colorPct) + 3 - 1, colBarFilled := _gradient and array.size(_theme) >= 5 ? color.from_gradient(_prefill ? sliceEnd : sliceStart, _min, _max, array.get(_theme, 3), array.get(_theme, 4)) : array.get(_theme, colorIndex)
+        array.push(_arrLine, line.new(x1 = bar_index + (x * _sliceWidth) + (x * _collapse) + _offsetX + _paddingWidth, y1 = _y, x2 = bar_index + ((x + 1) * _sliceWidth) + (x * _collapse) + _offsetX + _paddingWidth, xloc=xloc.bar_index, style = _style, y2 = _y, 
+         color=_mark and _value >= sliceStart and _value <= sliceEnd ? colBarFilled : _mark and _value > sliceEnd ? array.get(_theme, 2) : _value >= (_prefill ? sliceStart : sliceEnd) ? colBarFilled : array.get(_theme, 2), 
+         width = math.floor(_mark and _value >= sliceStart and _value <= sliceEnd ? _sliceHeight * _markSize : _sliceHeight))), x
+    // -- Background
+    int fullLength = ((x + 1) * _sliceWidth) + (x * _collapse) + (2 * _paddingWidth) 
+    line.set_xy2(array.get(_arrLine, backgroundId), bar_index + fullLength + _offsetX, _y)
+    // -- Label
+    for content in array.from(_textLeft, _textRight, _textTop, _textBottom)
+        ctr += 1
+        if not bool(content == string(na))
+            [x_, y_, text_, align_, style_] = switch
+                ctr == 0 => [bar_index + _offsetX - _textPadding, _y, content, text.align_right, label.style_label_right]
+                ctr == 1 => [bar_index + fullLength + _offsetX + _textPadding, _y, content, text.align_left, label.style_label_left]
+                ctr == 2 => [bar_index + math.ceil((fullLength / 2) + _offsetX), _y, content, text.align_center, label.style_label_down]
+                ctr == 3 => [bar_index + math.ceil((fullLength / 2) + _offsetX), _y, content, text.align_center, label.style_label_up]
+            array.push(_arrLabel, label.new(x = x_, y = y_, xloc = xloc.bar_index, color = array.get(_theme, 1), textcolor = array.get(_theme, 2), style = style_, textalign = align_, size = _textSize, text = text_, tooltip = _tooltip))
+    // -- Callback data
+    [int(_offsetX), float(_y), int(fullLength), color(colBarFilled)]
+// }
+
+// ──── Add decoration {
+// @function    A fully customizable progressbar.
+// @version     0.3 dev
+// @author      © cryptolinx - jango_blockchained
+// --
+// @param       series  line   [Array]  `_arrLabel`       *requird    Collect line objects.
+// @param       series  string [Array]  `_decor`          *requird    An array to collect label objects.
+// @param       series  int             `_offsetX`        *requird    Set xloc anchor point offset value, relative to the current bar_index [relative/bars]
+// @param       series  int             `_y`              *requird    Set yloc anchor point value, [absolut/price]
+// @param       series  int             `_fullLength`     *requird    Set length of progressbar.
+// @param       series  color           `_color`          defval      Set color.
+// @param       simple  string          `_size`           defval      Set decoration size.
+// @param       simple  bool            `_pingpong`       defval      Change output order from top-left, bottom-left, top-right, bottom-right to left, right. It also change the valign to center.
+// --
+// @returns      void
+// --
+export addDecoration(series label [] _arrLabel, series string [] _decor, series int _offsetX, series float _y, series int _fullLength, series color _color = color.silver, simple string _size = size.normal, simple bool _pingpong = false) =>
+    for decor in _decor
+        int ctr = array.indexof(_decor, decor), bool toggle = (ctr) % (_pingpong ? 2 : 4) >= (_pingpong ? 1 : 2)
+        array.push(_arrLabel, label.new(bar_index + _offsetX + (toggle ? _fullLength - 2 : 2), _y, color = color(na), textcolor = _color, style = toggle ? label.style_label_left : label.style_label_right,
+         textalign = toggle ? text.align_right : text.align_left, size = _size, text = str.format(_pingpong ? '{0}' : ctr % 2 == 1 ? '\n{0}' : '{0}\n', decor)))
+// }
+
+// ──── Get standard decoration {
+// @function    A fully customizable progressbar.
+// @version     0.3 dev
+// @author      © cryptolinx - jango_blockchained
+// --
+// @returns     tuple   string [], string [], string [] Returns current standard decorations as array. 
+// --
+export getDecorations() =>
+    var string [] PBAR_DECOR_01 = array.from("⌜","⌞","⌝","⌟"), var string [] PBAR_DECOR_02 = array.from("⌏","⌍","⌎","⌌"), var string [] PBAR_DECOR_03 = array.from("◜","◟", "◝", "◞")
+    [PBAR_DECOR_01, PBAR_DECOR_02, PBAR_DECOR_03]
+// }
+
+// ──── Add decoration {
+// ToDo: export addMarker()
+// }
+
+// --
+
+//  ▪ EXAMPLE ──── {
+// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+// ── Object Limiter {
+//| @maxval: 500
+var int MaxLabelsCount = 100, var int MaxLinesCount = 100
+// }
+
+// ── Object Stack Helper Library {
+import cryptolinx/ObjectStack/4 as objx
+// --
+[xLABEL, fLABEL, xLINE, fLINE, _, _, _, _] = objx.init()
+objx.delete(fLABEL), objx.delete(fLINE)
+// }
+
+// ── Themes {
+// -- [0] => Progressbar Background, [1] => Label Background, [2] => Bar Unfilled | [3...] Bar Filled
+var color [] PBAR_THEME_01 = array.from(#1C1C37, color(na), #2D4151, #F9D190, #fdb43f, #fda10d, #d96a02, #c04102)
+var color [] PBAR_THEME_02 = array.from(color(na), color(na), color.silver, color.green, color.orange, color.red)
+var color [] PBAR_THEME_03 = array.from(color.new(#1C1C37, 50), color(na), color.white, #AFFF00, #FF9800, #FF0081)
+var color [] PBAR_THEME_04 = array.from(color.new(color.blue, 90), color(na), color.white, #AAFF00)
+var color [] PBAR_THEME_05 = array.from(#161424, color(na), color.new(#ffffff, 60), #7d1aff)
+// --
+[PBAR_DECOR_01, PBAR_DECOR_02, PBAR_DECOR_03] = getDecorations()
+// }
+
+// ── Source Value {
+float __RSI = input.bool(false, 'Manuel RSI', inline='IND') ? input.int(50, '', minval=0, maxval=100, step=5, inline='IND') : ta.rsi(close, input.int(5, 'RSI Length', minval=0, maxval=100, step=5))
+// }
+
+// ── Customizer Example {
+var __CST_COL_BG = input.color(#161424ff, 'Color PBar Bg', group='CUSTOM')
+var __CST_COL_LB = input.color(#ffffff00, 'Color Text Bg', group='CUSTOM')
+var __CST_TXT_SIZE = input.string(size.small, 'Text Size', options=[size.tiny, size.small, size.normal, size.large, size.huge], group='CUSTOM')
+var __CST_TXT_PD = input.int(1, 'Text Padding', group='CUSTOM')
+var __CST_OPT_PRE = input.bool(false, 'Prefill', group='CUSTOM', tooltip='')
+var __CST_COL_BF = input.color(#7d1aff, 'Color Bar Filled', group='CUSTOM', inline='COLOR_BAR')
+var __CST_COL_BU = input.color(color.new(#ffffff, 60), 'Color Bar Unfilled / Text', group='CUSTOM')
+var __CST_OPT_MK = input.bool(false, 'Mark', group='CUSTOM', tooltip='')
+var __CST_OPT_MK_SIZE = input.float(1.618, 'Mark Size', group='CUSTOM', tooltip='')
+var __CST_OPT_GR = input.bool(true, 'Gradient', group='CUSTOM', tooltip='')
+var __CST_COL_GR = input.color(color.red, 'Color Bar Filled To Gradient', group='CUSTOM')
+var __CST_POS_X = input.int(-150, 'Offset X', group='CUSTOM')
+var __CST_POS_Y = input.int(0, 'Y', group='CUSTOM')
+var __CST_MIN = input.float(0, 'Range Min. Value', group='CUSTOM', tooltip='')
+var __CST_MAX = input.float(100, 'Range Max. Value', group='CUSTOM', tooltip='')
+var __CST_SLICES = input.int(7, 'Slices', group='CUSTOM', step=1, minval=3, maxval=7, tooltip='Library preview limitation (~100 objects). If you added it to your script you can add many slices you want.')
+var __CST_SLICE_W = input.int(4, 'Slice Height', group='CUSTOM', tooltip='in linewidth')
+var __CST_SLICE_H = input.int(2, 'Slice Width', group='CUSTOM', tooltip='in bars')
+var __CST_COLLAPSE = input.int(1, 'Collapse', group='CUSTOM', tooltip='in bars')
+var __CST_PADDING_H = input.int(16, 'Bar Padding Height', group='CUSTOM', tooltip='in linewidth')
+var __CST_PADDING_W = input.int(2, 'Bar Padding Width', group='CUSTOM', tooltip='in bars')
+var __CST_STYLE = input.string(line.style_solid, 'Line Style', options=[line.style_solid, line.style_dashed, line.style_dotted, line.style_arrow_right, line.style_arrow_left], group='CUSTOM')
+var __CST_DECOR = input.int(0,"Add Decor",step=1, minval=0, maxval=3, tooltip="0 = none", group='CUSTOM')
+// }
+
+// ── Progressbars {
+if barstate.islast
+    // -- With argument keys
+    bar(_arrLine = fLINE, _arrLabel = fLABEL, _theme = PBAR_THEME_01, _offsetX = 0, _y = 20, _value = __RSI, _min = 0, _max = 100, _slices = 9, _sliceWidth = 2, _sliceHeight = 3, _collapse = 1, _paddingWidth = 2, _paddingHeight = 10, _textRight = str.format('PaddingWidth 16; PaddingHeight 2; Collapse 1 - RSI {0,number,#.00}', __RSI), _tooltip = 'Tooltip Text')
+    // -- With partitial argument keys 
+    bar(fLINE, fLABEL, PBAR_THEME_02, 0, 10, __RSI, 0, 100, 9, 1, 4, 0, 0, 0, _textRight = str.format('RSI {0,number,#.00}', __RSI), _tooltip='Tooltip Text', _textSize = size.small, _style = line.style_solid, _mark = false, _prefill = false, _markSize = 2)
+    
+    // -- Save callback data ...
+    [bar3OffsetX, bar3Y, bar3FullLength, bar3ColorFilled] = bar(fLINE, fLABEL, array.from(color(na), color(na), #393929, #f7525f), 0, 0, __RSI, 0, 100, 9, 1, 16, 1, 0, 0, _textRight = '100 MAX', _textLeft = 'MIN 0', _style = line.style_solid, _textSize = size.small)
+    // -- ... to addDecoration()
+    addDecoration(fLABEL, PBAR_DECOR_01, bar3OffsetX, bar3Y, bar3FullLength, bar3ColorFilled)
+    
+    // -- 
+    bar(fLINE, fLABEL, PBAR_THEME_04, 0, -20, __RSI, 0, 100, 7, 2, 3, 1, 2, 14, _textRight = str.format('RSI {0,number,#.00}', __RSI), _tooltip = 'Tooltip Text')
+    // --
+    bar(fLINE, fLABEL, PBAR_THEME_05, 0, -10, __RSI, 0, 100, 7, 5, 1, 0, 2, 16, _textRight = str.format('RSI {0,number,#.00}', __RSI), _tooltip = 'Tooltip Text')
+// }
+
+// ── Custom {
+    var color [] PBAR_CUSTOM_THEME = array.from(__CST_COL_BG, __CST_COL_LB, __CST_COL_BU, __CST_COL_BF)
+    if __CST_OPT_GR
+        array.push(PBAR_CUSTOM_THEME, __CST_COL_GR)
+    [bar6OffsetX, bar6Y, bar6FullLength, bar6ColorFilled] = bar(fLINE, fLABEL, PBAR_CUSTOM_THEME, __CST_POS_X, __CST_POS_Y, __RSI, __CST_MIN, __CST_MAX, __CST_SLICES, __CST_SLICE_W, __CST_SLICE_H, __CST_COLLAPSE, __CST_PADDING_W, __CST_PADDING_H, 
+     _textLeft = 'CHANGE INPUT TO CUSTOMIZE', _textRight = str.format('RSI {0,number,#.00}', __RSI), _tooltip = 'Tooltip Text', _textSize = __CST_TXT_SIZE, _style = __CST_STYLE, _gradient = __CST_OPT_GR, _prefill = __CST_OPT_PRE, _mark = __CST_OPT_MK, _markSize = __CST_OPT_MK_SIZE)
+    if __CST_DECOR > 0
+        addDecoration(fLABEL, __CST_DECOR == 1 ? PBAR_DECOR_01 : __CST_DECOR == 2 ? PBAR_DECOR_02 : PBAR_DECOR_03, bar6OffsetX, bar6Y, bar6FullLength, bar6ColorFilled)
+// }
+
+// -- {
+color hlineCol = color.new(color.silver, 80), hline(15, color=hlineCol), hline(5, color=hlineCol), hline(-5, color=hlineCol), hline(-15, color=hlineCol), hline(25, color=hlineCol), hline(-25, color=hlineCol)
+// }
+
+// ──── Clean Object-Stack after all calls {
+objx.cleanOldest(xLABEL, fLABEL, MaxLabelsCount, 0)
+objx.cleanOldest(xLINE, fLINE, MaxLinesCount, 0)
+// }
+
+// ──── } #EOF
