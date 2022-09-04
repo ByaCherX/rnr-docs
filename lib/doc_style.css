@@ -10,6 +10,15 @@ dclr {color: rgb(219, 125, 71); font-weight: 500; font-size: 16px;}
 
 dclrTS {color: #719af4; font-weight: 500; font-size: 14px; background: #162444;}
 
+/* ---- Node css ---- */
+rtype1 {color: rgb(71, 152, 219); font-weight: 500; font-size: 16px;}
+rtype2 {color: rgb(212, 104, 41); font-weight: 500; font-size: 16px;}
+rtype3 {color: rgb(152, 71, 219); font-weight: 500; font-size: 16px;}
+stability0 {color: rgb(216, 59, 59); font-weight: 500; font-size: 16px;}
+stability1 {color: rgb(212, 119, 42); font-weight: 500; font-size: 16px;}
+stability2 {color: rgb(46, 204, 112); font-weight: 500; font-size: 16px;}
+stability3 {color: rgb(38, 50, 224); font-weight: 500; font-size: 16px;}
+
 
 /* ------------- Text css -----------  */
 .hltext {color: rgb(192, 192, 192); font-size: 15px; font-weight: 500; }

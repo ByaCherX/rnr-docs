@@ -31,8 +31,6 @@ r {color: rgb(250,0,0)}
 
 ## C++ Language Reference
 
-Bu başvuru, Microsoft C++ derleyicisinde uygulandığı şekliyle C++ programlama dilini açıklar. Organizasyon, Margaret Ellis ve Bjarne Stroustrup tarafından yazılan Açıklamalı *C++ Referans Kılavuzuna* ve ANSI/ISO C++ Uluslararası Standardına (ISO/IEC FDIS 14882) dayanmaktadır. C++ dil özelliklerinin Microsoft'a özgü uygulamaları dahildir.
-
 For an overview of Modern C++ programming practices, see [Welcome Back to C++](welcome-back-to-cpp-modern-cpp.md).
 
 ## C++ Language Reference Tree <i class="bi bi-list-nested"></i>
