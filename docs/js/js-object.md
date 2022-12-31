@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center;">JavaScript - Object</h1>
 
 ## Object Defination
 The `Object` class represents one of *JavaScript's data types*. It is used to store various keyed collections and more complex entities. Objects can be created using the *Object()* constructor or the *object initializer / literal syntax*.

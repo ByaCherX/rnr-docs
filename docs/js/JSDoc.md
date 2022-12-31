@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">Getting started</h1>
+<h1 style="text-align:center;">JavaScript - JSDoc</h1>
 
 JSDoc 3 is an API documentation generator for JavaScript, similar to Javadoc or phpDocumentor. You add documentation comments directly to your source code, right alongside the code itself. The JSDoc tool will scan your source code and generate an HTML documentation website for you.
 

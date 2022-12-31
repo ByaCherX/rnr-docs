@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center;">JavaScript - Indexed Collections</h1>
 
 ### Indexed constructor
 The `Int8Array()` constructor creates a typed array of twos-complement 8-bit signed integers. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).

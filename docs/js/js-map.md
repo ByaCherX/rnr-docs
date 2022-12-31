@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center;">JavaScript - Map</h1>
 
 ## Description
 The `Map` object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.

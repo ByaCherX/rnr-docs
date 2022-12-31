@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">Modules, Introduction</h1>
+<h1 style="text-align:center;">JavaScript - Modules</h1>
 
 As our application grows bigger, we want to split it into multiple files, so called “modules”. A module may contain a class or a library of functions for a specific purpose.
 
