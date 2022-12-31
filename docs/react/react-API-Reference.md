@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">React Top-Level API</h1>
+<h1 style="text-align:center">React - Top-Level API</h1>
 
 React is the entry point to the React library. If you load React from a `<script>` tag, these top-level APIs are available on the React global. If you use ES6 with npm, you can write `import React from 'react'`. If you use ES5 with npm, you can write `var React = require('react')`.
 

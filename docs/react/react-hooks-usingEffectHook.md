@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">Using the Effect Hook</h1>
+<h1 style="text-align:center">React - Using the Effect Hook</h1>
 
 The Effect Hook lets you perform side effects in function components:
 ```jsx

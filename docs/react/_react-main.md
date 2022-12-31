@@ -1,14 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
 <p align="center"><img alt="react-js" src="../media/react.svg" width="120"/></p>
 
-<h1 style="text-align:left;">React.js</h1>
-<p style="text-align:right">Beta</p>
-
---------------------------------------------------------------------------------
-
-<h2 align="center">React Document Libraries <i class="bi bi-journals"></i></h2>
+<h1 style="text-align:center;">React Document Libraries <i class="bi bi-journals"></i></h1>
 
 ## Concepts
 * [React](react-main-concepts.md)

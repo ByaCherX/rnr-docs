@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">Context</h1>
+<h1 style="text-align:center">React - Context</h1>
 
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
