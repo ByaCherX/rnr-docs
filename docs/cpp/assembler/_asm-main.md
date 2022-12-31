@@ -41,7 +41,7 @@ Some intrinsics, such as __assume and __ReadWriteBarrier, provide information to
      * [Debugging and Listings for Inline Assembly](../assembler/inline/debugging-and-listings-for-inline-assembly.md)
      * [Intel's MMX Instruction Set](../assembler/inline/intel-s-mmx-instruction-set.md)
    * [Using C or C++ in __asm Blocks](./inline/using-c-or-cpp-in-asm-blocks.md)
-     * [Using Operators in __asm Blocks](../.assembler/inline/using-operators-in-asm-blocks.md)
+     * [Using Operators in __asm Blocks](../assembler/inline/using-operators-in-asm-blocks.md)
      * [Using C or C++ Symbols_in __asm Blocks](../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
      * [Accessing C or C++ Data in __asm Blocks](../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
      * [Writing Functions with Inline Assembly](../assembler/inline/writing-functions-with-inline-assembly.md)

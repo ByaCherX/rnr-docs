@@ -19,11 +19,11 @@ while ( expression )
 
 ## Remarks
 
-The test of *expression* takes place before each execution of the loop; therefore, a **`while`** loop executes zero or more times. *expression* must be of an integral type, a pointer type, or a class type with an unambiguous conversion to an integral or pointer type.
+İfade testi , döngünün her yürütülmesinden önce gerçekleşir; bu nedenle, bir **`while`** döngü sıfır veya daha fazla kez yürütülür. ifade bir integral türünde, bir işaretçi türünde veya bir integral veya işaretçi türüne açık bir dönüşüme sahip bir sınıf türünde olmalıdır.
 
-A **`while`** loop can also terminate when a [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), or [return](../cpp/return-statement-cpp.md) within the statement body is executed. Use [continue](../cpp/continue-statement-cpp.md) to terminate the current iteration without exiting the **`while`** loop. **`continue`** passes control to the next iteration of the **`while`** loop.
+Bir **`while`** döngü, ifade gövdesi içinde bir `break`, `goto` veya `return` çalıştırıldığında da sonlandırılabilir. Döngüden çıkmadan geçerli yinelemeyi sonlandırmak için devam et seçeneğini kullanın **`while`**. **`continue`** kontrolü **`while`** döngünün bir sonraki yinelemesine geçirir .
 
-The following code uses a **`while`** loop to trim trailing underscores from a string:
+Aşağıdaki kod **`while`**, bir dizeden sondaki alt çizgileri kırpmak için bir döngü kullanır:
 
 ```cpp
 // while_statement.cpp
@@ -52,7 +52,7 @@ int main()
 }
 ```
 
-The termination condition is evaluated at the top of the loop. If there are no trailing underscores, the loop never executes.
+Sonlandırma koşulu, döngünün en üstünde değerlendirilir. Sonda alt çizgi yoksa, döngü hiçbir zaman yürütülmez.
 
 ## See also
 

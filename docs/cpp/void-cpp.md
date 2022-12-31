@@ -8,13 +8,13 @@ ms.assetid: d203edba-38e6-4056-8b89-011437351057
 ---
 # void (C++)
 
-When used as a function return type, the **`void`** keyword specifies that the function does not return a value. When used for a function's parameter list, **`void`** specifies that the function takes no parameters. When used in the declaration of a pointer, **`void`** specifies that the pointer is "universal."
+Bir işlev döndürme türü olarak kullanıldığında, **`void`** anahtar sözcük, işlevin bir değer döndürmediğini belirtir. Bir fonksiyonun parametre listesi için kullanıldığında, fonksiyonun parametre **`void`** almadığını belirtir. İşaretçi bildiriminde kullanıldığında **`void`**, işaretçinin "evrensel" olduğunu belirtir.
 
-If a pointer's type is **void\***, the pointer can point to any variable that is not declared with the **`const`** or **`volatile`** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
+İşaretçinin türü **void\*** ise, işaretçi **`const`** veya **`volatile`** anahtar sözcüğüyle bildirilmeyen herhangi bir değişkene işaret edebilir . Bir **void\*** işaretçisi, başka bir türe dönüştürülmediği sürece başvurudan kaldırılamaz. Bir **void\*** işaretçisi, başka herhangi bir veri işaretçisine dönüştürülebilir.
 
-A **`void`** pointer can point to a function, but not to a class member in C++.
+Bir **`void`** işaretçi bir işlevi işaret edebilir, ancak C++'da bir sınıf üyesine işaret edemez.
 
-You cannot declare a variable of type **`void`**.
+türünde bir değişken bildiremezsiniz **`void`**.
 
 ## Example
 

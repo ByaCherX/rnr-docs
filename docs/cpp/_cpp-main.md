@@ -1,47 +1,49 @@
 ---
-description: "Learn more about: C++ Language Reference"
+description: "C++ Language Reference"
 title: "C++ Language Reference"
 ms.custom: "index-page"
 ms.date: "29/05/2021"
 helpviewer_keywords: ["C++, main"]
-ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
+ms.assetid: unknown ?
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <style>
-r { color: rgb(250,0,0) }
+r {color: rgb(250,0,0)}
 </style>
 
-<h1 style="text-align:center;">C++ Language Reference Main</h1>
+<h1 style="text-align:center;">C++ Language Reference Main <i class="bi bi-code-slash"></i></h1>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs)
+![GitHub repo size](https://img.shields.io/github/repo-size/ByaCherX/rds-docs) 
 
-## C++ Document Libraries
-|Section|Description|link|
-|-|-|-|
-|<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|[-----](../cpp/_cpp-main.md)|
-|C++ Standard Library Main Documents|Provides standard library for C language|[-----](../cpp/standard-library/_standard-library-main.md)|
-|Active Template Library (ATL)|(ATL) is a set of template-based C++ classes that let you create|[-----](../cpp/atl/_ATL-main.md)|
-|C/C++ Preprocessor Reference|The C/C++ preprocessor reference explains the preprocessor|[-----](../cpp/preprocessor/_Preprocessor-main.md)|
-|C++/CX Language Reference|C++/CX is a set of extensions of the C++ language.|[-----](../cpp/cppcx/_cppcx-main.md)|
-|Compiler Intrinsics and assembly language|processor-specific code for maximum performance and control.|[-----](../cpp/assembler/_asm-main.md)|
+## C++ Document Libraries <i class="bi bi-journals"></i>
+|Section|Description|
+|-|-|
+|<r>➔ </r>C++ Language Main Documents|This documentation is the central location of the cpp|
+|[➔](c-language/_c-main.md) C Language Reference (*dev)|C programming language as implemented in Microsoft C.|
+|[➔](../cpp/standard-library/_standard-library-main.md) C++ Standard Library Main Documents|Provides standard library for C language|
+|[➔](c-language/c-runtime-library/_c-runtime-lib-main.md) C Runtime Library (CRT)|Microsoft runtime library provides routines for programming operating system|
+|[➔](../cpp/atl/_ATL-main.md) Active Template Library (ATL)|(ATL) is a set of template-based C++ classes that let you create|
+|[➔](../cpp/preprocessor/_Preprocessor-main.md) C/C++ Preprocessor Reference|The C/C++ preprocessor reference explains the preprocessor|
+|[➔](../cpp/cppcx/_cppcx-main.md) C++/CX Language Reference|C++/CX is a set of extensions of the C++ language.|
+|[➔](../cpp/assembler/_asm-main.md) Compiler Intrinsics and assembly language|processor-specific code for maximum performance and control.|
+|[➔](sanitizers/_code-sanitizers-main.md) C/C++ Code Sanitizers (Beta)|class of bugs that affect program correctness and program security.|
+|[➔](parallel-programming/_parallel-programming-main.md) Parallel Programming in Visual C++|C++ Accelerated Massive Parallelism (C++ AMP)|
 
-## Cpp Language Reference 
+## C++ Language Reference
 
-This reference explains the C++ programming language as implemented in the Microsoft C++ compiler. The organization is based on *The Annotated C++ Reference Manual* by Margaret Ellis and Bjarne Stroustrup and on the ANSI/ISO C++ International Standard (ISO/IEC FDIS 14882). Microsoft-specific implementations of C++ language features are included.
+Bu başvuru, Microsoft C++ derleyicisinde uygulandığı şekliyle C++ programlama dilini açıklar. Organizasyon, Margaret Ellis ve Bjarne Stroustrup tarafından yazılan Açıklamalı *C++ Referans Kılavuzuna* ve ANSI/ISO C++ Uluslararası Standardına (ISO/IEC FDIS 14882) dayanmaktadır. C++ dil özelliklerinin Microsoft'a özgü uygulamaları dahildir.
 
 For an overview of Modern C++ programming practices, see [Welcome Back to C++](welcome-back-to-cpp-modern-cpp.md).
 
-See the following tables to quickly find a keyword or operator:
-
-- [C++ Keywords](../cpp/keywords-cpp.md)
-
-- [C++ Operators](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-
-## Cpp Language Reference Tree 
+## C++ Language Reference Tree <i class="bi bi-list-nested"></i>
 ---
+
+* ### [C++ Getting Started](../cpp/cpp-overview.md)
+   * [C++ basics overview](../cpp/cpp-basics-overview.md)
 
 * ### [Lexical Conventions](../cpp/lexical-conventions.md)<br/> 
    * [Tokens and character sets](../cpp/character-sets.md)
-   * [Comments](../cpp/comments-cpp.md)
+   * [Comments](../cpp/comments-cpp.md) /düzeltme
    * [Identifiers](../cpp/identifiers-cpp.md)
    * [Keywords](../cpp/keywords-cpp.md)
    * [Punctuators](../cpp/punctuators-cpp.md)
@@ -50,23 +52,24 @@ See the following tables to quickly find a keyword or operator:
    * [User-defined literals](../cpp/user-defined-literals-cpp.md)
 ---
 * ### [Basic Concepts](../cpp/basic-concepts-cpp.md)<br/>
-   * [C++ type system](cpp-type-system-modern-cpp.md)
-   * [Scope](scope-visual-cpp.md)
-   * [Translation units and linkage](program-and-linkage-cpp.md)
-   * [main function and command-line arguments](main-function-command-line-args.md)
-   * [Program termination](program-termination.md)
-   * [Lvalues and rvalues](lvalues-and-rvalues-visual-cpp.md)
-   * [Temporary objects](temporary-objects.md)
-   * [Alignment](alignment-cpp-declarations.md)
+   * [C++ type system](cpp-type-system-modern-cpp.md) /düzeltme
+   * [Scope](scope-visual-cpp.md) /düzeltme
+   * [Header files](header-files-cpp.md) /düzeltme
+   * [Translation units and linkage](program-and-linkage-cpp.md) /düzeltme
+   * [main function and command-line arguments](main-function-command-line-args.md) /later
+   * [Program termination](program-termination.md) /düzeltme
+   * [Lvalues and rvalues](lvalues-and-rvalues-visual-cpp.md) /later
+   * [Temporary objects](temporary-objects.md) /later 2
+   * [Alignment](alignment-cpp-declarations.md) /later (unknown)
    * [Trivial, standard-layout and POD types](trivial-standard-layout-and-pod-types.md)
 ---
 * ### [Built-in types](fundamental-types-cpp.md)
-   * [Data type ranges](data-type-ranges.md)
-   * [Nullptr](nullptr.md)
-   * [Void](void-cpp.md)
-   * [Bool](bool-cpp.md)
-   * [True](../cpp/true-cpp.md)
-   * [False](../cpp/false-cpp.md)
+   * [Data type ranges](data-type-ranges.md) /düzeltme
+   * [Nullptr](nullptr.md) /düzeltme
+   * [Void](void-cpp.md) /düzeltme
+   * [Bool](bool-cpp.md) /düzeltme
+   * [True](../cpp/true-cpp.md) /combine {True/False} -\main
+   * [False](../cpp/false-cpp.md) /combine {True/False}
    * [Expressions](expressions-cpp.md)
    * [char, wchar_t, char8_t, char16_t, char32_t](char-wchar-t-char16-t-char32-t.md)
    * [__int8, __int16, __int32, __int64](int8-int16-int32-int64.md)
@@ -75,14 +78,14 @@ See the following tables to quickly find a keyword or operator:
    * [__m128d](m128d.md)
    * [__m128i](m128i.md)
    * [__ptr32, __ptr64](ptr32-ptr64.md)
-   * [Numerical limits](numerical-limits-cpp.md)
-   * [Integer limits](integer-limits.md)
-   * [Floating limits](floating-limits.md)
+   * [Numerical limits](numerical-limits-cpp.md) -\main {Built-in types}
+   * [Integer limits](integer-limits.md) -\main {Built-in types}
+   * [Floating limits](floating-limits.md) -\main {Built-in types}
 ---
-* ### [Declarations and definitions](declarations-and-definitions-cpp.md)
-   * [Storage classes](storage-classes-cpp.md)
+* ### [Declarations and definitions](declarations-and-definitions-cpp.md) /düzeltme***
+   * [Storage classes](storage-classes-cpp.md) /düzeltme (-)
    * [auto](auto-cpp.md)
-   * [const](const-cpp.md)
+   * [const](const-cpp.md) /düzeltme
    * [constexpr](constexpr-cpp.md)
    * [extern](extern-cpp.md)
    * [Initializers](initializers.md)
@@ -92,8 +95,8 @@ See the following tables to quickly find a keyword or operator:
    * [decltype](decltype-cpp.md)
    * [Attributes in C++](attributes.md)
 ---
-* ### [Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-   * [Scope resolution](../cpp/scope-resolution-operator.md)
+* ### [Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 
+   * [Scope resolution](../cpp/scope-resolution-operator.md) /düzeltme
    * [Member selection (object or pointer)](../cpp/member-access-operators-dot-and.md)
    * [Array subscript](../cpp/subscript-operator.md)
    * [Function call](../cpp/function-call-operator-parens.md)
@@ -109,8 +112,7 @@ See the following tables to quickly find a keyword or operator:
    * [Prefix decrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
    * [One's complement](../cpp/one-s-complement-operator-tilde.md)
    * [Logical not](../cpp/logical-negation-operator-exclpt.md)
-   * [Unary negation](../cpp/unary-plus-and-negation-operators-plus-and.md)
-   * [Unary plus](../cpp/unary-plus-and-negation-operators-plus-and.md)
+   * [Unary plus/negation](../cpp/unary-plus-and-negation-operators-plus-and.md) /düzeltme (-)
    * [Address-of](../cpp/address-of-operator-amp.md)
    * [Indirection](../cpp/indirection-operator-star.md)
    * [Create object](../cpp/new-operator-cpp.md)
@@ -128,15 +130,14 @@ See the following tables to quickly find a keyword or operator:
    * [Greater than](../cpp/relational-operators-equal-and-equal.md)
    * [Less than or equal to](../cpp/relational-operators-equal-and-equal.md)
    * [Greater than or equal to](../cpp/relational-operators-equal-and-equal.md) 
-   * [Equality](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
-   * [Inequality](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) 
-   * [Bitwise AND](../cpp/bitwise-and-operator-amp.md)
+   * [Equality](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) /düzeltme
+   * [Bitwise AND](../cpp/bitwise-and-operator-amp.md) /düzeltme (-)
    * [Bitwise exclusive OR](../cpp/bitwise-exclusive-or-operator-hat.md) 
    * [Bitwise inclusive OR](../cpp/bitwise-inclusive-or-operator-pipe.md)
-   * [Logical AND](../cpp/logical-and-operator-amp-amp.md)
-   * [Logical OR](../cpp/logical-or-operator-pipe-pipe.md) 
+   * [Logical AND](../cpp/logical-and-operator-amp-amp.md) /düzeltme
+   * [Logical OR](../cpp/logical-or-operator-pipe-pipe.md) /düzeltme
    * [Conditional](../cpp/conditional-operator-q.md)
-   * [Assignment](../cpp/assignment-operators.md)
+   * [Assignment](../cpp/assignment-operators.md) /düzeltme
    * [Multiplication assignment](../cpp/assignment-operators.md)
    * [Division assignment](../cpp/assignment-operators.md)
    * [Modulus assignment](../cpp/assignment-operators.md)
@@ -164,7 +165,7 @@ See the following tables to quickly find a keyword or operator:
      * [Casting operators](../cpp/casting-operators.md)
      * [Dynamic_cast](../cpp/dynamic-cast-operator.md)
      * [Bad cast exception](bad-cast-exception.md)
-     * [Static_cast](../cpp/static-cast-operator.md)
+     * [Static_cast](../cpp/static-cast-operator.md) /düzeltme /later
      * [Const_cast](../cpp/const-cast-operator.md)
      * [Reinterpret_cast](../cpp/reinterpret-cast-operator.md)
      * [Safe_cast](../extensions/safe-cast-cpp-component-extensions.md)
@@ -178,43 +179,39 @@ See the following tables to quickly find a keyword or operator:
      * [Expression statements](../cpp/expression-statement.md)
        * [Null statements](../cpp/null-statement.md)
      * [Compound statements](../cpp/compound-statements-blocks.md)
-     * [Selection statements](../cpp/selection-statements-cpp.md)
-       * [if-else statement](if-else-statement-cpp.md)
-       * [if](../cpp/if-else-statement-cpp.md)
-       * [Switch](../cpp/switch-statement-cpp.md)
+     * [Selection statements](../cpp/selection-statements-cpp.md) /merge -\main ??
+       * [if-else statement](if-else-statement-cpp.md) /düzeltme
+       * [Switch](../cpp/switch-statement-cpp.md) /düzeltme
        * [__if_exists](../cpp/if-exists-statement.md)
        * [__if_not_exists](../cpp/if-not-exists-statement.md)
-     * [Iteration statements](../cpp/iteration-statements-cpp.md)
-       * [break](../cpp/break-statement-cpp.md)
-       * [continue](../cpp/continue-statement-cpp.md)
-       * [while](../cpp/while-statement-cpp.md)
-       * [do](../cpp/do-while-statement-cpp.md)
-       * [for](../cpp/for-statement-cpp.md)
-       * [Range-based for](../cpp/range-based-for-statement-cpp.md)
+     * [Iteration statements](../cpp/iteration-statements-cpp.md) /merge -\main ??
+       * [while](../cpp/while-statement-cpp.md) /düzeltme
+       * [do](../cpp/do-while-statement-cpp.md) /düzeltme
+       * [for](../cpp/for-statement-cpp.md) /düzeltme
+       * [Range-based for](../cpp/range-based-for-statement-cpp.md) /düzeltme (unknown)
      * [Jump statements](../cpp/jump-statements-cpp.md)
-       * [Break Statement](../cpp/break-statement-cpp.md)
-       * [Continue Statement](../cpp/continue-statement-cpp.md)
-       * [Return Statement](../cpp/return-statement-cpp.md)
-       * [Goto Statement](../cpp/goto-statement-cpp.md)
+       * [Break Statement](../cpp/break-statement-cpp.md) /düzeltme
+       * [Continue Statement](../cpp/continue-statement-cpp.md) /düzeltme
+       * [Return Statement](../cpp/return-statement-cpp.md) /düzeltme
+       * [Goto Statement](../cpp/goto-statement-cpp.md) /düzeltme
        * [Transfers of control](transfers-of-control.md)
-     * [Declaration statements](declarations-and-definitions-cpp.md)
 ---
 * ### [Namespaces](namespaces-cpp.md)<br/>
 ---
-* ### [Enumerations](enumerations-cpp.md)<br/>
+* ### [Enumerations](enumerations-cpp.md)<br/> /düzeltme (-) *Important
 ---
 * ### [Unions](unions.md)<br/>
 ---
-* ### [Functions](functions-cpp.md)<br/>
+* ### [Functions](functions-cpp.md)<br/> *Important /düzeltme -\Main
    * [Functions with variable argument list](function-with-variable-argument-list-cpp.md)
    * [Function Overloading](../cpp/function-overloading.md)
    * [Explicitly defaulted and deleted functions](explicitly-defaulted-and-deleted-functions.md)
    * [argument dependent name koenig lookup on functions](argument-dependent-name-koenig-lookup-on-functions.md)
    * [Virtual Functions](../cpp/virtual-functions.md)
    * [Default arguments](default-arguments.md)
-   * [Inline Functions](../cpp/inline-functions-cpp.md)
+   * [Inline Functions](../cpp/inline-functions-cpp.md) /düzeltme (-)
 ---
-* ### [Operator Overloading](operator-overloading.md)<br/>
+* ### [Operator Overloading](operator-overloading.md)<br/> /düzeltme (-)
    * [General rules for operator overloading](general-rules-for-operator-overloading.md)
    * [Unary Operators](../cpp/overloading-unary-operators.md)
    * [Binary Operators](../cpp/binary-operators.md)
@@ -226,14 +223,14 @@ See the following tables to quickly find a keyword or operator:
    * [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md)
 ---
 * ### [Classes and structs](../cpp/classes-and-structs-cpp.md)<br/>
-   * [class](../cpp/class-cpp.md)
-   * [Struct](../cpp/struct-cpp.md)
+   * [class](../cpp/class-cpp.md) /düzeltme
+   * [Struct](../cpp/struct-cpp.md) /*
    * [Class Member Overview](../cpp/class-member-overview.md)
-   * [Member Access Control](../cpp/member-access-control-cpp.md)
-     * [Friend](../cpp/friend-cpp.md)
-     * [Private](../cpp/private-cpp.md)
-     * [Protected](../cpp/protected-cpp.md)
-     * [Public](../cpp/public-cpp.md)
+   * [Member Access Control](../cpp/member-access-control-cpp.md) combine {main-{member access}}
+     * [Public](../cpp/public-cpp.md) /combine {member access}
+     * [Private](../cpp/private-cpp.md) /combine {member access}
+     * [Friend](../cpp/friend-cpp.md) /combine {member access}
+     * [Protected](../cpp/protected-cpp.md) /combine {member access}
    * [Inheritance](../cpp/inheritance-cpp.md)
    * [Static Members](../cpp/static-members-cpp.md)
    * [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md)
@@ -249,6 +246,8 @@ See the following tables to quickly find a keyword or operator:
 * ### [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md)<br/>
 ---
 * ### [Derived Classes](../cpp/inheritance-cpp.md)<br/>
+---
+* ### [Arrays](../cpp/arrays-cpp.md)<br/> /düzeltme (-)
 ---
 * ### [Member-Access Control](../cpp/member-access-control-cpp.md)<br/>
 ---

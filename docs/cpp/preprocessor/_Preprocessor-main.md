@@ -5,14 +5,14 @@ ms.date: 02/06/2021
 helpviewer_keywords: ["preprocessor", "preprocessor, reference main"]
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ---
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <h1 style="text-align: center">C/C++ Preprocessor Reference</h1>
 
-The C/C++ preprocessor reference explains the preprocessor as it is implemented in Microsoft C/C++. The preprocessor performs preliminary operations on C and C++ files before they are passed to the compiler. You can use the preprocessor to conditionally compile code, insert files, specify compile-time error messages, and apply machine-specific rules to sections of code.
+C / C ++ önişlemci referans bunun ++ Microsoft C / C uygulanma biçimiyle önişlemci açıklıyor. Önişlemci, derleyiciye iletilmeden önce C ve C++ dosyaları üzerinde ön işlemler gerçekleştirir. Önişlemciyi koşullu olarak kod derlemek, dosya eklemek, derleme zamanı hata mesajlarını belirtmek ve kod bölümlerine makineye özel kurallar uygulamak için kullanabilirsiniz.
 
-In Visual Studio 2019 the /Zc:preprocessor compiler option provides a fully conformant C11 and C17 preprocessor. This is the default when you use the compiler flag /std:c11 or /std:c17.
+Visual Studio 2019'da /Zc:preprocessor derleyici seçeneği, tam uyumlu bir C11 ve C17 önişlemcisi sağlar. Bu, derleyici bayrağını /std:c11veya /std:c17.
 
-## Preprocessor Reference Tree
+## Preprocessor Reference Tree <i class="bi bi-list-nested"></i>
 
 * ### [Preprocessor](preprocessor.md)
     * [Preprocessor Experimental Overview](preprocessor-experimental-overview.md)

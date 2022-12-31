@@ -6,29 +6,29 @@ helpviewer_keywords: ["terminating execution", "quitting applications", "exiting
 ---
 # C++ program termination
 
-In C++, you can exit a program in these ways:
+C++'da bir programdan şu yollarla çıkabilirsiniz:
 
-- Call the [`exit`](../c-runtime-library/reference/exit-exit-exit.md) function.
-- Call the [`abort`](../c-runtime-library/reference/abort.md) function.
+- Call the [`exit`](../cpp/c-language/c-runtime-library/reference/exit-exit-exit.md) function.
+- Call the [`abort`](../cpp/c-language/c-runtime-library/reference/abort.md) function.
 - Execute a [`return`](return-statement-cpp.md) statement from `main`.
 
 ## `exit` function
 
-The [`exit`](../c-runtime-library/reference/exit-exit-exit.md) function, declared in \<stdlib.h>, terminates a C++ program. The value supplied as an argument to `exit` is returned to the operating system as the program's return code or exit code. By convention, a return code of zero means that the program completed successfully. You can use the constants `EXIT_FAILURE` and `EXIT_SUCCESS`, also defined in \<stdlib.h>, to indicate success or failure of your program.
+[`exit`](../c-runtime-library/reference/exit-exit-exit.md) \<Stdlib.h> beyan fonksiyonu, bir C ++ programı sonlandırır. Argüman olarak sağlanan değer `exit`, programın dönüş kodu veya çıkış kodu olarak işletim sistemine döndürülür. Kural olarak, sıfır dönüş kodu, programın başarıyla tamamlandığı anlamına gelir. Programınızın başarısını veya başarısızlığını belirtmek için \<stdlib.h> içinde de tanımlanan `EXIT_FAILURE` ve sabitlerini kullanabilirsiniz `EXIT_SUCCESS`.
 
-Issuing a **`return`** statement from the `main` function is equivalent to calling the `exit` function with the return value as its argument.
+İşlevden bir returnifade yayınlamak , mainişlevi exitbağımsız değişkeni olarak dönüş değeriyle çağırmaya eşdeğerdir .
 
 ## `abort` function
 
-The [`abort`](../c-runtime-library/reference/abort.md) function, also declared in the standard include file \<stdlib.h>, terminates a C++ program. The difference between `exit` and `abort` is that `exit` allows the C++ run-time termination processing to take place (global object destructors get called), but `abort` terminates the program immediately. The `abort` function bypasses the normal destruction process for initialized global static objects. It also bypasses any special processing that was specified using the [`atexit`](../c-runtime-library/reference/atexit.md) function.
+[`abort`](../c-runtime-library/reference/abort.md) Ayrıca standardında ilan fonksiyon, dosyayı <stdlib.h>, bir C ++ programı sonlandırır sayılabilir. Arasındaki fark `exit` ve `abort` olmasıdır `exit` C ++ çalışma zamanı sonlandırma işleme yeri (küresel nesne yıkıcılar denilen olsun) almaya izin verir ama `abort` hemen programı sonlandırır. `abort` Fonksiyon global durağan nesneler normal imha işlemi atlar. Ayrıca, [`atexit`](../c-runtime-library/reference/atexit.md) işlev kullanılarak belirtilen tüm özel işlemleri atlar.
 
 ## `atexit` function
 
-Use the [`atexit`](../c-runtime-library/reference/atexit.md) function to specify actions that execute before the program terminates. No global static objects initialized before the call to `atexit` are destroyed before execution of the exit-processing function.
+atexitProgram sonlandırılmadan önce yürütülecek eylemleri belirtmek için işlevi kullanın.  [`atexit`](../c-runtime-library/reference/atexit.md) Çıkış işleme işlevinin yürütülmesinden önce, çağrıdan önce başlatılan hiçbir global statik nesne yok edilmez.
 
 ## `return` statement in `main`
 
-Issuing a [`return`](return-statement-cpp.md) statement from `main` is functionally equivalent to calling the `exit` function. Consider the following example:
+[`return`](return-statement-cpp.md) from deyimi yayınlamak `main`, işlevi çağırmakla işlevsel olarak eşdeğerdir `exit`. Aşağıdaki örneği göz önünde bulundurun:
 
 ```cpp
 // return_statement.cpp
@@ -40,15 +40,15 @@ int main()
 }
 ```
 
-The `exit` and **`return`** statements in the preceding example are functionally identical. Normally, C++ requires that functions that have return types other than **`void`** return a value. The `main` function is an exception; it can end without a **`return`** statement. In that case, it returns an implementation-specific value to the invoking process. The **`return`** statement allows you to specify a return value from `main`.
+`exit` Ve **`return`** bir önceki örnekte olduğu tablolar işlevsel olarak aynıdır. Normalde, C++, **`void`** bir değer döndürmekten başka dönüş türlerine sahip işlevleri gerektirir. `main` Fonksiyon bir istisnadır; bir **`return`** açıklama yapmadan bitebilir. Bu durumda, çağırma işlemine uygulamaya özel bir değer döndürür. **`return`** İfadende dönüş değeri belirlemenizi sağlar `main`.
 
 ## Destruction of static objects
 
-When you call `exit` or execute a **`return`** statement from `main`, static objects are destroyed in the reverse order of their initialization (after the call to `atexit` if one exists). The following example shows how such initialization and cleanup works.
+`exit`' den bir **`return`** deyimi çağırdığınızda veya yürüttüğünüzde `main`, statik nesneler, başlatılmalarının tersi sırayla (`atexit` varsa , çağrıdan sonra) yok edilir. Aşağıdaki örnek, bu tür başlatma ve temizlemenin nasıl çalıştığını gösterir.
 
 ### Example
 
-In the following example, the static objects `sd1` and `sd2` are created and initialized before entry to `main`. After this program terminates using the **`return`** statement, first `sd2` is destroyed and then `sd1`. The destructor for the `ShowData` class closes the files associated with these static objects.
+Aşağıdaki örnekte, statik nesneler `sd1` ve `sd2` öğeleri, girişten önce oluşturulur ve başlatılır `main`. Bu program returndeyimi kullanarak sonlandırıldıktan sonra önce `sd2` yok edilir ve ardından `sd1`. `ShowData` Sınıfın yıkıcısı , bu statik nesnelerle ilişkili dosyaları kapatır.
 
 ```cpp
 // using_exit_or_return1.cpp
@@ -86,7 +86,7 @@ int main() {
 }
 ```
 
-Another way to write this code is to declare the `ShowData` objects with block scope, allowing them to be destroyed when they go out of scope:
+Bu kodu yazmanın başka bir yolu, `ShowData` nesneleri blok kapsamıyla bildirmek ve kapsam dışına çıktıklarında yok edilmelerine izin vermektir:
 
 ```cpp
 int main() {

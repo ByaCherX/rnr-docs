@@ -18,30 +18,28 @@ protected base-class
 
 ## Remarks
 
-The **`protected`** keyword specifies access to class members in the *member-list* up to the next access specifier (**`public`** or **`private`**) or the end of the class definition. Class members declared as **`protected`** can be used only by the following:
+**`protected`** Anahtar kelime belirtir sınıf üyelerine erişmek *member-list*esindeki bir sonraki erişim belirteci (**`public`** or **`private`**) ya da sınıf tanımının sonuna. Olarak beyan edilen sınıf üyeleri **`protected`** yalnızca aşağıdakiler tarafından kullanılabilir:
 
-- Member functions of the class that originally declared these members.
+- Başlangıçta bu üyeleri bildiren sınıfın üye işlevleri.
 
-- Friends of the class that originally declared these members.
+- Başlangıçta bu üyeleri ilan eden sınıfın arkadaşları.
 
-- Classes derived with public or protected access from the class that originally declared these members.
+- Bu üyeleri ilk olarak bildiren sınıftan genel veya korumalı erişimle türetilen sınıflar.
 
-- Direct privately derived classes that also have private access to protected members.
+- Korunan üyelere özel erişimi de olan doğrudan özel olarak türetilmiş sınıflar.
 
-When preceding the name of a base class, the **`protected`** keyword specifies that the public and protected members of the base class are protected members of its derived classes.
+Bir temel sınıfın adından önce geldiğinde, **`protected`** anahtar kelime , temel sınıfın genel ve korumalı üyelerinin, türetilmiş sınıflarının korumalı üyeleri olduğunu belirtir.
 
-Protected members are not as private as **`private`** members, which are accessible only to members of the class in which they are declared, but they are not as public as **`public`** members, which are accessible in any function.
+Korumalı üyeler, **`private`** yalnızca bildirildikleri sınıfın üyeleri tarafından erişilebilen üyeler kadar özel değildir , ancak **`public`** herhangi bir işlevde erişilebilen üyeler kadar genel de değildir .
 
-Protected members that are also declared as **`static`** are accessible to any friend or member function of a derived class. Protected members that are not declared as **`static`** are accessible to friends and member functions in a derived class only through a pointer to, reference to, or object of the derived class.
-
-For related information, see [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), and the member-access table in [Controlling Access to Class Members](member-access-control-cpp.md).
+Ayrıca **`static`** üretilmiş bir sınıfın herhangi bir arkadaş veya üye işlevi tarafından erişilebilir olarak bildirilen korumalı üyeler . **`static`** Türetilmiş bir sınıftaki arkadaşlar ve üye işlevleri tarafından yalnızca türetilmiş sınıfın bir işaretçisi, referansı veya nesnesi aracılığıyla erişilebilir olarak bildirilmeyen korumalı üyeler .
 
 ## /clr Specific
 
-In CLR types, the C++ access specifier keywords (**`public`**, **`private`**, and **`protected`**) can affect the visibility of types and methods with regard to assemblies. For more information, see [Member Access Control](member-access-control-cpp.md).
+CLR türlerinde, C++ erişim belirteci anahtar sözcükleri (**`public`**, **`private`**, and **`protected`**), derlemelerle ilgili türlerin ve yöntemlerin görünürlüğünü etkileyebilir. Daha fazla bilgi için, bkz. [Member Access Control](member-access-control-cpp.md).
 
 > [!NOTE]
-> Files compiled with [/LN](../build/reference/ln-create-msil-module.md) are not affected by this behavior. In this case, all managed classes (either public or private) will be visible.
+> [/LN](../build/reference/ln-create-msil-module.md) ile derlenen dosyalar bu davranıştan etkilenmez. Bu durumda, yönetilen tüm sınıflar (genel veya özel) görünür olacaktır.
 
 ## END /clr Specific
 

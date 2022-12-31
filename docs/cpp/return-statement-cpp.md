@@ -8,7 +8,7 @@ ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
 ---
 # return Statement (C++)
 
-Terminates the execution of a function and returns control to the calling function (or to the operating system if you transfer control from the `main` function). Execution resumes in the calling function at the point immediately following the call.
+Bir işlevin yürütülmesini sonlandırır ve kontrolü çağıran işleve (veya işlevi işlevden kontrol aktarırsanız işletim sistemine) döndürür `main`. Yürütme, çağrının hemen ardından çağrı işlevinde devam eder.
 
 ## Syntax
 
@@ -18,15 +18,15 @@ return [expression];
 
 ## Remarks
 
-The `expression` clause, if present, is converted to the type specified in the function declaration, as if an initialization were being performed. Conversion from the type of the expression to the **`return`** type of the function can create temporary objects. For more information about how and when temporaries are created, see [Temporary Objects](../cpp/temporary-objects.md).
+`expression` Bir başlatma gerçekleştirilen sanki maddesi, mevcut ise, fonksiyon bir beyanda belirtilen türüne dönüştürülür. İfade returntüründen işlev türüne dönüştürme, geçici nesneler oluşturabilir. Geçicilerin nasıl ve ne zaman oluşturulduğu hakkında daha fazla bilgi için bkz. Geçici Nesneler .
 
-The value of the `expression` clause is returned to the calling function. If the expression is omitted, the return value of the function is undefined. Constructors and destructors, and functions of type **`void`**,cannot specify an expression in the **`return`** statement. Functions of all other types must specify an expression in the **`return`** statement.
+Yan `expression` tümcenin değeri, çağıran işleve döndürülür. İfade atlanırsa, işlevin dönüş değeri tanımsızdır. Yapıcılar ve yıkıcılar ve türdeki işlevler, **`void`** ifadede bir ifade belirtemez **`return`**. Diğer tüm türlerdeki işlevler, ifadede bir ifade belirtmelidir **`return`**.
 
-When the flow of control exits the block enclosing the function definition, the result is the same as it would be if a **`return`** statement without an expression had been executed. This is invalid for functions that are declared as returning a value.
+Kontrol akışı, fonksiyon tanımını içeren bloktan çıktığında, sonuç, **`return`** ifadesi olmayan bir ifadenin yürütülmüş olmasıyla aynıdır. Bu, bir değer döndürdüğü bildirilen işlevler için geçersizdir.
 
-A function can have any number of **`return`** statements.
+Bir fonksiyon herhangi bir sayıda **`return`** ifadeye sahip olabilir .
 
-The following example uses an expression with a **`return`** statement to obtain the largest of two integers.
+Aşağıdaki örnek **`return`**, iki tamsayıdan en büyüğünü elde etmek için bir ifade içeren bir ifade kullanır .
 
 ## Example
 

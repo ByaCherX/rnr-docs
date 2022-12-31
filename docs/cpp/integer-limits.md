@@ -9,7 +9,7 @@ ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
 
 **Microsoft-specific**
 
-The limits for integer types are listed in the following table. Preprocessor macros for these limits are also defined when you include the standard header file \<climits>.
+Tamsayı türleri için sınırlar aşağıdaki tabloda listelenmiştir. Bu limitler için önişlemci makroları, standart başlık dosyası \<climits> eklediğinizde de tanımlanır.
 
 ## Limits on Integer Constants
 
@@ -35,7 +35,7 @@ The limits for integer types are listed in the following table. Preprocessor mac
 | `LLONG_MAX` | Maximum value for a variable of type **`long long`** | 9223372036854775807 |
 | `ULLONG_MAX` | Maximum value for a variable of type **`unsigned long long`** | 18446744073709551615 (0xffffffffffffffff) |
 
-If a value exceeds the largest integer representation, the Microsoft compiler generates an error.
+Bir değer en büyük tamsayı gösterimini aşarsa, Microsoft derleyicisi bir hata oluşturur.
 
 ## See also
 

@@ -30,23 +30,23 @@ Allows selection among multiple sections of code, depending on the value of an i
 
 ## Remarks
 
-A **`switch`** statement causes control to transfer to one *`labeled-statement`* in its statement body, depending on the value of *`condition`*.
+Bir **`switch`** deyim *`labeled-statement`*, değerine bağlı olarak, kontrolün deyim gövdesindeki birine aktarılmasına neden olur *`condition`*.
 
-The *`condition`* must have an integral type, or be a class type that has an unambiguous conversion to integral type. Integral promotion takes place as described in [Standard conversions](standard-conversions.md).
+*`condition`* Tamamlayıcı tip veya entegre tip açık bir dönüşüm vardır, bir sınıf tipi olmalıdır. Entegre promosyon, Standart dönüşümlerde açıklandığı gibi gerçekleşir .
 
-The **`switch`** statement body consists of a series of **`case`** labels and an optional **`default`** label. A *`labeled-statement`* is one of these labels and the statements that follow. The labeled statements aren't syntactic requirements, but the **`switch`** statement is meaningless without them. No two *`constant-expression`* values in **`case`** statements may evaluate to the same value. The **`default`** label may appear only once. The **`default`** statement is often placed at the end, but it can appear anywhere in the **`switch`** statement body. A **`case`** or **`default`** label can only appear inside a **`switch`** statement.
+Bildirim **`switch`** gövdesi, bir dizi **`case`**etiketten ve isteğe bağlı bir **`default`** etiketten oluşur. A *`labeled-statement`*, bu etiketlerden ve takip eden ifadelerden biridir. Etiketli ifadeler sözdizimsel gereklilikler değildir, ancak **`switch`** ifade onlarsız anlamsızdır. İfadelerdeki iki *`constant-expression`* değer **`case`** aynı değeri değerlendiremez. **`default`** Etiket sadece bir kez görünebilir. **`default`** İfadesi sıklıkla sonunda yerleştirilir, ancak herhangi bir yerde geçebilir **`switch`** deyim vücuda. A **`case`** veya **`default`** etiketi yalnızca bir **`switch`** ifadenin içinde görünebilir .
 
-The *`constant-expression`* in each **`case`** label is converted to a constant value that's the same type as *`condition`*. Then, it's compared with *`condition`* for equality. Control passes to the first statement after the **`case`** *`constant-expression`* value that matches the value of *`condition`*. The resulting behavior is shown in the following table.
+*`constant-expression`* Her **`case`** bir etiket ile aynı tipte olan bir sabit değere dönüştürülür *`condition`*. Daha sonra, *`condition`* eşitlik için ile karşılaştırılır . Kontrol, değeriyle eşleşen değerden sonraki ilk ifadeye geçer . Ortaya çıkan davranış aşağıdaki tabloda gösterilmektedir.**`case`** *`constant-expression`* *`condition`* 
 
 ### `switch` statement behavior
 
-| Condition | Action |
+| Durum | Action |
 |--|--|
-| Converted value matches that of the promoted controlling expression. | Control is transferred to the statement following that label. |
-| None of the constants match the constants in the **`case`** labels; a **`default`** label is present. | Control is transferred to the **`default`** label. |
-| None of the constants match the constants in the **`case`** labels; no **`default`** label is present. | Control is transferred to the statement after the **`switch`** statement. |
+| Dönüştürülen değer, yükseltilmiş denetim ifadesinin değeriyle eşleşir. | Kontrol, bu etiketi takip eden ifadeye aktarılır. |
+| Sabitlerin hiçbiri **`case`** etiketlerdeki sabitlerle eşleşmez ; bir **`default`** etiket mevcuttur. | Control is transferred to the **`default`** label. |
+| Sabitlerin hiçbiri **`case`** etiketlerdeki sabitlerle eşleşmez ; Hiçbir **`default`** etiket mevcuttur. | Kontrol, ekstreden sonra ekstreye aktarılır **`switch`**. |
 
-If a matching expression is found, execution can continue through later **`case`** or **`default`** labels. The [`break`](../cpp/break-statement-cpp.md) statement is used to stop execution and transfer control to the statement after the **`switch`** statement. Without a **`break`** statement, every statement from the matched **`case`** label to the end of the **`switch`**, including the **`default`**, is executed. For example:
+Eşleşen bir ifade bulunursa, yürütme daha sonra **`case`** veya **`default`** etiketler aracılığıyla devam edebilir. [`break`](../cpp/break-statement-cpp.md) İfadesi sonrası yapılan açıklamaya yürütme ve transfer kontrolünü durdurmak için kullanılır **`switch`** açıklamada. İfade olmadan **`break`** , eşleşen **`case`** etiketten sonuna kadar olan her ifade, **`switch`**, dahil olmak üzere **`default`** yürütülür. Örneğin:
 
 ```cpp
 // switch_statement1.cpp
@@ -77,9 +77,9 @@ int main() {
 }
 ```
 
-In the above example, `uppercase_A` is incremented if `c` is an uppercase `'A'`. The **`break`** statement after `uppercase_A++` terminates execution of the **`switch`** statement body and control passes to the **`while`** loop. Without the **`break`** statement, execution would "fall through" to the next labeled statement, so that `lowercase_a` and `other` would also be incremented. A similar purpose is served by the **`break`** statement for `case 'a'`. If `c` is a lowercase `'a'`, `lowercase_a` is incremented and the **`break`** statement terminates the **`switch`** statement body. If `c` isn't an `'a'` or `'A'`, the **`default`** statement is executed.
+In the above example, `uppercase_A` is incremented if `c` is an uppercase `'A'`. The **`break`** statement after `uppercase_A++` terminates execution of the **`switch`** statement body and control passes to the **`while`** loop. Without the **`break`** statement, execution would "fall through" to the next labeled statement, so that `lowercase_a` and `other` would also be incremented. A similar purpose is served by the **`break`** statement for `case 'a'`. If `c` is a lowercase `'a'`, `lowercase_a` is incremented and the **`break`** statement terminates the **`switch`** statement body. If `c` isn't an `'a'` or `'A'`, the **`default`** statement is executed. 
 
-**Visual Studio 2017 and later:** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)) The `[[fallthrough]]` attribute is specified in the C++17 standard. You can use it in a **`switch`** statement. It's a hint to the compiler, or anyone who reads the code, that fall-through behavior is intentional. The Microsoft C++ compiler currently doesn't warn on fallthrough behavior, so this attribute has no effect on compiler behavior. In the example, the attribute gets applied to an empty statement within the unterminated labeled statement. In other words, the semicolon is necessary.
+**Visual Studio 2017 and later:** ve sonrası: ( [/std:c++17](../build/reference/std-specify-language-standard-version.md) ile kullanılabilir ) `[[fallthrough]]` Öznitelik, C++17 standardında belirtilir. Bir **`switch`** açıklamada kullanabilirsiniz . Derleyiciye veya kodu okuyan herhangi birine, düşme davranışının kasıtlı olduğuna dair bir ipucu. Microsoft C++ derleyicisi şu anda hata davranışı konusunda uyarmadığından, bu özniteliğin derleyici davranışı üzerinde hiçbir etkisi yoktur. Örnekte, öznitelik, sonlandırılmamış etiketli ifade içindeki boş bir ifadeye uygulanır. Başka bir deyişle, noktalı virgül gereklidir.
 
 ```cpp
 int main()
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 version 15.3 and later** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)). A **`switch`** statement may have an *`init-statement`* clause, which ends with a semicolon. It introduces and initializes a variable whose scope is limited to the block of the **`switch`** statement:
+**Visual Studio 2017 version 15.3 and later** ( [/std:c++17](../build/reference/std-specify-language-standard-version.md) ile kullanılabilir ). Bir **`switch`** ifadenin *`init-statement`* noktalı virgülle biten bir yan tümcesi olabilir . Kapsamı **`switch`** ifadenin bloğuyla sınırlı olan bir değişkeni tanıtır ve başlatır :
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -120,7 +120,7 @@ int main()
     };
 ```
 
-An inner block of a **`switch`** statement can contain definitions with initializers as long as they're *reachable*, that is, not bypassed by all possible execution paths. Names introduced using these declarations have local scope. For example:
+Bir **`switch`** ifadenin iç bloğu, erişilebilir oldukları , yani tüm olası yürütme yolları tarafından atlanmadıkları sürece başlatıcılara sahip tanımlar içerebilir . Bu bildirimler kullanılarak tanıtılan adların yerel kapsamı vardır. Örneğin:
 
 ```cpp
 // switch_statement2.cpp
@@ -155,7 +155,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-A **`switch`** statement can be nested. When nested, the **`case`** or **`default`** labels associate with the closest **`switch`** statement that encloses them.
+Bir **`switch`** deyim yuvalanabilir. İç içe yerleştirildiğinde **`case`** veya **`default`** etiketleri, **`switch`** onları çevreleyen en yakın ifadeyle ilişkilendirilir .
 
 ### Microsoft-specific behavior
 

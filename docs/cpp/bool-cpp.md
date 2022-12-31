@@ -8,9 +8,9 @@ ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ---
 # bool (C++)
 
-This keyword is a built-in type. A variable of this type can have values [`true`](../cpp/true-cpp.md) and [`false`](../cpp/false-cpp.md). Conditional expressions have the type **`bool`** and so have values of type **`bool`**. For example, `i != 0` now has **`true`** or **`false`** depending on the value of `i`.
+Bu anahtar kelime yerleşik bir türdür. Bu türdeki bir değişken değerlere sahip olabilir true ve false. Koşullu ifadeler type **`bool`** değerine sahiptir ve bu nedenle type değerlerine sahiptir **`bool`**. Örneğin, `i != 0` şimdi **`true`** veya **`false`** değerine bağlı olarak i.
 
-**Visual Studio 2017 version 15.3 and later** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The operand of a postfix or prefix increment or decrement operator may not be of type **`bool`**. In other words, given a variable `b` of type **`bool`**, these expressions are no longer allowed:
+**Visual Studio 2017 version 15.3 and later** ( [/std:c++17](../build/reference/std-specify-language-standard-version.md) ile kullanılabilir ): Bir sonek veya önek artırma veya azaltma operatörünün işleneni türünde olmayabilir **`bool`**. Bir değişken verilen Diğer bir deyişle, `b` Çeşidi **`bool`**, bu ifadeler artık izin verilir:
 
 ```cpp
     b++;
@@ -32,15 +32,15 @@ In the following statement:
 if (condexpr1) statement1;
 ```
 
-If `condexpr1` is **`true`**, `statement1` is always executed; if `condexpr1` is **`false`**, `statement1` is never executed.
+Eğer `condexpr1` bir **`true`**, `statement1` her zaman çalıştırılır; eğer `condexpr1` olduğunu **`false`**, `statement1` asla çalıştırılmaz.
 
-When a postfix or prefix **`++`** operator is applied to a variable of type **`bool`**, the variable is set to **`true`**.
+Bir **`++`** tür değişkenine bir sonek veya önek operatörü uygulandığında **`bool`**, değişken olarak ayarlanır **`true`**.
 
-**Visual Studio 2017 version 15.3 and later**: `operator++` for **`bool`** was removed from the language and is no longer supported.
+**Visual Studio 2017 version 15.3 and later**: `operator++` 3for **`bool`** dilden kaldırıldı ve artık desteklenmiyor.
 
-The postfix or prefix **`--`** operator can't be applied to a variable of this type.
+Sonek veya önek **`--`** operatörü bu tür bir değişkene uygulanamaz.
 
-The **`bool`** type participates in default integral promotions. An r-value of type **`bool`** can be converted to an r-value of type **`int`**, with **`false`** becoming zero and **`true`** becoming one. As a distinct type, **`bool`** participates in overload resolution.
+**`bool`** Varsayılan ayrılmaz promosyonlar yazın katılır. Tipte bir r-value **`bool`** tipi bir r-value dönüştürülebilir **`int`** ile, **`false`** sıfır olmak ve **`true`** biri olmuştur. Farklı bir tür **`bool`** olarak aşırı yük çözünürlüğüne katılır.
 
 ## See also
 

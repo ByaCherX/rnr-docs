@@ -8,7 +8,7 @@ ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
 ---
 # `for` statement (C++)
 
-Executes a statement repeatedly until the condition becomes false. For information on the range-based **`for`** statement, see [Range-based `for` statement (C++)](../cpp/range-based-for-statement-cpp.md).
+Koşul yanlış olana kadar bir ifadeyi tekrar tekrar yürütür. Aralık tabanlı **`for`** deyim hakkında bilgi için bkz. Aralık tabanlı fordeyim (C++) .
 
 ## Syntax
 
@@ -17,19 +17,19 @@ Executes a statement repeatedly until the condition becomes false. For informati
 
 ## Remarks
 
-Use the **`for`** statement to construct loops that must execute a specified number of times.
+**`for`** Belirtilen sayıda yürütmesi gereken döngüler oluşturmak için ifadeyi kullanın .
 
-The **`for`** statement consists of three optional parts, as shown in the following table.
+**`for`** Aşağıdaki tabloda gösterildiği gibi, açıklamada, üç isteğe bağlı bölümden oluşmaktadır.
 
 ### for loop elements
 
 | Syntax name | When executed | Description |
 |--|--|--|
-| *`init-expression`* | Before any other element of the **`for`** statement, *`init-expression`* is executed only once. Control then passes to *`cond-expression`*. | Often used to initialize loop indices. It can contain expressions or declarations. |
-| *`cond-expression`* | Before execution of each iteration of *`statement`*, including the first iteration. *`statement`* is executed only if *`cond-expression`* evaluates to true (nonzero). | An expression that evaluates to an integral type or a class type that has an unambiguous conversion to an integral type. Normally used to test for loop-termination criteria. |
-| *`loop-expression`* | At the end of each iteration of *`statement`*. After *`loop-expression`* is executed, *`cond-expression`* is evaluated. | Normally used to increment loop indices. |
+| *`init-expression`* | Başka element önce **`for`** açıklamada, *`init-expression`* yalnızca bir kez yürütülür. Kontrol daha sonra 'a geçer *`cond-expression`*. | Genellikle döngü indekslerini başlatmak için kullanılır. İfadeler veya bildirimler içerebilir. |
+| *`cond-expression`* | *`statement`* İlk yineleme de dahil olmak üzere her yinelemenin yürütülmesinden önce *`statement`* yalnızca *`cond-expression`* true (sıfırdan farklı) olarak değerlendirilirse yürütülür. | Bir integral türünü veya bir integral türüne açık bir dönüşümü olan bir sınıf türünü değerlendiren bir ifade. Normalde döngü sonlandırma kriterlerini test etmek için kullanılır. |
+| *`loop-expression`* | Her yinelemenin sonunda *`statement`*. Sonra *`loop-expression`* yürütülür, *`cond-expression`* değerlendirilir. | Normalde döngü indekslerini artırmak için kullanılır. |
 
-The following examples show different ways to use the **`for`** statement.
+Aşağıdaki örnekler, **`for`** ifadeyi kullanmanın farklı yollarını gösterir .
 
 ```cpp
 #include <iostream>
@@ -56,7 +56,7 @@ int main() {
 }
 ```
 
-*`init-expression`* and *`loop-expression`* can contain multiple statements separated by commas. For example:
+*`init-expression`* ve *`loop-expression`* virgülle ayrılmış birden çok ifade içerebilir. Örneğin:
 
 ```cpp
 #include <iostream>
@@ -74,7 +74,7 @@ int main(){
     i + j = 19
 ```
 
-*`loop-expression`* can be incremented or decremented, or modified in other ways.
+*`loop-expression`* artırılabilir, azaltılabilir veya başka şekillerde değiştirilebilir.
 
 ```cpp
 #include <iostream>
@@ -91,11 +91,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-A **`for`** loop terminates when a [`break`](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), or [`goto`](../cpp/goto-statement-cpp.md) (to a labeled statement outside the **`for`** loop) within *`statement`* is executed. A [`continue`](../cpp/continue-statement-cpp.md) statement in a **`for`** loop terminates only the current iteration.
+Bir **`for`** döngü, içinde bir [`break`](../cpp/break-statement-cpp.md), [`return`](../cpp/return-statement-cpp.md), veya [`goto`](../cpp/goto-statement-cpp.md) ( **`for`** döngünün dışındaki etiketli bir ifadeye ) *`statement`* yürütüldüğünde sona erer . Döngüdeki bir [`continue`](../cpp/continue-statement-cpp.md) ifade **`for`** yalnızca geçerli yinelemeyi sonlandırır.
 
-If *`cond-expression`* is omitted, it's considered **`true`**, and the **`for`** loop won't terminate without a **`break`**, **`return`**, or **`goto`** within *`statement`*.
+Eğer *`cond-expression`* atlanırsa, bu kabul edilir **`true`** ve **`for`** döngü bir olmadan sona olmaz **`break`**, **`return`**, or **`goto`** içinde *`statement`*.
 
-Although the three fields of the **`for`** statement are normally used for initialization, testing for termination, and incrementing, they're not restricted to these uses. For example, the following code prints the numbers 0 through 4. In this case, *`statement`* is the null statement:
+İfadenin üç alanı **`for`** normalde başlatma, sonlandırma için test etme ve artırma için kullanılsa da, bunlar bu kullanımlarla sınırlı değildir. Örneğin, aşağıdaki kod 0'dan 4'e kadar olan sayıları yazdırır. Bu durumda, *`statement`* null deyimidir:
 
 ```cpp
 #include <iostream>
@@ -112,7 +112,7 @@ int main()
 
 ## `for` loops and the C++ Standard
 
-The C++ standard says that a variable declared in a **`for`** loop shall go out of scope after the **`for`** loop ends. For example:
+C++ standardı, bir **`for`** döngüde bildirilen bir değişkenin, **`for`** döngü sona erdikten sonra kapsam dışına çıkacağını söyler. Örneğin:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -121,11 +121,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-By default, under [/Ze](../build/reference/za-ze-disable-language-extensions.md), a variable declared in a **`for`** loop remains in scope until the **`for`** loop's enclosing scope ends.
+Varsayılan olarak, [/Ze](../build/reference/za-ze-disable-language-extensions.md) altında , bir **`for`**döngüde bildirilen bir değişken, **`for`**döngünün kapsamı sona erene kadar kapsamda kalır .
 
-[/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) enables standard behavior of variables declared in for loops without needing to specify `/Za`.
+[/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md), for döngülerinde bildirilen değişkenlerin standart davranışını belirtmeye gerek kalmadan etkinleştirir /Za.
 
-It's also possible to use the scoping differences of the **`for`** loop to redeclare variables under `/Ze` as follows:
+Aşağıdaki şekilde **`for`** değişkenleri yeniden bildirmek için döngünün kapsam farklarını kullanmak da mümkündür `/Ze`:
 
 ```cpp
 // for_statement5.cpp
@@ -137,7 +137,7 @@ int main(){
 }
 ```
 
-This behavior more closely mimics the standard behavior of a variable declared in a **`for`** loop, which requires variables declared in a **`for`** loop to go out of scope after the loop is done. When a variable is declared in a **`for`** loop, the compiler internally promotes it to a local variable in the **`for`** loop's enclosing scope. It's promoted even if there's already a local variable with the same name.
+Bu davranış, bir **`for`** döngüde bildirilen değişkenlerin **`for`** döngü tamamlandıktan sonra kapsam dışına çıkmasını gerektiren bir döngüde bildirilen bir değişkenin standart davranışını daha yakından taklit eder . Bir **`for`** döngüde bir değişken bildirildiğinde , derleyici onu dahili olarak **`for`** döngünün çevreleyen kapsamındaki yerel bir değişkene yükseltir. Zaten aynı ada sahip yerel bir değişken olsa bile terfi ettirilir.
 
 ## See also
 

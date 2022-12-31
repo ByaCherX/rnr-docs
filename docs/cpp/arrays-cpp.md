@@ -7,11 +7,11 @@ ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ---
 # Arrays (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory. However, they provide much greater type safety, and support iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers](../standard-library/stl-containers.md).
+Bir dizi, bitişik bir bellek alanını işgal eden aynı türdeki nesnelerin bir dizisidir. Geleneksel C tarzı diziler birçok hatanın kaynağıdır, ancak özellikle eski kod tabanlarında hala yaygındır. Modern C++'da, bu bölümde açıklanan C tarzı diziler yerine [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) kullanmanızı şiddetle tavsiye ederiz . Bu standart kitaplık türlerinin her ikisi de öğelerini bitişik bir bellek bloğu olarak depolar. Bununla birlikte, çok daha fazla tür güvenliği sağlarlar ve dizi içinde geçerli bir konuma işaret etmesi garanti edilen yineleyicileri desteklerler. Daha fazla bilgi için bkz. [Containers](../standard-library/stl-containers.md).
 
 ## Stack declarations
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression. That's because the compiler has to know how much stack space to allocate; it can't use a value computed at run-time. Each element in the array is assigned a default value of 0. If you don't assign a default value, each element initially contains whatever random values happen to be at that memory location.
+Bir C++ dizi bildiriminde, dizi boyutu, diğer bazı dillerde olduğu gibi tür adından sonra değil, değişken adından sonra belirtilir. Aşağıdaki örnek, yığında tahsis edilecek 1000 çiftlik bir dizi bildirir. Öğe sayısı, bir tamsayı değişmezi veya sabit bir ifade olarak sağlanmalıdır. Bunun nedeni, derleyicinin ne kadar yığın alanı ayıracağını bilmesi gerektiğidir; çalışma zamanında hesaplanan bir değeri kullanamaz. Dizideki her öğeye varsayılan bir 0 değeri atanır. Varsayılan bir değer atamazsanız, her öğe başlangıçta o bellek konumunda olan rastgele değerleri içerir.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -36,20 +36,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the zeroth element. The last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Dizideki ilk eleman sıfırıncı elemandır. Son eleman (*n*-1) elemanıdır, burada n , dizinin içerebileceği eleman sayısıdır. Bildirimdeki öğelerin sayısı bir integral türünde olmalı ve 0'dan büyük olmalıdır. Programınızın alt simge operatörüne hiçbir zaman değerinden büyük bir değer iletmemesini sağlamak sizin sorumluluğunuzdadır `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **`struct`** or **`union`** and when the Microsoft extensions are enabled (**`/Za`** or **`/permissive-`** isn't set).
+Sıfır boyutlu bir dizi, yalnızca dizi a **`struct`** veya içindeki son alan **`union`** olduğunda ve Microsoft uzantıları etkinleştirildiğinde (**`/Za`** or **`/permissive-`** ayarlanmadığında) yasaldır.
 
-Stack-based arrays are faster to allocate and access than heap-based arrays. However, stack space is limited. The number of array elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Yığın tabanlı dizilerin tahsisi ve erişimi, yığın tabanlı dizilere göre daha hızlıdır. Ancak, yığın alanı sınırlıdır. Dizi öğelerinin sayısı, çok fazla yığın belleği kullanacak kadar büyük olamaz. Ne kadar fazla olduğu programınıza bağlıdır. Bir dizinin çok büyük olup olmadığını belirlemek için profil oluşturma araçlarını kullanabilirsiniz.
 
 ## Heap declarations
 
-You may require an array that's too large to allocate on the stack, or whose size isn't known at compile time. It's possible to allocate this array on the heap by using a [`new[]`](new-operator-cpp.md) expression. The operator returns a pointer to the first element. The subscript operator works on the pointer variable the same way it does on a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It's your responsibility to ensure that:
+Yığına ayrılamayacak kadar büyük veya derleme zamanında boyutu bilinmeyen bir diziye ihtiyacınız olabilir. Bir [`new[]`](new-operator-cpp.md) ifade kullanarak bu diziyi öbek üzerinde tahsis etmek mümkündür . Operatör, ilk öğeye bir işaretçi döndürür. Alt simge operatörü, yığın tabanlı bir dizide olduğu gibi işaretçi değişkeni üzerinde çalışır. İşaretçiyi dizideki herhangi bir rastgele öğeye taşımak için [pointer arithmetic](../c-language/pointer-arithmetic.md) de kullanabilirsiniz. Aşağıdakileri sağlamak sizin sorumluluğunuzdadır:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you don't increment or decrement the pointer address past the array bounds.
+- diziye artık ihtiyacınız olmadığında belleği silebilmeniz için her zaman orijinal işaretçi adresinin bir kopyasını saklarsınız.
 
-The following example shows how to define an array on the heap at run time. It shows how to access the array elements using the subscript operator and by using pointer arithmetic:
+- dizi sınırlarını aşan işaretçi adresini artırmaz veya azaltmazsınız.
+Aşağıdaki örnek, çalışma zamanında öbek üzerinde bir dizinin nasıl tanımlanacağını gösterir. Alt simge operatörünü ve işaretçi aritmetiğini kullanarak dizi öğelerine nasıl erişileceğini gösterir:
 
 ```cpp
 

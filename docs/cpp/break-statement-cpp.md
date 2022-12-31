@@ -8,7 +8,7 @@ ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
 ---
 # break Statement (C++)
 
-The **`break`** statement ends execution of the nearest enclosing loop or conditional statement in which it appears. Control passes to the statement that follows the end of the statement, if any.
+**`break`** Göründüğü yakın parça döngü veya koşullu tablosunu uçları yürütülmesi. Kontrol, varsa deyimin sonunu takip eden deyime geçer.
 
 ## Syntax
 
@@ -18,17 +18,17 @@ break;
 
 ## Remarks
 
-The **`break`** statement is used with the conditional [switch](../cpp/switch-statement-cpp.md) statement and with the [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md), and [while](../cpp/while-statement-cpp.md) loop statements.
+**`break`** Deyim koşullu kullanılır anahtar deyimler switch, do, for ve while döngü ifadeleri içindir.
 
-In a **`switch`** statement, the **`break`** statement causes the program to execute the next statement outside the **`switch`** statement. Without a **`break`** statement, every statement from the matched **`case`** label to the end of the **`switch`** statement, including the **`default`** clause, is executed.
+Bir **`switch`** ifadede, **`break`** ifade, programın bir sonraki ifadeyi ifadenin dışında yürütmesine neden olur **`switch`**. Bir **`break`** deyim olmadan , eşleşen **`case`** etiketten **`switch`** deyimin sonuna kadar tüm deyimler, **`default`** yan tümce de dahil olmak üzere yürütülür.
 
-In loops, the **`break`** statement ends execution of the nearest enclosing **`do`**, **`for`**, or **`while`** statement. Control passes to the statement that follows the ended statement, if any.
+Döngülerde, **`break`** ifade, en yakın çevreleyen do, for, veya whileifadesinin yürütülmesini sona erdirir . Kontrol, varsa, sona eren ifadeyi takip eden ifadeye geçer.
 
-Within nested statements, the **`break`** statement ends only the **`do`**, **`for`**, **`switch`**, or **`while`** statement that immediately encloses it. You can use a **`return`** or **`goto`** statement to transfer control from more deeply nested structures.
+İç içe ifadeler içinde, **`break`** ifade yalnızca onu hemen çevreleyen **`do`**, **`for`**, **`switch`**, veya **`while`** ifadesini sona erdirir . Daha derin iç içe geçmiş yapılardan denetimi aktarmak için bir **`return`** or **`goto`** deyimi kullanabilirsiniz .
 
 ## Example
 
-The following code shows how to use the **`break`** statement in a **`for`** loop.
+Aşağıdaki kod, **`break`** ifadenin bir **`for`** döngüde nasıl kullanılacağını gösterir.
 
 ```cpp
 #include <iostream>
@@ -97,7 +97,7 @@ In each case:
 0123
 ```
 
-The following code shows how to use **`break`** in a switch statement. You must use **`break`** in every case if you want to handle each case separately; if you do not use **`break`**, the code execution falls through to the next case.
+Aşağıdaki kod, **`break`** bir switch ifadesinde nasıl kullanılacağını gösterir. **`break`** Her vakayı ayrı ayrı ele almak istiyorsanız her durumda kullanmalısınız; kullanmazsanız **`break`**, kod yürütme sonraki duruma geçer.
 
 ```cpp
 #include <iostream>

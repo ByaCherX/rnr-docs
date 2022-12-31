@@ -17,33 +17,32 @@ ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
 
 ## Remarks
 
-Assignment operators store a value in the object specified by the left operand. There are two kinds of assignment operations:
+Atama operatörleri, sol işlenen tarafından belirtilen nesnede bir değer depolar. İki tür atama işlemi vardır:
 
-- *simple assignment*, in which the value of the second operand is stored in the object specified by the first operand.
+- ikinci işlenenin değerinin birinci işlenen tarafından belirtilen nesnede saklandığı *simple assignment*.
 
-- *compound assignment*, in which an arithmetic, shift, or bitwise operation is performed before storing the result.
+- sonucu saklamadan önce bir aritmetik, kaydırma veya bit düzeyinde işlemin gerçekleştirildiği *compound assignment*
 
-All assignment operators in the following table except the **`=`** operator are compound assignment operators.
-
+Operatör dışında aşağıdaki tabloda yer alan tüm atama operatörleri **`=`** bileşik atama operatörleridir.
 ### Assignment operators table
 
 | Operator | Meaning |
 |--|--|
-| **`=`** | Store the value of the second operand in the object specified by the first operand (simple assignment). |
-| **`*=`** | Multiply the value of the first operand by the value of the second operand; store the result in the object specified by the first operand. |
-| **`/=`** | Divide the value of the first operand by the value of the second operand; store the result in the object specified by the first operand. |
-| **`%=`** | Take modulus of the first operand specified by the value of the second operand; store the result in the object specified by the first operand. |
-| **`+=`** | Add the value of the second operand to the value of the first operand; store the result in the object specified by the first operand. |
-| **`-=`** | Subtract the value of the second operand from the value of the first operand; store the result in the object specified by the first operand. |
-| **`<<=`** | Shift the value of the first operand left the number of bits specified by the value of the second operand; store the result in the object specified by the first operand. |
-| **`>>=`** | Shift the value of the first operand right the number of bits specified by the value of the second operand; store the result in the object specified by the first operand. |
-| **`&=`** | Obtain the bitwise AND of the first and second operands; store the result in the object specified by the first operand. |
-| **`^=`** | Obtain the bitwise exclusive OR of the first and second operands; store the result in the object specified by the first operand. |
-| **`|=`** | Obtain the bitwise inclusive OR of the first and second operands; store the result in the object specified by the first operand. |
+| **`=`** | İkinci işlenenin değerini birinci işlenen tarafından belirtilen nesnede saklayın (basit atama). |
+| **`*=`** | Birinci işlenenin değerini ikinci işlenenin değeriyle çarpın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`/=`** | İlk işlenenin değerini ikinci işlenenin değerine bölün; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`%=`** | İkinci işlenenin değeriyle belirtilen birinci işlenenin modülünü alın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`+=`** | İkinci işlenenin değerini birinci işlenenin değerine ekleyin; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`-=`** | 	İkinci işlenenin değerini birinci işlenenin değerinden çıkarın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`<<=`** | Birinci işlenenin değerini, ikinci işlenenin değeri tarafından belirtilen bit sayısını sola kaydırın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`>>=`** | Birinci işlenenin değerini, ikinci işlenenin değeri tarafından belirtilen bit sayısı kadar sağa kaydırın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`&=`** | Birinci ve ikinci işlenenlerin bit düzeyinde AND'sini alın; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`^=`** | Birinci ve ikinci işlenenlerin bit düzeyinde özel VEYA'sını elde edin; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
+| **`|=`** | Birinci ve ikinci işlenenlerin bit düzeyinde kapsayıcı VEYA'sını elde edin; sonucu ilk işlenen tarafından belirtilen nesnede saklayın. |
 
 ### Operator keywords
 
-Three of the compound assignment operators have keyword equivalents. They are:
+Bileşik atama operatörlerinden üçünün anahtar kelime eşdeğerleri vardır. Onlar:
 
 | Operator | Equivalent |
 |--|--|
@@ -51,7 +50,7 @@ Three of the compound assignment operators have keyword equivalents. They are:
 | **`|=`** | **`or_eq`** |
 | **`^=`** | **`xor_eq`** |
 
-C++ specifies these operator keywords as alternative spellings for the compound assignment operators. In C, the alternative spellings are provided as macros in the \<iso646.h> header. In C++, the alternative spellings are keywords; use of \<iso646.h> or the C++ equivalent \<ciso646> is deprecated. In Microsoft C++, the [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compiler option is required to enable the alternative spelling.
+C++, bu işleç anahtar sözcüklerini, bileşik atama işleçleri için alternatif yazımlar olarak belirtir. C'de, alternatif yazımlar \<iso646.h> başlığında makrolar olarak sağlanır. C++'da alternatif yazımlar anahtar sözcüklerdir; \<iso646.h> veya C++ eşdeğeri \<ciso646> kullanımı kullanımdan kaldırılmıştır. Microsoft C++' [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md) alternatif yazımı etkinleştirmek için veya derleyici seçeneği gereklidir.
 
 ## Example
 
@@ -79,13 +78,13 @@ int main() {
 
 ## Simple assignment
 
-The simple assignment operator (**`=`**) causes the value of the second operand to be stored in the object specified by the first operand. If both objects are of arithmetic types, the right operand is converted to the type of the left, before storing the value.
+Basit atama operatörü (**`=`**), ikinci işlenenin değerinin birinci işlenen tarafından belirtilen nesnede saklanmasına neden olur. Her iki nesne de aritmetik türdeyse, sağdaki işlenen, değeri kaydetmeden önce soldaki türe dönüştürülür.
 
-Objects of **`const`** and **`volatile`** types can be assigned to l-values of types that are only **`volatile`**, or that aren't **`const`** or **`volatile`**.
+Nesneleri **`const`** ve **`volatile`** türleri, yalnızca **`volatile`** olan veya olmayan **`const`** veya olmayan türlerin l değerlerine atanabilir **`volatile`**.
 
-Assignment to objects of class type (**`struct`**, **`union`**, and **`class`** types) is performed by a function named `operator=`. The default behavior of this operator function is to perform a bitwise copy; however, this behavior can be modified using overloaded operators. For more information, see [Operator overloading](../cpp/operator-overloading.md). Class types can also have *copy assignment* and *move assignment* operators. For more information, see [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md) and [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md).
+Sınıf türündeki (**`struct`**, **`union`**, and **`class`** types) nesnelere atama , adlı bir işlev tarafından gerçekleştirilir `operator=`. Bu operatör işlevinin varsayılan davranışı, bit düzeyinde kopyalama gerçekleştirmektir; ancak bu davranış aşırı yüklenmiş operatörler kullanılarak değiştirilebilir. Daha fazla bilgi için, bkz. [Operator overloading](../cpp/operator-overloading.md). Sınıf türlerinde ayrıca *kopya atama* ve taşıma atama operatörleri olabilir. Daha fazla bilgi için bkz. [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md) ve [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md).
 
-An object of any unambiguously derived class from a given base class can be assigned to an object of the base class. The reverse isn't true because there's an implicit conversion from derived class to base class, but not from base class to derived class. For example:
+Belirli bir temel sınıftan kesin olarak türetilmiş herhangi bir sınıfın nesnesi, temel sınıfın bir nesnesine atanabilir. Bunun tersi doğru değildir, çünkü türetilmiş sınıftan temel sınıfa örtük bir dönüşüm vardır, ancak temel sınıftan türetilmiş sınıfa değil. Örneğin:
 
 ```cpp
 // expre_SimpleAssignment.cpp
@@ -114,16 +113,16 @@ int main()
 }
 ```
 
-Assignments to reference types behave as if the assignment were being made to the object to which the reference points.
+Referans tiplerine atamalar, sanki referansın işaret ettiği nesneye atama yapılıyormuş gibi davranır.
 
-For class-type objects, assignment is different from initialization. To illustrate how different assignment and initialization can be, consider the code
+Sınıf türü nesneler için atama, başlatmadan farklıdır. Atama ve başlatmanın ne kadar farklı olabileceğini göstermek için kodu göz önünde bulundurun.
 
 ```cpp
 UserType1 A;
 UserType2 B = A;
 ```
 
-The preceding code shows an initializer; it calls the constructor for `UserType2` that takes an argument of type `UserType1`. Given the code
+Önceki kod bir başlatıcıyı gösterir; `UserType2` tür bir argüman aldığı için yapıcıyı çağırır `UserType1`. verilen kod
 
 ```cpp
 UserType1 A;
@@ -138,31 +137,31 @@ the assignment statement
 B = A;
 ```
 
-can have one of the following effects:
+aşağıdaki etkilerden birine sahip olabilir:
 
-- Call the function `operator=` for `UserType2`, provided `operator=` is provided with a `UserType1` argument.
+- İşlevini çağırın `operator=` için UserType2sağlanan `operator=` bir sağlanır `UserType1` argüman.
 
-- Call the explicit conversion function `UserType1::operator UserType2`, if such a function exists.
+- `UserType1::operator UserType2` Böyle bir işlev varsa , açık dönüştürme işlevini çağırın .
 
-- Call a constructor `UserType2::UserType2`, provided such a constructor exists, that takes a `UserType1` argument and copies the result.
+- `UserType2::UserType2` Böyle bir kurucu varsa, bir `UserType1` argüman alan ve sonucu kopyalayan bir kurucu çağırın .
 
 ## Compound assignment
 
-The compound assignment operators are shown in the [Assignment operators table](#assignment-operators-table). These operators have the form *e1* *op*= *e2*, where *e1* is a non-**`const`** modifiable l-value and *e2* is:
+Bileşik atama operatörleri, [Assignment operators table](#assignment-operators-table)'da gösterilir. Bu operatörler bir şekilde sahip *e1* *op* = *e2* , *e1* olmayan bir olup **`const`**, değiştirilebilir l-value ve *e2* olup:
 
-- an arithmetic type
+aritmetik bir tür
 
-- a pointer, if *op* is **`+`** or **`-`**
+bir işaretçi, *op* ise **`+`** or **`-`**
 
-The *e1* *op*= *e2* form behaves as *e1* **`=`** *e1* *op* *e2*, but *e1* is evaluated only once.
+The *e1* *op* = *e2* olarak bir şekilde davranır *e1* *e1* *op* *e2*, ancak *e1* sadece bir kere elde edildi.=
 
-Compound assignment to an enumerated type generates an error message. If the left operand is of a pointer type, the right operand must be of a pointer type, or it must be a constant expression that evaluates to 0. When the left operand is of an integral type, the right operand must not be of a pointer type.
+Numaralandırılmış bir türe bileşik atama, bir hata mesajı oluşturur. Sol işlenen işaretçi türündeyse, sağ işlenen işaretçi türünde veya 0 olarak değerlendirilen sabit bir ifade olmalıdır. Sol işlenen bir integral türünde olduğunda, sağ işlenen bir işaretçi türünden olmamalıdır. işaretçi türü.
 
 ## Result of assignment operators
 
-The assignment operators return the value of the object specified by the left operand after the assignment. The resultant type is the type of the left operand. The result of an assignment expression is always an l-value. These operators have right-to-left associativity. The left operand must be a modifiable l-value.
+Atama operatörleri, atamadan sonra sol işlenen tarafından belirtilen nesnenin değerini döndürür. Ortaya çıkan tür, sol işlenenin türüdür. Atama ifadesinin sonucu her zaman bir l değeridir. Bu operatörler sağdan sola ilişkilendirilebilirliğe sahiptir. Sol işlenen, değiştirilebilir bir l değeri olmalıdır.
 
-In ANSI C, the result of an assignment expression isn't an l-value. That means the legal C++ expression `(a += b) += c` isn't allowed in C.
+ANSI C'de atama ifadesinin sonucu bir l değeri değildir. Bu, C'de yasal C++ ifadesine `(a += b) += c` izin verilmediği anlamına gelir .
 
 ## See also
 

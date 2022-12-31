@@ -15,15 +15,15 @@ ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
 
 ## Remarks
 
-The binary equality operators compare their operands for strict equality or inequality.
+İkili eşitlik operatörleri, işlenenlerini katı eşitlik veya eşitsizlik açısından karşılaştırır.
 
-The equality operators, equal to (**`==`**) and not equal to (**`!=`**), have lower precedence than the relational operators, but they behave similarly. The result type for these operators is **`bool`**.
+(**`==`**) değerine eşit ve (**`!=`**) değerine eşit olmayan eşitlik operatörleri, ilişkisel operatörlerden daha düşük önceliğe sahiptir, ancak benzer şekilde davranırlar. Bu operatörler için sonuç türü **`bool`**
 
-The equal-to operator (**`==`**) returns **`true`** if both operands have the same value; otherwise, it returns **`false`**. The not-equal-to operator (**`!=`**) returns **`true`** if the operands don't have the same value; otherwise, it returns **`false`**.
+Eşittir operatörü (**`==`**) **`true`** her iki işlenen de aynı değere sahipse döner; aksi halde geri döner **`false`**. Eşit olmayan işleci (**`!=`**) **`true`**, işlenenler aynı değere sahip değilse döner; aksi halde geri döner **`false`**.
 
 ## Operator keyword for !=
 
-C++ specifies **`not_eq`** as an alternative spelling for **`!=`**. (There's no alternative spelling for **`==`**.) In C, the alternative spelling is provided as a macro in the \<iso646.h> header. In C++, the alternative spelling is a keyword; use of \<iso646.h> or the C++ equivalent \<ciso646> is deprecated. In Microsoft C++, the [`/permissive-`](../build/reference/permissive-standards-conformance.md) or [`/Za`](../build/reference/za-ze-disable-language-extensions.md) compiler option is required to enable the alternative spelling.
+C++ **`not_eq`** için alternatif bir yazım belirtir **`!=`**. ( için alternatif yazım yoktur **`==`**) C'de, alternatif yazım \iso646.h> başlığında bir makro olarak sağlanır. C++'da alternatif yazım bir anahtar kelimedir; \<iso646.h> veya C++ eşdeğeri \<ciso646> kullanımı kullanımdan kaldırılmıştır.
 
 ## Example
 
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-Equality operators can compare pointers to members of the same type. In such a comparison, pointer-to-member conversions are performed. Pointers to members can also be compared to a constant expression that evaluates to 0.
+Eşitlik operatörleri, işaretçileri aynı türdeki üyelerle karşılaştırabilir. Böyle bir karşılaştırmada, işaretçiden üyeye dönüşümler gerçekleştirilir. Üyelere yönelik işaretçiler, 0 olarak değerlendirilen sabit bir ifadeyle de karşılaştırılabilir.
 
 ## See also
 

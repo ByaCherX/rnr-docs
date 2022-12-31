@@ -24,29 +24,29 @@ class [ms-decl-spec] [tag [: base-list ]]
 #### Parameters
 
 *template-spec*<br/>
-Optional template specifications. For more information, refer to [Templates](templates-cpp.md).
+İsteğe bağlı şablon belirtimleri. Daha fazla bilgi için [Templates](templates-cpp.md) bölümüne bakın.
 
 *class*<br/>
 The **`class`** keyword.
 
 *ms-decl-spec*<br/>
-Optional storage-class specification. For more information, refer to the [__declspec](../cpp/declspec.md) keyword.
+İsteğe bağlı depolama sınıfı belirtimi. Daha fazla bilgi için [__declspec](../cpp/declspec.md) anahtar sözcüğüne bakın .
 
 *tag*<br/>
-The type name given to the class. The tag becomes a reserved word within the scope of the class. The tag is optional. If omitted, an anonymous class is defined. For more information, see [Anonymous Class Types](../cpp/anonymous-class-types.md).
+Sınıfa verilen tür adı. Etiket, sınıf kapsamında ayrılmış bir kelime haline gelir. Etiket isteğe bağlıdır. Atlanırsa, anonim bir sınıf tanımlanır. Daha fazla bilgi için, bkz. [Anonymous Class Types](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
-Optional list of classes or structures this class will derive its members from. See [Base Classes](../cpp/base-classes.md) for more information. Each base class or structure name can be preceded by an access specifier ([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)) and the [virtual](../cpp/virtual-cpp.md) keyword. See the member-access table in [Controlling Access to Class Members](member-access-control-cpp.md) for more information.
+Bu sınıfın üyelerini türeteceği isteğe bağlı sınıflar veya yapılar listesi. Daha fazla bilgi için Temel Sınıflara bakın . Her temel sınıf veya yapı adından önce bir erişim belirteci (public, private, protected) ve virtual anahtar sözcüğü gelebilir . Daha fazla bilgi için Sınıf Üyelerine Erişimi Kontrol Etme bölümündeki [Controlling Access to Class Members](member-access-control-cpp.md) bakın.
 
 *member-list*<br/>
-List of class members. Refer to [Class Member Overview](../cpp/class-member-overview.md) for more information.
+Sınıf üyelerinin listesi. Daha fazla bilgi için [Class Member Overview](../cpp/class-member-overview.md)'a bakın .
 
 *declarators*<br/>
-Declarator list specifying the names of one or more instances of the class type. Declarators may include initializer lists if all data members of the class are **`public`**. This is more common in structures, whose data members are **`public`** by default, than in classes. See [Overview of Declarators](./declarations-and-definitions-cpp.md) for more information.
+Sınıf türünün bir veya daha fazla örneğinin adlarını belirten Bildirici listesi. Bildiriler, sınıfın tüm veri üyeleri ise başlatıcı listelerini içerebilir **`public`**. Bu, veri üyeleri **`public`** varsayılan olarak sınıflara göre olan yapılarda daha yaygındır. Daha fazla bilgi için [Overview of Declarators](./declarations-and-definitions-cpp.md) bölümüne bakın .
 
 ## Remarks
 
-For more information on classes in general, refer to one of the following topics:
+Genel olarak sınıflar hakkında daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
 - [struct](../cpp/struct-cpp.md)
 

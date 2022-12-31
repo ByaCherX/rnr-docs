@@ -38,22 +38,6 @@ The Microsoft runtime library provides routines for programming the Microsoft Wi
 * [C runtime (CRT) and C++ Standard Library (STL) .lib files](crt-library-features.md)
 * ### [Universal C runtime routines by category](run-time-routines-by-category.md)
 ---
-<<<<<<< HEAD:docs/c-language/c-runtime-library/_c-runtime-lib-main.md
-* ### [Global variables and standard types](global-variables-and-standard-types.md)
----
-* ### [Global constants](global-constants.md)
----
-* ### [Global state](global-state.md)
----
-* ### [Generic-text mappings](generic-text-mappings.md)
----
-* ### [Alphabetical function reference](reference/crt-alphabetical-function-reference.md)
----
-* ### [Function family overviews](function-family-overviews.md)
----
-* ### [Language and country/region strings](locale-names-languages-and-country-region-strings.md)
----
-=======
 * [Argument Access](../c-runtime-library/argument-access.md)
 * [Buffer Manipulation](../c-runtime-library/buffer-manipulation.md)
 * [Byte Classification](../c-runtime-library/byte-classification.md)
@@ -208,4 +192,3 @@ The Microsoft runtime library provides routines for programming the Microsoft Wi
 * [_aligned_offset_malloc_dbg](aligned-offset-malloc-dbg.md)
 * [...](reference/crt-alphabetical-function-reference.md)
 ---
->>>>>>> main:docs/cpp/c-language/c-runtime-library/_c-runtime-lib-main.md
