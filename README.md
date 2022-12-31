@@ -66,6 +66,9 @@ Languages
 * ✅ CSS
 
 Frameworks
+* ✅ React
+* ✅ Nestjs
+Frameworks
 * ❌ React
 * ❌ Nestjs
 * ❌ Webpack
