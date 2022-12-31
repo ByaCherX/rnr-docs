@@ -1,7 +1,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 # React.Component
+=======
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center;">React - Component</h1>
+
+>>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 This page contains a detailed API reference for the React component class definition. It assumes you’re familiar with fundamental React concepts, such as Components and Props, as well as State and Lifecycle. If you’re not, read them first.
 
 ## Overview

@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 <h1 style="text-align:center">TS - Namespaces</h1>
+=======
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center">TypeScript - Namespaces</h1>
+>>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 This post outlines the various ways to organize your code using namespaces (previously “internal modules”) in TypeScript. As we alluded in our note about terminology, “internal modules” are now referred to as “namespaces”. Additionally, anywhere the `module` keyword was used when declaring an internal module, the `namespace` keyword can and should be used instead. This avoids confusing new users by overloading them with similarly named terms.
 

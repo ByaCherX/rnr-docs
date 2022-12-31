@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 <h1 style="text-align:center">TS - Type Compatibility</h1>
+=======
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center">TypeScript - Type Compatibility</h1>
+>>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 Type compatibility in TypeScript is based on structural subtyping. Structural typing is a way of relating types based solely on their members. This is in contrast with nominal typing. Consider the following code:
 ```ts

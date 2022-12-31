@@ -14,3 +14,7 @@ _themes.VS.Modern/
 # Documentation build
 /docs/vcppdocs
 debug.log
+
+#Markdown
+docs/markdown/markdown-html-css.md
+docs/markdown/bootstrap-icon_lib.md

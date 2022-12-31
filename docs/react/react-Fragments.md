@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 <h1 style="text-align:center">Fragments</h1>
+=======
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center">React - Fragments</h1>
+>>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 

@@ -1,10 +1,29 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../lib/doc_style.css">
 
 <h1 style="text-align:center">TS - Utility Types</h1>
 
 TypeScript provides several utility types to facilitate common type transformations. These utilities are available globally.
 
+=======
+<link rel="stylesheet" href="../source.css">
+
+<h1 style="text-align:center">TypeScript - Utility Types</h1>
+
+TypeScript provides several utility types to facilitate common type transformations. These utilities are available globally.
+
+## Awaited< Type>
+This type is meant to model operations like `await` in `async` functions, or the `.then()` method on `Promises` - specifically, the way that they recursively unwrap Promises.
+```ts
+type A = Awaited<Promise<string>>;
+
+type B = Awaited<Promise<Promise<number>>>;
+
+type C = Awaited<boolean | Promise<number>>;
+```
+
+>>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 ## Partial< Type>
 Constructs a type with all properties of `Type` set to optional. This utility will return a type that represents all subsets of a given type.
 ```ts
