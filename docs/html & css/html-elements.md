@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../reddevsoftware/source.css">
-<h1 id="h1c">HTML Tags</h1>
+<link rel="stylesheet" href="../source.css">
+<h1 id="h1c">HTML Elements</h1>
 
 This page lists all the HTML elements, which are created using tags. They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 

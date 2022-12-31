@@ -1,7 +1,7 @@
 ---
 ms-link:
 ---
-<link rel="stylesheet" href="../reddevsoftware/source.css">
+<link rel="stylesheet" href="../source.css">
 <h1 id="h1c">HTML Tags</h1>
 
 ### Basic HTML
