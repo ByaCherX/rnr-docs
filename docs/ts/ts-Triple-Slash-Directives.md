@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../../lib/doc_style.css">
+<link rel="stylesheet" href="../source.css">
 
-<h1 style="text-align:center">TS - Triple Slash Directives</h1>
+<h1 style="text-align:center">TypeScript - Triple Slash Directives</h1>
 
 Triple-slash directives are single-line comments containing a single XML tag. The contents of the comment are used as compiler directives.
 
