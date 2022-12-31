@@ -119,4 +119,4 @@ void outputLine(int account, const string &name, double balance)
 {
    cout << left << setw(10) << account << setw(13) << name
         << setw(7) << setprecision(2) << right << balance << endl;
-} // end function outputLine
+} // end function outputLine|
