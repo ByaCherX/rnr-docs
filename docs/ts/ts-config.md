@@ -1,13 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-<h1 style="text-align:center">TS - Config</h1>
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center">TypeScript - Config</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 The presence of a `tsconfig.json` file in a directory indicates that the directory is the root of a TypeScript project. The `tsconfig.json` file specifies the root files and the compiler options required to compile the project.
 

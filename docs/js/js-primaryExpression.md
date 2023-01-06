@@ -1,13 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-## Primary Expression
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center;">JavaScript - Primary Expression</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 ### This
 A function's `this` keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between strict mode and non-strict mode.

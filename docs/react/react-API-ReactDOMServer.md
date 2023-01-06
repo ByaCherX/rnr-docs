@@ -1,13 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-<h1 style="text-align:center">ReactDOMServer</h1>
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center">React - DOMServer</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 The `ReactDOMServer` object enables you to render components to static markup. Typically, it’s used on a Node server:
 ```jsx

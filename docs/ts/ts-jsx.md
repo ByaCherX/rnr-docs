@@ -1,11 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center;">TypeScript - JSX</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 *JSX* is an embeddable XML-like syntax. It is meant to be transformed into valid JavaScript, though the semantics of that transformation are implementation-specific. JSX rose to popularity with the *React* framework, but has since seen other implementations as well. TypeScript supports embedding, type checking, and compiling JSX directly to JavaScript.
 

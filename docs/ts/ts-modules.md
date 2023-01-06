@@ -1,13 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-<h1 style="text-align:center">TS - Modules</h1>
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center">TypeScript - Modules</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 JavaScript has a long history of different ways to handle modularizing code. TypeScript having been around since 2012, has implemented support for a lot of these formats, but over time the community and the JavaScript specification has converged on a format called ES Modules (or ES6 modules). You might know it as the `import/export` syntax.
 

@@ -1,13 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-<h1 style="text-align:center">TS - Decorators</h1>
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center">TypeScript - Decorators</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 With the introduction of Classes in TypeScript and ES6, there now exist certain scenarios that require additional features to support annotating or modifying classes and class members. Decorators provide a way to add both annotations and a meta-programming syntax for class declarations and members. Decorators are a [stage 2 proposal](https://github.com/tc39/proposal-decorators) for JavaScript and are available as an experimental feature of TypeScript.
 
@@ -25,11 +19,7 @@ tsc --target ES5 --experimentalDecorators
 ```json
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "ES5",
-=======
     "target": "ES6",
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
     "experimentalDecorators": true
   }
 }

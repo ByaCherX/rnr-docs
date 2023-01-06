@@ -1,11 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-=======
 <link rel="stylesheet" href="../source.css">
 
 <h1 style="text-align:center;">JavaScript - Str,ng</h1>
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 ## Description
 Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their length, to build and concatenate them using the *+ and += string operators*, checking for the existence or location of substrings with the indexOf() method, or extracting substrings with the `substring()` method.

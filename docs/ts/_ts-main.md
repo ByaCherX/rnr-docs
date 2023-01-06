@@ -1,22 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<<<<<<< HEAD
-<link rel="stylesheet" href="../../lib/doc_style.css">
-
-<p align="center"><img alt="react-js" src="../media/typescript.svg" width="120"/></p>
-<h1 style="text-align:left;">TypeScript</h1>
-
-<p style="text-align:right">Beta</p>
-
-------------------------------------------------------------------------------------
-
-<h2 align="center">TypeScript Document Libraries <i class="bi bi-journals"></i></h2>
-=======
 <link rel="stylesheet" href="../source.css">
 
 <p align="center"><img alt="react-js" src="../media/typescript.svg" width="120"/></p>
 <h1 style="text-align:center;">TypeScript Document Libraries <i class="bi bi-journals"></i></h1>
 
->>>>>>> bd2eb553b592b1e2a0d0cfa22bee14b12f0806db
 
 ## Reference
 * [TypeScript Utility Types](ts-utility-types.md)
@@ -39,22 +26,8 @@
 
 
 
-
-
-
-
-
-
-
 > [!IMPORTANT]
 > this document only explains some parts. For more detailed documentation, you can refer to the official [TypeScript documentation](https://www.typescriptlang.org/docs) website.
-
-
-
-
-
-
-
 
 
 
