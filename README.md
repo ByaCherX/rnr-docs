@@ -2,14 +2,14 @@
 <link rel="stylesheet" href="./docs/source.css">
 
 <h1 align="center">  
-<tx class="anim1"> Renoir Docs <tx>  
+<tx class="anim1"> Renoir Docs [ ⚠️ DEPRECATED ]<tx>  
 </h1> 
 
 <p align="center">  
   <bold>(WIP)</bold>: RNR Docs can be an excellent resource for you to help users adapt to the RNR ecosystem faster and get detailed information. This documentation covers some topics in detail, but it can also skip some topics.
 </p>  
     <p align="center">  
-</p>  
+</p>
 
 <p align="center">
  <a></a>
@@ -17,7 +17,6 @@
  <img src="https://img.shields.io/badge/version-v1.0--alpha.1-blue" alt="Version"/>
  <img src="https://img.shields.io/github/license/ByaCherX/rds-docs" alt="License"/>
  <img src="https://img.shields.io/tokei/lines/github/ByaCherX/rds-docs" alt="LinesCode"/>
-
 </p>
 
 ## Description
@@ -31,20 +30,15 @@ Languages
 * ❌ C/C++
 * ✅ JavaScript
 * ✅ TypeScript
-* ❌ Python
-* ❌ Matlab
-* ❌ Rust
+* ❌ Python 
+* ❌ Matlab (canceled)
+* ❌ Rust (canceled)
 * ✅ HTML
 * ✅ CSS
 
 Frameworks
-* ✅ React
-* ✅ Nestjs
-Frameworks
-* ❌ React
-* ✅ Nestjs
-* ❌ Webpack
-* ❌ Falcon
+* ❔ React
+* ✅ Nestjs (8.x)
 
 Software
 * ❌ Git
